@@ -1,4 +1,5 @@
-import "./App.css";
+import React from 'react';
+import "./App.scss";
 
 // packages
 import {
@@ -15,6 +16,7 @@ import db from "./firebase";
 
 // Files
 import Home from "./Pages/Home/Home";
+import Services from './Pages/Services/Services';
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path='/services'>
+            <Services />
             </Route>
           </Switch>
         </div>
