@@ -1,9 +1,15 @@
 import React from "react";
+import Partner from "../Parnter/Partner";
+import Questions from "../Questions/Questions";
+import Headd from "../Services/Headd";
+ 
 
 const Home = () => {
   return (
     <div>
-      <h2>Hi im fromm home</h2>
+      <Headd />
+      <Partner />
+      <Questions />
     </div>
   );
 };

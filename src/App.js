@@ -16,7 +16,9 @@ import db from "./firebase";
 
 // Files
 import Home from "./Pages/Home/Home";
-import Services from './Pages/Services/Services';
+// import Services from './Pages/Services/Services';
+// import Tech from './Pages/Technolgies/Tech';
+// import Niches from './Pages/Niches/Niches';
 
 function App() {
   return (
@@ -28,9 +30,12 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path='/services'>
-            <Services />
+            {/* <Route exact path='/technology'>
+            <Tech />
             </Route>
+            <Route exact path='/Niches'>
+            <Niches />
+            </Route> */}
           </Switch>
         </div>
       </div>
