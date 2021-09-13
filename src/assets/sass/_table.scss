@@ -1,0 +1,34 @@
+.tablerow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  &:not(:last-child) {
+    border-bottom: 0.1rem solid black;
+  }
+
+  &__item {
+    width: 13rem;
+    &:not(:last-child) {
+      border-right: 0.1rem solid black;
+    }
+    &--image {
+      width: 13rem;
+    }
+  }
+}
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__heading {
+    &--text {
+      font-size: 5rem;
+    }
+  }
+  &__content {
+    margin-top: 2rem;
+  }
+}

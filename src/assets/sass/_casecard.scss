@@ -1,0 +1,48 @@
+.casescard {
+  display: flex;
+
+  &__left {
+    width: 50%;
+    margin-top: 11rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 40px;
+
+    &--image {
+      display: flex;
+      justify-content: center;
+      &-img {
+        width: 80%;
+      }
+    }
+    &--description {
+      width: 65%;
+      font-size: 2.5rem;
+      &-span {
+        color: blue;
+      }
+    }
+  }
+  &__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    align-items: center;
+    &--image {
+      display: flex;
+      justify-content: center;
+      &-img {
+        width: 80%;
+      }
+    }
+    &--description {
+      width: 65%;
+      font-size: 2.5rem;
+      &-span {
+        color: blue;
+      }
+    }
+  }
+}

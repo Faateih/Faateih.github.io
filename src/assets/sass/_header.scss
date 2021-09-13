@@ -4,11 +4,12 @@
   position: relative;
   align-items: center;
   height: 6rem;
-  background-color: yellow;
+  background: rgba(76, 175, 80, 0.3);
+  z-index: 1000;
   &__logo {
     &--image {
-      height: 7rem;
-      width: 7rem;
+      height: 5rem;
+      width: 8rem;
     }
   }
   &__menu {
@@ -18,7 +19,10 @@
   }
   &__pop {
     position: absolute;
-    visibility: hidden;
+    background: white;
+    top: 6rem;
+    width: 100%;
+    padding: 3rem 0rem;
   }
   &__button {
   }
@@ -32,21 +36,31 @@
   justify-content: center;
   position: relative;
   &:not(:last-child) {
-    margin-right: 2rem;
+    margin-right: 7rem;
   }
 
   &__text {
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
   }
   &__border {
     position: absolute;
     top: 0;
-    border-top: 0.1rem solid black;
+    border-top: 0.5rem solid white;
+    width: 0rem;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &__text:hover ~ &__border {
     width: 100%;
+    visibility: visible;
   }
   &__popup {
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
   }
 }
 .header-button {
@@ -57,14 +71,265 @@
 
   width: 12rem;
   height: 3rem;
-  border: 0.1rem solid blue;
+  border: 0.1rem solid #008ecc;
   border-radius: 2rem;
-  background-color: blue;
+  background-color: #008ecc;
   color: white;
   cursor: pointer;
 
   &:hover {
     background-color: white;
-    color: blue;
+    color: #008ecc;
   }
+}
+
+.header-popup-services {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+  &__section-one {
+    background-image: url("https://riseapps.co/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/09/people01-300x300.png.webp");
+
+    height: 19rem;
+    width: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 7rem;
+
+    display: flex;
+
+    align-items: center;
+  }
+  &__section-two {
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    &--text {
+      color: rgb(7, 7, 7);
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: 400;
+      cursor: pointer;
+      width: fit-content;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &:hover {
+        color: blue;
+      }
+    }
+    &--text::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: 0rem;
+      width: 0%;
+      color: white;
+
+      border-bottom: 0.2rem solid black;
+      transition: all 0.5s;
+    }
+
+    &--text:hover::after {
+      width: 100%;
+    }
+  }
+  &__section-three {
+    margin-left: 7rem;
+    align-self: center;
+    position: absolute;
+    left: 50vw;
+    top: 5rem;
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+    &--text {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      position: relative;
+      width: fit-content;
+      color: black;
+
+      &-span {
+        position: absolute;
+        left: 3rem;
+        top: 0.3rem;
+        color: black;
+      }
+    }
+    &--text::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      width: 0%;
+      color: white;
+
+      border-bottom: 0.2rem solid black;
+      transition: all 0.5s;
+    }
+
+    &--text:hover::after {
+      width: 100%;
+    }
+  }
+}
+// .header-popup-services__section-two--text:hover
+//   + .header-popup-services__section-three {
+//   visibility: visible;
+//   opacity: 1;
+// }
+.header-popup-technologies {
+  display: flex;
+  &-one {
+    background-image: url("https://riseapps.co/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/09/people01-300x300.png.webp");
+    height: 19rem;
+    width: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 7rem;
+    display: flex;
+    align-items: center;
+  }
+  &-two {
+    margin-left: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+
+    &__text {
+      width: fit-content;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: black;
+      cursor: pointer;
+      position: relative;
+      margin-left: 9rem;
+    }
+    &__text::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: 0rem;
+      width: 0%;
+      color: black;
+
+      border-bottom: 0.2rem solid black;
+      transition: all 0.5s;
+    }
+
+    &__text:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.header-popup-blog {
+  display: flex;
+  margin: 0rem 5rem;
+  &-one {
+    background-image: url("https://riseapps.co/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/09/people01-300x300.png.webp");
+    height: 19rem;
+    width: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 6rem;
+    display: flex;
+    align-items: center;
+  }
+  &-two {
+    margin-left: 6rem;
+    &__heading {
+      color: red;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    &__text {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: blue;
+    }
+    &__text:hover {
+      color: black;
+    }
+  }
+  &-three {
+    margin-left: 6rem;
+    &__heading {
+      color: red;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    &__text {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: blue;
+    }
+    &__text:hover {
+      color: black;
+    }
+  }
+}
+
+.extra {
+  width: 33.3%;
+}
+.background {
+  position: relative;
+  top: -6rem;
+  background-color: rgba(76, 175, 80, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 120vh;
+
+  &__text-one {
+    margin-top: 15%;
+    margin-left: 10rem;
+
+    &--text {
+      color: white;
+      font-size: 5rem;
+    }
+  }
+  &__border {
+    margin-left: 10rem;
+    border-bottom: 0.5rem solid white;
+    width: 5rem;
+    margin-top: 3rem;
+  }
+  &__text-two {
+    margin-left: 10rem;
+    margin-top: 3rem;
+    &--text {
+      color: white;
+      font-size: 2.4rem;
+    }
+  }
+  &__button {
+    margin-left: 10rem;
+    width: 21rem;
+    height: 5rem;
+    margin-top: 3rem;
+    border: none;
+    color: white;
+    background-color: orange;
+    border-radius: 0.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
 }
