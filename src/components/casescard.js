@@ -1,38 +1,40 @@
 import React from "react";
 import imageone from "../assets/images/cov_me.png.webp";
 import imagetwo from "../assets/images/sg_main_.png.webp";
-
-const CasesCard = () => {
+import Tilt from "react-tilt";
+const CasesCard = (props) => {
   return (
     <div className="casescard">
-      <div className="casescard__left">
+      <Tilt className="casescard__left">
         <div className="casescard__left--image">
           <img
-            src={imageone}
+            src={props.src}
             alt="Blo"
             className="casescard__left--image-img"
           />
         </div>
         <div className="casescard__left--description">
-          <span className="casescard__left--description-span">Melanence</span> -
-          Unique e-learning platform for people of color
+          <span className="casescard__left--description-span">
+            {props.span}
+          </span>{" "}
+          -{props.text}
         </div>
-      </div>
-      <div className="casescard__right">
+      </Tilt>
+      <Tilt className="casescard__right">
         <div className="casescard__right--image">
           <img
-            src={imagetwo}
+            src={props.source2}
             alt="Bl"
             className="casescard__right--image-img"
           />
         </div>
         <div className="casescard__right--description">
           <span className="casescard__right--description-span">
-            App for an EU-based fitness chain
+            {props.span2}
           </span>{" "}
-          - Digital transformation for offline gyms
+          {props.text2}
         </div>
-      </div>
+      </Tilt>
     </div>
   );
 };

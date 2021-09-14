@@ -9636,6 +9636,11 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-animated-3d-card@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-animated-3d-card/-/react-animated-3d-card-1.0.2.tgz#65bcc02f3b9aeafa3f7187fa7d7e4f4d7bf8a20b"
+  integrity sha512-Gx3eo3EEk6/2h8fjZ/kYv5YWiZzEUdUBi9Vw6zvvj2HvuFw1SR3h/Y0Z7T99jS5CHupI8eqWqyQ81oUu4IN4fw==
+
 react-app-polyfill@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-2.0.0.tgz#a0bea50f078b8a082970a9d853dc34b6dcc6a3cf"
@@ -9818,6 +9823,11 @@ react-scripts@4.0.3:
     workbox-webpack-plugin "5.1.4"
   optionalDependencies:
     fsevents "^2.1.3"
+
+react-tilt@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/react-tilt/-/react-tilt-0.1.4.tgz#0ac1f33674a3fff6c617cf411002d7ecdd2ebcb1"
+  integrity sha512-bVeRumg+RIn6QN8S92UmubGqX/BG6/QeQISBeAcrS/70dpo/jVj+sjikIawDl5wTuPdubFH8zH0EMulWIctsnw==
 
 react-toastify@^8.0.2:
   version "8.0.2"

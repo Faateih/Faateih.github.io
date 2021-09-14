@@ -4,15 +4,17 @@ import HeaderText from "./headertext";
 import HeaderPopup from "./header-popup";
 import companyLogo from "../assets/images/loogo.png";
 import { useState } from "react";
+import { useEffect } from "react";
 import { findAllByTestId } from "@testing-library/dom";
 
-const Header = () => {
+const Header = (props) => {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
+
   return (
     <div style={{ position: "fixed", zIndex: 2000, width: "100%" }}>
-      <div className="header">
+      <div className="header" style={props.style}>
         <div className="header__logo">
           <img src={companyLogo} alt="Blogo" className="header__logo--image" />
         </div>
