@@ -18,13 +18,13 @@
         text-transform: uppercase;
         margin-bottom: 2rem;
         font-family: var(--service-fonts);
-        color: #008ecc;
+        color: var(--font-color-blue);
     }
 
     &__outer
     {
         width: 100%;
-        border-bottom: 2px solid #008ecc;
+        border-bottom: 2px solid var(--font-color-blue);
         opacity: 0;
         visibility: hidden;
 
@@ -88,7 +88,7 @@
         height: 4rem;
         width: 90%;
         border-radius: 20px;
-        border: 2px solid  #6FB8FF;
+        border: 2px solid  var(--font-color-blue);
         transition: all .8s;
         background-color: transparent;
 
@@ -121,7 +121,7 @@
     &__heading {
         margin-top: 1.5rem;
         font-size: 1.46rem;
-        color: #0075a7;
+        color: var(--font-color-blue);
     }
 
     &__niches {
@@ -151,7 +151,7 @@
             margin-bottom: 1rem;
             &:hover{
                 cursor: pointer;
-                color: #0075a7;
+                color: var(--font-color-blue);
             }
 
         }
@@ -165,7 +165,7 @@
             
             &:hover{
                 cursor: pointer;
-                color: #0075a7;
+                color: var(--font-color-blue);
             }
         }
 
@@ -177,7 +177,7 @@
 
             &:hover{
                 cursor: pointer;
-                color: #0075a7;
+                color: var(--font-color-blue);
             }
         }
 
@@ -186,31 +186,31 @@
 }
 
 
-.ourservice {
-    position: relative;
-    &__servic {
-        position: absolute;
+// .ourservice {
+//     position: relative;
+//     &__servic {
+//         position: absolute;
 
-    }
+//     }
 
-    &__techn {
-        position: absolute;
+//     &__techn {
+//         position: absolute;
 
-    }
+//     }
 
-    &__nichs {
-        position: absolute;
-    }
-}
+//     &__nichs {
+//         position: absolute;
+//     }
+// }
 
-///////////////////// 
-///////PARTNER
+///////////////////////////// 
+///////////////PARTNER
 .partner {
-    margin-top: 70%;
+    min-height: 40vh;
     margin-bottom: 35rem;
     &__tag {
         font-size: 5rem;
-        color: #008ecc;
+        color: var(--font-color-blue);
         display: flex;
         justify-content: center;
     }
@@ -226,8 +226,8 @@
         width: 20rem;
     }
 }
-//////////////////// 
-//////QUESTIONS 
+////////////////////////////
+////////////QUESTIONS 
 .questions {
     margin: auto;
     width: 85%;
@@ -237,7 +237,7 @@
         display: flex;
         justify-content: center;
         font-size: 3rem;
-        color: #008ecc;
+        color: var(--font-color-blue);
     }
 
     &__qhead-secondary {
@@ -267,6 +267,7 @@
         
         &--bold {
             display: flex;
+            color: var(--font-color-blue);
             justify-content: space-between;
             font-size: 2rem;
             font-weight: 700;
@@ -281,16 +282,180 @@
             padding: 0 2rem;
             font-size: 1.5rem;
             font-weight: 450;
-            color: #a2a2a2;
+            color: black;
         }
     }
 }
 
-@keyframes answer {
-    0% {
-        height: 0%;
+///////////////////////// 
+//////////QUERIES
+
+.queries {
+    min-height: 100vh;
+    background-color: var(--font-color-blue);
+    clip-path: polygon(0% 15%, 0 5%, 33% 2%, 68% 9%, 100% 0, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+
+    &__query {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    100% {
-        height: 100%;
+
+    &__main {
+        margin-top: 9rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fefefe;
     }
+
+    &__sub {
+        margin-top: 1rem;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #fefefe;
+    }
+
+    &__icon {
+        font-size: 4rem;
+        color: #fefefe;
+        margin-top: 1.5rem;
+    }
+}
+
+.mail {
+    display: flex;
+
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 7rem;
+        width: 45%;
+        margin-top: 6rem;
+    }
+
+    &__email {
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: 600;
+        right: 0;
+        height: 5rem;
+        width: 55%;
+        border: none;
+        margin-bottom: 2rem;
+        background-color: transparent;
+        color: #fefefe;
+        border-bottom: 2px solid white;
+
+       &::placeholder {
+           color: white;
+           font-size: 1.5rem;
+           font-weight: 600;
+       }
+    }
+
+    &__email:focus{
+        outline: none;
+    }
+
+    &__center {
+        height: 50rem;
+        border: 1px solid white;
+        margin-top: 3rem;
+    }
+
+    &__check {
+        height: 2rem;
+        width: 2rem; 
+       }
+
+       &__button {
+        margin-left: 15rem;
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-top: 3rem;
+        margin-bottom: 11rem;
+        height: 5rem;
+        width: 30%;
+        border-radius: 30px;
+        border: 2px solid  white;
+        color: white;
+        transition: all .7s;
+        background-color: transparent;
+       }
+
+       &__button:hover {
+        cursor: pointer;
+        background-color: #fefefe;
+        color: var(--font-color-blue);
+       }
+
+       &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 8rem;
+        width: 45%;
+
+    }
+
+       &__flex {
+           display: flex;
+           align-items: center;
+           margin-top: 9rem;
+       }
+
+       &__picture {
+            height: 15rem;
+            width: 15rem;
+            border-radius: 50%;
+            object-fit: fill;
+       }
+
+       &__data {
+        //    margin-top: -2rem;
+           margin-left: 3rem;
+       }
+
+       &__heading {
+           font-size: 2rem;
+           font-weight: 600;
+           color: #fefefe;
+           margin-bottom: .5rem;
+       }
+
+       &__details {
+           font-size: 1.5rem;
+            color: #fefefe;
+            margin-bottom: .5rem;
+       }
+
+       &__phone {
+           display: flex;
+           align-items: center;
+           font-size: 1.5rem;
+           margin-bottom: .5rem;
+           margin-left: -.5rem;
+       }
+
+       &__mobile {
+           width: 2.5rem;
+       }
+
+       &__num {
+           margin-left: 1rem;
+           color: #fefefe;
+       }
+
+       &__emaile {
+           color: #fefefe;
+           font-size: 1.5rem;
+       }
+
+       &__second {
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;
+       }
 }
