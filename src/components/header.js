@@ -11,6 +11,7 @@ const Header = (props) => {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
 
   return (
     <div style={{ position: "fixed", zIndex: 2000, width: "100%" }}>
@@ -19,13 +20,27 @@ const Header = (props) => {
           <img src={companyLogo} alt="Blogo" className="header__logo--image" />
         </div>
         <div className="header__menu">
-          <HeaderText text="About Us" />
+          <HeaderText
+            to={`/aboutus`}
+            text="About Us"
+            onMouseEnter={() => {
+              setIsOpen1(false);
+              setIsOpen2(false);
+              setIsOpen3(false);
+              setIsOpen4(true);
+            }}
+            onMouseLeave={() => {
+              setIsOpen4(false);
+            }}
+          />
+
           <HeaderText
             text="Services"
             onMouseEnter={() => {
               setIsOpen1(true);
               setIsOpen2(false);
               setIsOpen3(false);
+              setIsOpen4(false);
             }}
             onMouseLeave={() => {
               setIsOpen1(false);
@@ -38,6 +53,7 @@ const Header = (props) => {
               setIsOpen2(true);
               setIsOpen1(false);
               setIsOpen3(false);
+              setIsOpen4(false);
             }}
             onMouseLeave={() => {
               setIsOpen2(false);
@@ -50,6 +66,7 @@ const Header = (props) => {
               setIsOpen3(true);
               setIsOpen1(false);
               setIsOpen2(false);
+              setIsOpen4(false);
             }}
             onMouseLeave={() => {
               setIsOpen3(false);
@@ -84,6 +101,22 @@ const Header = (props) => {
             }}
           >
             <HeaderPopup popupname="technologies" />
+          </div>
+        )}
+        {isOpen4 === true && (
+          <div
+            className="header__pop"
+            onMouseEnter={() => {
+              setIsOpen4(true);
+              setIsOpen2(false);
+              setIsOpen3(false);
+              setIsOpen1(false);
+            }}
+            onMouseLeave={() => {
+              setIsOpen4(false);
+            }}
+          >
+            <HeaderPopup popupname="aboutus" />
           </div>
         )}
         {isOpen3 === true && (

@@ -58,6 +58,29 @@ const HeaderPopup = (props) => {
       </div>
     );
   }
+  if (props.popupname === "aboutus") {
+    return (
+      <div className="header-popup-services">
+        <div className="header-popup-services__section-one"></div>
+        <div className="header-popup-services__section-two">
+          <div className="header-popup-services__section-two--text">
+            Web Design and Development
+          </div>
+          <div className="header-popup-services__section-two--text">
+            Mobile Development
+          </div>
+
+          <div className="header-popup-services__section-two--text">
+            {" "}
+            Software Testing
+          </div>
+          <div className="header-popup-services__section-two--text">
+            UX/UI Design
+          </div>
+        </div>
+      </div>
+    );
+  }
   if (props.popupname === "technologies") {
     return (
       <div className="header-popup-technologies">
