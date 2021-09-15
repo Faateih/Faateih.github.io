@@ -6,7 +6,7 @@ import Tech from '../Technolgies/Tech';
 import Niches from '../Niches/Niches';
 
 
-function Headd() {
+function Headd(props) {
     const[isOpen1, setIsOpen1] = useState(true);
     const[isOpen2, setIsOpen2] = useState(false);
     const[isOpen3, setIsOpen3] = useState(false);

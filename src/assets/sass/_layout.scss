@@ -105,6 +105,28 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .card {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1160px) {
+    .card__button {
+        font-size: 1.5rem;
+        height: 3rem;
+        width: 90%;
+    }
+}
+
+@media(max-width:1000px) {
+    .card__button{
+        width: 90%;
+    }
+}
+
 .cards {
     width: 33.33%;
     margin-top: 7rem;
@@ -183,6 +205,17 @@
 
     }
 
+}
+
+@media(max-width: 1000px) {
+    .cards{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cards__heading{
+        font-size: 2.1rem;
+    }
 }
 
 
@@ -319,6 +352,12 @@
         font-size: 4rem;
         color: #fefefe;
         margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .partner {
+        margin-top: 10rem;
     }
 }
 
