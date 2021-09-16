@@ -4,22 +4,22 @@ import Logo from "../assets/images/loogo.png";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer__heading">
-        <img src={Logo} alt="cbsols logo" className="footer__heading--logo" />
+    <div className="footer1">
+      <div className="footer1__heading">
+        <img src={Logo} alt="cbsols logo" className="footer1__heading--logo" />
       </div>
 
-      <div className="footer__main">
-        <div className="footer__main--one">
+      <div className="footer1__main">
+        <div className="footer1__main--one">
           <FooterContent name="footerone" />
         </div>
-        <div className="footer__main--two">
+        <div className="footer1__main--two">
           <FooterContent name="footertwo" />
         </div>
-        <div className="footer__main--three">
+        <div className="footer1__main--three">
           <FooterContent name="footertwo" />
         </div>
-        <div className="footer__main--four">
+        <div className="footer1__main--four">
           <FooterContent name="footerthree" />
         </div>
       </div>

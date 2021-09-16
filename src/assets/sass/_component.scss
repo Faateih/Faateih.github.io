@@ -1,0 +1,60 @@
+.main {
+  width: 85%;
+  margin: auto;
+  min-height: 100vh;
+  margin-bottom: 10rem;
+}
+.main-nichess {
+  width: 85%;
+  margin: auto;
+  min-height: 100vh;
+}
+.main-techh {
+  width: 85%;
+  margin: auto;
+  min-height: 100vh;
+}
+.service-header {
+  display: flex;
+  position: relative;
+  width: 85%;
+  margin: auto;
+}
+.center {
+  display: flex;
+
+  &__left {
+    width: 33.33%;
+  }
+
+  &__right {
+    display: flex;
+    width: 67.77%;
+    flex-wrap: wrap;
+  }
+
+  //    &__below {
+  //        display: flex;
+  //        width: 67.77%;
+  //        margin-left: 33%;
+  //     }
+}
+.center-head {
+  position: relative;
+
+  &__cntr {
+    position: absolute;
+    top: 5rem;
+  }
+  &__tech {
+    position: absolute;
+    top: 6rem;
+  }
+}
+
+///////////////////
+//////PARTNER
+// .partners {
+//     display: flex;
+//     flex-direction: column;
+// }

@@ -1,4 +1,4 @@
-.footer {
+.footer1 {
   background-color: blue;
   width: 100%;
   display: flex;
@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: flex-start;
 
-  margin-top: 10rem;
   &__heading {
     &--logo {
       width: 6rem;
