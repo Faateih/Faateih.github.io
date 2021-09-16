@@ -1,5 +1,6 @@
 import React from "react";
+import AboutUsMain from "../../components/aboutusmain";
 const AboutUs = () => {
-  return <div>hello world</div>;
+  return <AboutUsMain />;
 };
 export default AboutUs;

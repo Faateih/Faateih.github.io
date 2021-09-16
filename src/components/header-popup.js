@@ -64,18 +64,15 @@ const HeaderPopup = (props) => {
         <div className="header-popup-services__section-one"></div>
         <div className="header-popup-services__section-two">
           <div className="header-popup-services__section-two--text">
-            Web Design and Development
+            Our Company
           </div>
           <div className="header-popup-services__section-two--text">
-            Mobile Development
+            Our Team
           </div>
 
           <div className="header-popup-services__section-two--text">
             {" "}
-            Software Testing
-          </div>
-          <div className="header-popup-services__section-two--text">
-            UX/UI Design
+            Careers
           </div>
         </div>
       </div>
