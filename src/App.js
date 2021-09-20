@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./App.scss";
 
 // packages
@@ -16,9 +16,8 @@ import db from "./firebase";
 
 // Files
 import Home from "./Pages/Home/Home";
-// import Services from './Pages/Services/Services';
-// import Tech from './Pages/Technolgies/Tech';
-// import Niches from './Pages/Niches/Niches';
+import NewPage from "./Pages/Home/Newpage";
+import AboutUs from "./Pages/Home/aboutus";
 
 function App() {
   return (
@@ -30,12 +29,12 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            {/* <Route exact path='/technology'>
-            <Tech />
+            <Route exact path="/newpage">
+              <NewPage />
             </Route>
-            <Route exact path='/Niches'>
-            <Niches />
-            </Route> */}
+            <Route exact path="/aboutus">
+              <AboutUs />
+            </Route>
           </Switch>
         </div>
       </div>

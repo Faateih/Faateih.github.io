@@ -1,15 +1,15 @@
-import React from 'react';
-
+import React from "react";
+import { useState } from "react";
 function Header(props) {
-    return (
-        <div className='header'>
-        <ul className='header__list'>
-            <li className='header__item'
-            onClick={props.click}>{props.header}</li>
-            <div className='header__outer'></div>
-        </ul>
-     </div>
-    )
+  return (
+    <div className="header1">
+      <ul className="header1__list">
+        <li className="header1__item" onClick={props.click}>
+          {props.header}
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 export default Header;
