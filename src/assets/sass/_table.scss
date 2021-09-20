@@ -5,20 +5,20 @@
 
   width: fit-content;
   &:not(:last-child) {
-    border-bottom: 0.1rem solid black;
+    border-bottom: 0.1rem solid #e6e6fa;
   }
 
   &__item {
-    width: 9vw;
+    width: 16vw;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &:not(:last-child) {
-      border-right: 0.1rem solid black;
+      border-right: 0.1rem solid #e6e6fa;
     }
     &--image {
-      width: 8vw;
+      width: 10vw;
     }
   }
 }
@@ -29,7 +29,9 @@
   align-items: center;
   &__heading {
     &--text {
-      font-size: 5rem;
+      font-size: 7rem;
+      font-weight: normal;
+      font-family: "Playfair Display", serif;
     }
   }
   &__content {
