@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { AiOutlineRight } from "react-icons/ai";
+import { HashLink as Link } from "react-router-hash-link";
 
 const HeaderPopup = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,12 +64,18 @@ const HeaderPopup = (props) => {
       <div className="header-popup-services">
         <div className="header-popup-services__section-one"></div>
         <div className="header-popup-services__section-two">
-          <div className="header-popup-services__section-two--text">
+          <Link
+            to="aboutus#aboutsectiontwo"
+            className="header-popup-services__section-two--text"
+          >
             Our Company
-          </div>
-          <div className="header-popup-services__section-two--text">
+          </Link>
+          <Link
+            to="aboutus#aboutsectionthree"
+            className="header-popup-services__section-two--text"
+          >
             Our Team
-          </div>
+          </Link>
 
           <div className="header-popup-services__section-two--text">
             {" "}

@@ -11,7 +11,7 @@ const AboutUsMain = () => {
   const [isShow, setIsShow] = useState(false);
   return (
     <div className="aboutus">
-      <div className="aboutus__sectionone">
+      <div className="aboutus__sectionone" id="aboutsectionone">
         <img
           src={Picture}
           alt="backgroundimage"
@@ -19,7 +19,7 @@ const AboutUsMain = () => {
         />
         <div className="aboutus__sectionone--text">We are CbSol</div>
       </div>
-      <div className="aboutus__sectiontwo">
+      <div className="aboutus__sectiontwo" id="aboutsectiontwo">
         <div className="aboutus__sectiontwo--partone">
           <h1 className="aboutus__sectiontwo--partone-heading">About us</h1>
           <div className="aboutus__sectiontwo--partone-logo"></div>
@@ -33,7 +33,7 @@ const AboutUsMain = () => {
           remaining essentially unchanged.
         </div>
       </div>
-      <div className="aboutus__sectionthree">
+      <div className="aboutus__sectionthree" id="aboutsectionthree">
         <div className="aboutus__sectionthree--partone">
           <div className="aboutus__sectionthree--partone-text">
             Meet the team

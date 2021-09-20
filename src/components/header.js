@@ -48,6 +48,7 @@ const Header = (props) => {
           />
 
           <HeaderText
+            to={`/technologies`}
             text="Technology"
             onMouseEnter={() => {
               setIsOpen2(true);
@@ -59,8 +60,9 @@ const Header = (props) => {
               setIsOpen2(false);
             }}
           />
-          <HeaderText text="Cases" />
+          <HeaderText text="Cases" to={`/newpage`} />
           <HeaderText
+            to={`/blogs`}
             text="Blog"
             onMouseEnter={() => {
               setIsOpen3(true);

@@ -18,6 +18,8 @@ import db from "./firebase";
 import Home from "./Pages/Home/Home";
 import NewPage from "./Pages/Home/Newpage";
 import AboutUs from "./Pages/Home/aboutus";
+import Blogs from "./Pages/Home/blogs";
+import Technologies from "./Pages/Home/technologies";
 
 function App() {
   return (
@@ -34,6 +36,12 @@ function App() {
             </Route>
             <Route exact path="/aboutus">
               <AboutUs />
+            </Route>
+            <Route exact path="/blogs">
+              <Blogs />
+            </Route>
+            <Route exact path="/Technologies">
+              <Technologies />
             </Route>
           </Switch>
         </div>
