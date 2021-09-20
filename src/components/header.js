@@ -35,6 +35,7 @@ const Header = (props) => {
           />
 
           <HeaderText
+            to={`/services1`}
             text="Services"
             onMouseEnter={() => {
               setIsOpen1(true);

@@ -21,7 +21,7 @@ const Home = () => {
 
   const listenScrollEvent = (event) => {
     if (window.scrollY < 599) {
-      return setHeader("rgba(76, 175, 80, 0.3)");
+      return setHeader("rgba(9, 13, 48, 0.3)");
     }
     if (window.scrollY > 600 && window.scrollY < 1600) {
       return setHeader("blue");

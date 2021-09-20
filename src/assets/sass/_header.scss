@@ -3,8 +3,8 @@
   justify-content: space-around;
   position: relative;
   align-items: center;
-  height: 6rem;
-  background: rgba(76, 175, 80, 0.3);
+  height: 8rem;
+  background: rgba(#434eea, 0.8);
   z-index: 1000;
   &__logo {
     &--image {
@@ -20,7 +20,7 @@
   &__pop {
     position: absolute;
     background: white;
-    top: 6rem;
+    top: 8rem;
     width: 100%;
     padding: 3rem 0rem;
   }
@@ -71,11 +71,12 @@
   justify-content: center;
 
   width: 12rem;
-  height: 3rem;
-  border: 0.1rem solid #008ecc;
+  height: 3.8rem;
+  //border: 0.1rem solid #008ecc;
   border-radius: 2rem;
-  background-color: #008ecc;
-  color: white;
+  background-color: white;
+  font-weight: 800;
+  color: #434eea;
   cursor: pointer;
 
   &:hover {
@@ -283,7 +284,7 @@
 .background {
   position: relative;
   top: -6rem;
-  background-color: rgba(76, 175, 80, 0.3);
+  background-color: rgba(#434eea, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -295,7 +296,8 @@
 
     &--text {
       color: white;
-      font-size: 5rem;
+      font-size: 7rem;
+      font-weight: normal;
     }
   }
   &__border {
@@ -310,16 +312,17 @@
     &--text {
       color: white;
       font-size: 2.4rem;
+      font-weight: normal;
     }
   }
   &__button {
     margin-left: 10rem;
-    width: 21rem;
-    height: 5rem;
+    width: 24rem;
+    height: 6.4rem;
     margin-top: 3rem;
     border: none;
     color: white;
-    background-color: orange;
+    background-color: #f55e23;
     border-radius: 0.5rem;
     font-size: 2.5rem;
     cursor: pointer;

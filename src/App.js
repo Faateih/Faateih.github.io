@@ -20,6 +20,7 @@ import NewPage from "./Pages/Home/Newpage";
 import AboutUs from "./Pages/Home/aboutus";
 import Blogs from "./Pages/Home/blogs";
 import Technologies from "./Pages/Home/technologies";
+import Services1 from "./Pages/Home/services1";
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
             </Route>
             <Route exact path="/Technologies">
               <Technologies />
+            </Route>
+            <Route exact path="/services1">
+              <Services1 />
             </Route>
           </Switch>
         </div>
