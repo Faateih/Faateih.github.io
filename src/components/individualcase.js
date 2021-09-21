@@ -25,7 +25,9 @@ const Individualcase = (props) => {
           <div className="individualcase__left--technologies-item">Web</div>
         </div>
         <div className="individualcase__left--description">{props.text}</div>
-        <button className="individualcase__left--button">View Case</button>
+        <button className="individualcase__left--button" style={props.styless}>
+          View Case
+        </button>
       </div>
       <div className="individualcase__right">
         <img

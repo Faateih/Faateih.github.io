@@ -1,14 +1,16 @@
 .technologiesmain {
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
+  padding-top: 15rem;
   &__one {
     display: flex;
     justify-content: center;
     &--text {
       font-size: 3.5rem;
       font-weight: 900;
-      color: cadetblue;
+      color: #17217b;
+      font-family: 'Playfair Design', serif;
+      font-size: 7rem;
     }
   }
   &__two {
@@ -18,44 +20,45 @@
 .singletech {
   display: flex;
   margin-top: 10rem;
-  &:last-child {
-    margin-bottom: 5rem;
-  }
+  margin-bottom: 30rem;
+
+
 
   &__left {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5rem;
     &--image {
-      max-width: 80%;
+      max-width: 90%;
       max-height: 60rem;
       transition: all 0.5s;
+      box-shadow: 49px 46px 15px -5px rgba(0,0,0,0.67);
 
-      box-shadow: 24px 24px 5px 0px rgba(106, 181, 225, 0.75);
-      -webkit-box-shadow: 24px 24px 5px 0px rgba(106, 181, 225, 0.75);
-      -moz-box-shadow: 24px 24px 5px 0px rgba(106, 181, 225, 0.75);
     }
   }
   &__right {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     &--inner {
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       width: 70%;
       &-heading {
-        font-size: 3.3rem;
-        font-weight: normal;
-        color: #18227b;
+        font-size: 4rem;
+        font-weight: 600;
+        color: #17217b;
+        margin-bottom: 3rem;
+        font-family: 'Playfair Design', serif;
       }
       &-text {
         font-size: 2rem;
-        color: #505860;
+        color: black;
         transition: all 0.5s;
 
         &:hover {

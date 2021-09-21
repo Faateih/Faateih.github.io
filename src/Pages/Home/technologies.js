@@ -1,7 +1,13 @@
 import React from "react";
+import Header from "../../components/header";
 import TechnologiesMain from "../../components/technologiesmain";
 
 const Technologies = () => {
-  return <TechnologiesMain text="technologies we work on" />;
+  return (
+    <>
+    <Header />
+  <TechnologiesMain text="Technologies We Are Working On" />
+  </>
+  )
 };
 export default Technologies;

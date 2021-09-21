@@ -2,7 +2,7 @@ import React from 'react';
 
 function Queries(props) {
     return (
-        <div className='queries'>
+        <form className='queries'>
             <div className='queries__query'>
                 <div className='queries__main'>{props.queryhead}</div>
                 <div className='queries__sub'>{props.querysub}</div>
@@ -11,7 +11,7 @@ function Queries(props) {
             <div className='mail'>
                 <div className='mail__left'>
                     <input type='text' placeholder='Your name' className='mail__email'></input>
-                    <input type='text' placeholder='E-mail address' className='mail__email'></input>
+                    <input type='email' placeholder='E-mail address' className='mail__email'></input>
                     <input type='text' placeholder='Phone number' className='mail__email'></input>
                     <input type='text' placeholder='Your message or query' className='mail__email'></input>
                     <button className='mail__button'>{props.button}<span className='card__arrow'> &rarr;</span></button>
@@ -43,7 +43,7 @@ function Queries(props) {
                     </div>
                     </div>
                 </div>
-            </div>
+            </form>
     )
 }
 
