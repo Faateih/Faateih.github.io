@@ -10,9 +10,9 @@ import { FiSend } from "react-icons/fi";
 const TechnologiesMain = (props) => {
   return (
     <div className="technologiesmain">
-      <div className="technologiesmain__one">
+      {/* <div className="technologiesmain__one">
         <h1 className="technologiesmain__one--text">{props.text}</h1>
-      </div>
+      </div> */}
       <div className="technologiesmain__two">
         <SingleTech
           id="react"

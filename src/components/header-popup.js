@@ -16,14 +16,14 @@ const HeaderPopup = (props) => {
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
-            Web Design and Development
+            Web Application
           </Link>
           <Link
             to="services1#mobiledevelopment"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(true)}
           >
-            Mobile Development
+            Mobile Application
           </Link>
           {isOpen === true && (
             <div className="header-popup-services__section-three">
@@ -67,6 +67,20 @@ const HeaderPopup = (props) => {
             onMouseEnter={() => setIsOpen(false)}
           >
             UX/UI Design
+          </Link>
+          <Link
+            to="services1#uiuxdesign"
+            className="header-popup-services__section-two--text"
+            onMouseEnter={() => setIsOpen(false)}
+          >
+            Data Security
+          </Link>
+          <Link
+            to="services1#uiuxdesign"
+            className="header-popup-services__section-two--text"
+            onMouseEnter={() => setIsOpen(false)}
+          >
+            Project Management
           </Link>
         </div>
       </div>

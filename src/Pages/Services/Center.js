@@ -18,7 +18,7 @@ const Center = () => {
         <Cards
           icons={<VscDeviceMobile />}
           title="Mobile Application"
-          title2="We like to make life easier for ourselves and for others, so we will create an application that will not only stand out from the crowd and give real profits, but will also be useful."
+          title2="We like to make life easier for ourselves and for others, so we application that will not only stand out from the crowd and give real profits, but will also be useful."
           button="Click Here"
           to={`services1#mobileapplication`}
         />
@@ -31,14 +31,14 @@ const Center = () => {
         />
         <Cards
           icons={<MdColorLens />}
-          title="Product Design"
+          title="UI/UX Design"
           title2="We will optimize development costs and assess your capabilities thanks to our practical knowledge and experience in the IT industry."
           button="Click Here"
           to={`services1#productdesign`}
         />
         <Cards
           icons={<RiSettings4Line />}
-          title="QA & Testing"
+          title="Software Testing"
           title2="Our experience in reducing testing costs and reducing the time to market of a ready-made application that has the highest level of code."
           button="Click Here"
           to={`services1#qaandtesting`}
@@ -52,7 +52,7 @@ const Center = () => {
         />
         <Cards
           icons={<AiOutlineFundProjectionScreen />}
-          title="Discovery Workshop"
+          title="Project Management"
           title2="Discovery Product Workshops are a brilliant place to test your idea for an application and solve IT problems in your business."
           button="Click Here"
           to={`services1#discoveryworkshop`}

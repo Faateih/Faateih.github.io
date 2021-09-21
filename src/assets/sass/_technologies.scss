@@ -1,7 +1,7 @@
 .technologiesmain {
   display: flex;
   flex-direction: column;
-  padding-top: 15rem;
+  margin-top: 5rem;
   &__one {
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@
       font-size: 3.5rem;
       font-weight: 900;
       color: #17217b;
-      font-family: 'Playfair Design', serif;
+      font-family: "Playfair Design", serif;
       font-size: 7rem;
     }
   }
@@ -22,8 +22,6 @@
   margin-top: 10rem;
   margin-bottom: 30rem;
 
-
-
   &__left {
     width: 50%;
     display: flex;
@@ -34,8 +32,7 @@
       max-width: 90%;
       max-height: 60rem;
       transition: all 0.5s;
-      box-shadow: 49px 46px 15px -5px rgba(0,0,0,0.67);
-
+      box-shadow: 49px 46px 15px -5px rgba(0, 0, 0, 0.67);
     }
   }
   &__right {
@@ -54,7 +51,7 @@
         font-weight: 600;
         color: #17217b;
         margin-bottom: 3rem;
-        font-family: 'Playfair Design', serif;
+        font-family: "Playfair Design", serif;
       }
       &-text {
         font-size: 2rem;

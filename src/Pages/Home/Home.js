@@ -22,21 +22,21 @@ const Home = () => {
 
   const listenScrollEvent = (event) => {
     if (window.scrollY < 599) {
-      setHeader("rgba(9, 13, 48, 0.3)");
+      setHeader("rgba(9, 13, 48, 0)");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 600 && window.scrollY < 1600) {
+    if (window.scrollY > 600 && window.scrollY < 2000) {
       setHeader("blue");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 1700 && window.scrollY < 2000) {
+    if (window.scrollY > 2000 && window.scrollY < 2500) {
       setHeader("#007cba");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 2000 && window.scrollY < 2500) {
+    if (window.scrollY > 2500 && window.scrollY < 3000) {
       setHeader("#414756");
       setBorder("none");
       return;
@@ -84,7 +84,6 @@ const Home = () => {
         mailpicf={fb}
         mailnamef="Fraz Khan"
         maildetailf="Project Manager, CbSol"
-        
       />
       <Footer />
     </div>
