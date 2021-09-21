@@ -11,50 +11,63 @@ const HeaderPopup = (props) => {
       <div className="header-popup-services">
         <div className="header-popup-services__section-one"></div>
         <div className="header-popup-services__section-two">
-          <div
+          <Link
+            to="services1#webdesignanddevelopment"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             Web Design and Development
-          </div>
-          <div
+          </Link>
+          <Link
+            to="services1#mobiledevelopment"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(true)}
           >
             Mobile Development
-          </div>
+          </Link>
           {isOpen === true && (
             <div className="header-popup-services__section-three">
-              <div className="header-popup-services__section-three--text">
+              <Link
+                to="services1#ios"
+                className="header-popup-services__section-three--text"
+              >
                 iOS
                 <div className="header-popup-services__section-three--text-span">
                   <AiOutlineRight />
                 </div>
-              </div>
+              </Link>
 
-              <div className="header-popup-services__section-three--text">
+              <Link
+                to="services1#android"
+                className="header-popup-services__section-three--text"
+              >
                 Android
-              </div>
+              </Link>
 
-              <div className="header-popup-services__section-three--text">
+              <Link
+                to="services1#crossplatform"
+                className="header-popup-services__section-three--text"
+              >
                 Cross-platform
-              </div>
+              </Link>
             </div>
           )}
 
-          <div
+          <Link
+            to="services1#softwaretesting"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             {" "}
             Software Testing
-          </div>
-          <div
+          </Link>
+          <Link
+            to="services1#uiuxdesign"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             UX/UI Design
-          </div>
+          </Link>
         </div>
       </div>
     );
@@ -91,41 +104,92 @@ const HeaderPopup = (props) => {
         <div className="header-popup-technologies-one"></div>
         <div className="header-popup-technologies-two">
           <div className="extra">
-            <div className="header-popup-technologies-two__text">React</div>
+            <Link
+              to="Technologies#react"
+              className="header-popup-technologies-two__text"
+            >
+              React
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">
+            <Link
+              to="Technologies#reactnative"
+              className="header-popup-technologies-two__text"
+            >
               React Native
-            </div>
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">Flutter</div>
+            <Link
+              to="Technologies#flutter"
+              className="header-popup-technologies-two__text"
+            >
+              Flutter
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">Python</div>
+            <Link
+              to="Technologies#python"
+              className="header-popup-technologies-two__text"
+            >
+              Python
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">Node Js</div>
+            <Link
+              to="Technologies#nodejs"
+              className="header-popup-technologies-two__text"
+            >
+              Node Js
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">
+            <Link
+              to="Technologies#typescript"
+              className="header-popup-technologies-two__text"
+            >
               Type Script
-            </div>
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">AWS</div>
+            <Link
+              to="Technologies#aws"
+              className="header-popup-technologies-two__text"
+            >
+              AWS
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">SASS</div>
+            <Link
+              to="Technologies#sass"
+              className="header-popup-technologies-two__text"
+            >
+              SASS
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">Hewlet</div>
+            <Link
+              to="Technologies#hewlet"
+              className="header-popup-technologies-two__text"
+            >
+              Hewlet
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">Kotlin</div>
+            <Link
+              to="Technologies#kotlin"
+              className="header-popup-technologies-two__text"
+            >
+              Kotlin
+            </Link>
           </div>
           <div className="extra">
-            <div className="header-popup-technologies-two__text">Java</div>
+            <Link
+              to="Technologies#java"
+              className="header-popup-technologies-two__text"
+            >
+              Java
+            </Link>
           </div>
         </div>
       </div>

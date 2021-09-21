@@ -84,6 +84,7 @@ const Home = () => {
         mailpicf={fb}
         mailnamef="Fraz Khan"
         maildetailf="Project Manager, CbSol"
+        
       />
       <Footer />
     </div>

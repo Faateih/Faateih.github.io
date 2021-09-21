@@ -204,6 +204,7 @@
     width: 45%;
 
     &__text {
+      text-decoration: none;
       width: fit-content;
       font-size: 1.5rem;
       font-weight: 500;
@@ -329,6 +330,14 @@
     font-size: 2.5rem;
     cursor: pointer;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--link {
+      text-decoration: none;
+      color: white;
+    }
+
     &:hover {
       transform: translateY(-0.5rem);
     }

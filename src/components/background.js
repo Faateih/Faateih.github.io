@@ -1,6 +1,6 @@
 import React from "react";
 import Video from "./backgroundvideo";
-
+import { HashLink as Link } from "react-router-hash-link";
 const Background = () => {
   return (
     <div className="background">
@@ -13,7 +13,11 @@ const Background = () => {
           Risk-free mobile and web development
         </h3>
       </div>
-      <button className="background__button">Lets Talk</button>
+      <div className="background__button">
+        <Link to="#contactus" className="background__button--link">
+          Lets Talk
+        </Link>
+      </div>
       <Video />
     </div>
   );
