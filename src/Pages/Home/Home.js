@@ -17,32 +17,32 @@ import mobil from "../../assets/phone.svg";
 import fb from "../../assets/frazbhai.jpg";
 import { FiSend } from "react-icons/fi";
 const Home = () => {
-  const [header, setHeader] = useState("header");
+  const [header, setHeader] = useState("transparent");
   const [border, setBorder] = useState("border");
 
   const listenScrollEvent = (event) => {
     if (window.scrollY < 599) {
-      setHeader("rgba(9, 13, 48, 0.3)");
+      setHeader("rgba(9, 13, 48, 0)");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 600 && window.scrollY < 1600) {
-      setHeader("blue");
-      setBorder("none");
-      return;
-    }
-    if (window.scrollY > 1700 && window.scrollY < 2000) {
-      setHeader("#007cba");
+    if (window.scrollY > 600 && window.scrollY < 2000) {
+      setHeader("white");
       setBorder("none");
       return;
     }
     if (window.scrollY > 2000 && window.scrollY < 2500) {
+      setHeader("#007cba");
+      setBorder("none");
+      return;
+    }
+    if (window.scrollY > 2500 && window.scrollY < 3000) {
       setHeader("#414756");
       setBorder("none");
       return;
     }
     if (window.scrollY > 2500 && window.scrollY < 3200) {
-      setHeader("#006ba1");
+      setHeader("green");
       setBorder("none");
       return;
     }

@@ -30,7 +30,7 @@ function Careers(props) {
                 </div>
                 <div className='middle__center'></div>
                 <div className='middle__right'>
-                <div className='middle__vac'> We are Hiring! </div>
+                <div className='middle__vac'> JOIN OUR TEAM </div>
                     <div className='middle__data'>
                         <div className='middle__icons'><BiUser/></div>
                         <div className='middle__vacancy'>Web Development</div>

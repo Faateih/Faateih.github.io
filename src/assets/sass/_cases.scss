@@ -67,7 +67,7 @@
       display: flex;
       margin-top: 3rem;
       &-item {
-        padding: .5rem 3rem;
+        padding: 0.5rem 3rem;
         height: 4.5rem;
         border: 0.1rem solid white;
         border-radius: 50px;
@@ -91,14 +91,14 @@
       border: 0.2rem solid white;
       border-radius: 0.5rem;
       margin-top: 5rem;
-      background-color: green;
+      background-color: transparent;
       font-size: 2rem;
       color: white;
       cursor: pointer;
-      transition: all .4s;
+      transition: all 0.4s;
 
       &:hover {
-        transform: translateY(1rem);
+        transform: translateY(-0.5rem);
       }
     }
   }
@@ -111,10 +111,11 @@
   }
 }
 .caseonmain {
+  background-color: #007cba;
 }
 
 .welcomecase {
-  background-color: yellowgreen;
+  background-image: url(../images/blue.jpg);
   position: relative;
   padding: 0rem 6rem;
   top: 8rem;

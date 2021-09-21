@@ -11,7 +11,7 @@ const HeaderText = (props) => {
     if (window.scrollY > 3200) {
       return setText("black");
     } else {
-      return setText("white");
+      return setText("black");
     }
   };
 
