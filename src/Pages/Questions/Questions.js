@@ -1,6 +1,7 @@
 import React from 'react';
-import plus from '../../assets/plus-lg.svg';
 import cancel from '../../assets/x-lg.svg';
+import {BiPlus} from 'react-icons/bi';
+import {VscClose} from 'react-icons/vsc';
 import {useState} from 'react';
 
 function Questions() {
@@ -20,8 +21,8 @@ function Questions() {
                     setAnsOpen(!ansOpen);
                 }}>
                 <div className='questions__ques--bold'>What services and products do you offer?
-                {ansOpen===false &&<span className='questions__ques--plus'><img src={plus} alt='Plus' /></span> }
-                {ansOpen===true &&<span className='questions__ques--plus'><img src={cancel} alt='Cancel' /></span> }
+                {ansOpen===false &&<span className='questions__ques--plus'><BiPlus/></span> }
+                {ansOpen===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
             <div className='questions__border-down'></div>
@@ -35,8 +36,8 @@ function Questions() {
                     setAnsOpen3(!ansOpen3);
                 }}>
                 <div className='questions__ques--bold'>What kind of experience do you have in IT projects?
-                {ansOpen3===false &&<span className='questions__ques--plus'><img src={plus} alt='Plus' /></span> }
-                {ansOpen3===true &&<span className='questions__ques--plus'><img src={cancel} alt='Cancel' /></span> }
+                {ansOpen3===false &&<span className='questions__ques--plus'><BiPlus/></span> }
+                {ansOpen3===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
             <div className='questions__border-down'></div>
@@ -50,12 +51,12 @@ function Questions() {
                     setAnsOpen4(!ansOpen4);
                 }}>
                 <div className='questions__ques--bold'>What services and products do you offer?
-                {ansOpen4===false &&<span className='questions__ques--plus'><img src={plus} alt='Plus' /></span> }
-                {ansOpen4===true &&<span className='questions__ques--plus'><img src={cancel} alt='Cancel' /></span> }
+                {ansOpen4===false &&<span className='questions__ques--plus'><BiPlus/></span> }
+                {ansOpen4===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
             <div className='questions__border-down'></div>
-            {ansOpen4===true &&
+            {ansOpen4===true  && 
             <>
             <div className='questions__ques--ans'>We advise, answer questions, find solutions and create</div>
             <div className='questions__border-down'></div>
@@ -65,8 +66,8 @@ function Questions() {
                     setAnsOpen5(!ansOpen5);
                 }}>
                 <div className='questions__ques--bold'>What services and products do you offer?
-                {ansOpen5===false &&<span className='questions__ques--plus'><img src={plus} alt='Plus' /></span> }
-                {ansOpen5===true &&<span className='questions__ques--plus'><img src={cancel} alt='Cancel' /></span> }
+                {ansOpen5===false &&<span className='questions__ques--plus'><BiPlus/></span> }
+                {ansOpen5===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
             <div className='questions__border-down'></div>
@@ -80,8 +81,8 @@ function Questions() {
                     setAnsOpen6(!ansOpen6);
                 }}>
                 <div className='questions__ques--bold'>What services and products do you offer?
-                {ansOpen6===false &&<span className='questions__ques--plus'><img src={plus} alt='Plus' /></span> }
-                {ansOpen6===true &&<span className='questions__ques--plus'><img src={cancel} alt='Cancel' /></span> }
+                {ansOpen6===false &&<span className='questions__ques--plus'><BiPlus/></span> }
+                {ansOpen6===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
             <div className='questions__border-down'></div>
@@ -95,8 +96,8 @@ function Questions() {
                     setAnsOpen7(!ansOpen7);
                 }}>
                 <div className='questions__ques--bold'>What services and products do you offer?
-                {ansOpen7===false &&<span className='questions__ques--plus'><img src={plus} alt='Plus' /></span> }
-                {ansOpen7===true &&<span className='questions__ques--plus'><img src={cancel} alt='Cancel' /></span> }
+                {ansOpen7===false &&<span className='questions__ques--plus'><BiPlus/></span> }
+                {ansOpen7===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
             <div className='questions__border-down'></div>
@@ -110,8 +111,8 @@ function Questions() {
                     setAnsOpen8(!ansOpen8);
                 }}>
                 <div className='questions__ques--bold'>What services and products do you offer?
-                {ansOpen8===false &&<span className='questions__ques--plus'><img src={plus} alt='Plus' /></span> }
-                {ansOpen8===true &&<span className='questions__ques--plus'><img src={cancel} alt='Cancel' /></span> }
+                {ansOpen8===false &&<span className='questions__ques--plus'><BiPlus/></span> }
+                {ansOpen8===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
             <div className='questions__border-down'></div>
