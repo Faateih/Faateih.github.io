@@ -17,19 +17,6 @@ const TechnologiesMain = (props) => {
         <SingleTech />
         <SingleTech />
         <SingleTech />
-        <Queries
-          iconmail={<FiSend />}
-          queryhead="Have a project in mind? Need help with an ongoing one?"
-          querysub="We'll be happy to talk!"
-          button="Send Message"
-          mailpic={mail}
-          mailname="Umair Ali"
-          maildetail="Cheif Executive Officer, CbSol"
-          mobile={mobil}
-          mailpicf={fb}
-          mailnamef="Fraz Khan"
-          maildetailf="Project Manager, CbSol"
-        />
       </div>
     </div>
   );

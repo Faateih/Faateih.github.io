@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 import TechnologiesMain from "../../components/technologiesmain";
 
@@ -7,6 +8,7 @@ const Services1 = () => {
     <div>
     <Header />
   <TechnologiesMain text="Services" />
+  <Footer />
   </div>
   )
 };

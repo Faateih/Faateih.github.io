@@ -35,7 +35,11 @@
       max-height: 60rem;
       transition: all 0.5s;
       box-shadow: 49px 46px 15px -5px rgba(0,0,0,0.67);
+      transition: all .3s;
 
+      &:hover {
+        transform: translateY(-1rem);
+      }
     }
   }
   &__right {

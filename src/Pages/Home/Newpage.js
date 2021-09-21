@@ -6,6 +6,7 @@ import imageone from "../../assets/images/cov_me.png.webp";
 import imagetwo from "../../assets/images/sg_main_.png.webp";
 import imagethree from "../../assets/images/rg_home.png.webp";
 import imagefour from "../../assets/images/probuddy_img_1.png.webp";
+import Footer from '../../components/footer'
 
 const NewPage = () => {
   return (
@@ -44,6 +45,7 @@ const NewPage = () => {
         span2="App for an EU-based fitness chain"
         text2="Digital transformation for offline gyms"
       />
+      <Footer />
     </>
   );
 };
