@@ -4,47 +4,59 @@ import companyLogo from "../assets/images/kg.svg";
 import image from "../assets/images/img-2.png";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useRef } from "react";
 
-const CaseOnMain = () => {
-  const [header, setHeader] = useState("header");
+const CaseOnMain = (props) => {
+  // const [header, setHeader] = useState("header");
+  // const myRef = useRef(null);
+  // const myRef1 = useRef(null);
+  // const myRef2 = useRef(null);
 
-  const listenScrollEvent = (event) => {
-    if (window.scrollY > 1850 && window.scrollY < 2350) {
-      return setHeader("#007cba");
-    }
-    if (window.scrollY > 2350 && window.scrollY < 2850) {
-      return setHeader("#414756");
-    }
-    if (window.scrollY > 2850 && window.scrollY < 3100) {
-      return setHeader("green");
-    }
-  };
+  // // let offsetTop = myRef?.current?.node?.getBoundingClientRect();
 
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+  // const listenScrollEvent = (event) => {
+  //   let offsetTop = myRef?.current?.offsetTop;
+  //   let offsetTop1 = myRef1?.current?.offsetTop;
+  //   let offsetTop2 = myRef2?.current?.offsetTop;
+  //   console.log(offsetTop);
+  //   console.log(offsetTop1);
+  //   console.log(offsetTop2);
+  //   if (window.scrollY > offsetTop && window.scrollY < offsetTop1) {
+  //     return setHeader("blue");
+  //   }
+  //   if (window.scrollY > offsetTop1 && window.scrollY < offsetTop2) {
+  //     return setHeader("brown");
+  //   }
+  //   if (window.scrollY > offsetTop2) {
+  //     return setHeader("green");
+  //   }
+  // };
 
-    return () => window.removeEventListener("scroll", listenScrollEvent);
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent);
+
+  //   return () => window.removeEventListener("scroll", listenScrollEvent);
+  // }, []);
 
   return (
-    <div className="caseonmain" style={{ backgroundColor: header }}>
+    <div className="caseonmain" style={props.stylee}>
       <Individualcase
+        ref={props.ref1}
         src={companyLogo}
-        image={image}
-        styless={{ backgroundColor: header }}
-        heading="Ruggengraat"
-        text="Ruggengraat is an online fitness platform. We integrated features, that allow the trainer to create meal and workout plans, send them to the client's phone, and track the progress via text and graphs."
-      />
-      <Individualcase
-        src={companyLogo}
-        styless={{ backgroundColor: header }}
         image={image}
         heading="Ruggengraat"
         text="Ruggengraat is an online fitness platform. We integrated features, that allow the trainer to create meal and workout plans, send them to the client's phone, and track the progress via text and graphs."
       />
       <Individualcase
+        ref={props.ref2}
         src={companyLogo}
-        styless={{ backgroundColor: header }}
+        image={image}
+        heading="Ruggengraat"
+        text="Ruggengraat is an online fitness platform. We integrated features, that allow the trainer to create meal and workout plans, send them to the client's phone, and track the progress via text and graphs."
+      />
+      <Individualcase
+        ref={props.ref3}
+        src={companyLogo}
         image={image}
         heading="Ruggengraat"
         text="Ruggengraat is an online fitness platform. We integrated features, that allow the trainer to create meal and workout plans, send them to the client's phone, and track the progress via text and graphs."
