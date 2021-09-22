@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Cases = () => {
+const Cases = React.forwardRef((props,ref) => {
   return (
-    <div className="cases">
+    <div className="cases" ref={ref}>
       <div className="cases__border"></div>
       <div className="cases__heading">
         Haven't found the case in your business sector?
@@ -17,5 +17,5 @@ const Cases = () => {
       </NavLink>
     </div>
   );
-};
+});
 export default Cases;

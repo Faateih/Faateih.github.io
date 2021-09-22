@@ -3,9 +3,9 @@ import companyLogo from "../assets/images/kg.svg";
 import image from "../assets/images/img-2.png";
 import { AiFillPropertySafety } from "react-icons/ai";
 
-const Individualcase = (props) => {
+const Individualcase = React.forwardRef((props, ref) => {
   return (
-    <div className="individualcase">
+    <div className="individualcase" ref={ref}>
       <div className="individualcase__left">
         <div className="individualcase__left--logo">
           <div className="individualcase__left--logo-logo">
@@ -38,5 +38,5 @@ const Individualcase = (props) => {
       </div>
     </div>
   );
-};
+});
 export default Individualcase;

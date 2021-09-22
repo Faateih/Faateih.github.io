@@ -4,31 +4,16 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const HeaderText = (props) => {
-  const [text, setText] = useState("text");
-  console.log(props.to);
-
-  const listenScrollEvent = (event) => {
-    if (window.scrollY > 3200) {
-      return setText("black");
-    } else {
-      return setText("black");
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-
-    return () => window.removeEventListener("scroll", listenScrollEvent);
-  }, []);
+  
   return (
     <NavLink
-      style={{ color: text }}
+      
       to={`${props.to}`}
       className="header-text"
       onMouseEnter={props.onMouseEnter}
       onMouseLeave={props.onMouseLeave}
     >
-      <h5 className="header-text__text" style={{ color: text }}>
+      <h5 className="header-text__text" style={props.styleee}>
         {props.text}
       </h5>
       <div className="header-text__border"></div>

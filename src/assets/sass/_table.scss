@@ -4,19 +4,21 @@
   justify-content: center;
 
   width: fit-content;
-  &:not(:last-child) {
-    border-bottom: 0.1rem solid #e6e6fa;
-  }
 
   &__item {
-    width: 16vw;
+    width: 12vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    &:not(:nth-child(-n + 7)) {
+      border-top: 0.1rem solid #e6e6fa;
+    }
 
-    &:not(:last-child) {
+    &:not(:nth-child(7n)) {
       border-right: 0.1rem solid #e6e6fa;
     }
+
     &--image {
       width: 10vw;
     }
@@ -38,5 +40,9 @@
   &__content {
     margin-top: 2rem;
     margin-bottom: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 5rem 10rem;
   }
 }

@@ -21,7 +21,7 @@ const Header = (props) => {
           <img src={companyLogo} alt="Blogo" className="header__logo--image" />
         </div>
         <div className="header__menu">
-          <HeaderText
+          <HeaderText styleee={props.styleee1}
             to={`/aboutus`}
             text="About Us"
             onMouseEnter={() => {
@@ -36,6 +36,7 @@ const Header = (props) => {
           />
 
           <HeaderText
+          styleee={props.styleee2}
             to={`/services1`}
             text="Services"
             onMouseEnter={() => {
@@ -50,6 +51,7 @@ const Header = (props) => {
           />
 
           <HeaderText
+          styleee={props.styleee3}
             to={`/technologies`}
             text="Technology"
             onMouseEnter={() => {
@@ -62,8 +64,8 @@ const Header = (props) => {
               setIsOpen2(false);
             }}
           />
-          <HeaderText text="Cases" to={`/newpage`} />
-          <HeaderText
+          <HeaderText text="Cases" to={`/newpage`} styleee={props.styleee4} />
+          <HeaderText styleee={props.styleee5}
             to={`/blogs`}
             text="Blog"
             onMouseEnter={() => {

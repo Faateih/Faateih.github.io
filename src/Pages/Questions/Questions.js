@@ -1,6 +1,5 @@
 import React from 'react';
 import {BiPlus} from 'react-icons/bi';
-import {VscClose} from 'react-icons/vsc';
 import {useState} from 'react';
 import {useEffect} from 'react';
 import Aos from 'aos';

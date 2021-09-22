@@ -18,45 +18,60 @@ import mail from "../../assets/umairbhai.jpg";
 import mobil from "../../assets/phone.svg";
 import fb from "../../assets/frazbhai.jpg";
 import { FiSend } from "react-icons/fi";
+import { useRef } from "react";
 const Home = () => {
   useEffect(() => {
     Aos.init({duration: 1200});
 }, []);
   const [header, setHeader] = useState("transparent");
+  const[bg, setBg]=useState("blue");
+  const [text, setText] = useState('black');
   const [border, setBorder] = useState("border");
+  const myRef = useRef(null);
+  const myRef1 = useRef(null);
+  const myRef2 = useRef(null);
+  const newRef=useRef(null);
+  const lastRef=useRef(null);
+
+  // let offsetTop = myRef?.current?.node?.getBoundingClientRect();
 
   const listenScrollEvent = (event) => {
-    if (window.scrollY < 599) {
-      setHeader("rgba(9, 13, 48, 0)");
-      setBorder("none");  
-      return;
+    let offsetTop = myRef?.current?.offsetTop;
+    let offsetTop1 = myRef1?.current?.offsetTop;
+    let offsetTop2 = myRef2?.current?.offsetTop;
+    let offsetTop3 = newRef?.current?.offsetTop;
+    let offsetTop4 = lastRef?.current?.offsetTop;
+    console.log(offsetTop);
+    console.log(offsetTop1);
+    console.log(offsetTop2);
+    if (window.scrollY < offsetTop3 ){
+      setHeader('transparent');
     }
-    if (window.scrollY > 600 && window.scrollY < 1850) {
-      setHeader("white");
-      setBorder("none");
-      return;
+    if(window.scrollY > offsetTop3 && window.scrollY < offsetTop) {
+      setHeader('rgba(255,255,255,0.9)');
+      setText('black');
     }
-    if (window.scrollY > 1850 && window.scrollY < 2350) {
-      setHeader("#007cba");
-      setBorder("none");
-      return;
+    if (window.scrollY > offsetTop && window.scrollY < offsetTop1) {
+       setHeader("blue");
+       setBg('blue');
+       setText('white');
+       return;
     }
-    if (window.scrollY > 2350 && window.scrollY < 2850) {
-      setHeader("#414756");
-      setBorder("none");
-      return;
+    if (window.scrollY > offsetTop1 && window.scrollY < offsetTop2) {
+       setHeader("brown");
+      setBg('brown');
+      setText('white');
+       return;
     }
-    if (window.scrollY > 2850 && window.scrollY < 3100) {
-      setHeader("green");
-      setBorder("none");
-      return;
+    if (window.scrollY > offsetTop2 && window.scrollY < offsetTop4) {
+       setHeader("green");
+      setBg('green');
+      setText('white');
+       return;
     }
-    if (window.scrollY > 3400) {
-      setHeader("rgba(255, 255, 255, 0.9)");
-      setBorder("0.1rem solid #dcdcdc");
-      return;
-    } else {
-      setBorder("none");
+    if(window.scrollY > offsetTop4){
+      setHeader('white');
+      setText('black');
     }
   };
 
@@ -68,13 +83,18 @@ const Home = () => {
 
   return (
     <div>
-      <Header style={{ backgroundColor: header, borderBottom: border }} />
       <div data-aos="fade-down">
+      <Header style={{ backgroundColor: header }} styleee1={{color: text}} styleee2={{color: text}} styleee3={{color: text}} styleee4={{color: text}} styleee5={{color: text}}/>
       <Background />
       </div>
-      <Table />
-      <CaseOnMain />
-      <Cases />
+      <Table ref={newRef}/>
+      <CaseOnMain
+        ref1={myRef}
+        ref2={myRef1}
+        ref3={myRef2}
+        stylee={{ backgroundColor: bg }}
+      />
+      <Cases ref={lastRef} />
 
       <Headd />
       <Partner />
