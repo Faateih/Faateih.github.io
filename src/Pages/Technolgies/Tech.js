@@ -3,10 +3,16 @@ import Card from './Card';
 import Description from '../Services/Description';
 import crossplat from '../../assets/cross platform.jpg';
 import frontend from '../../assets/front end development.jpg'
+import {useEffect} from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function Tech() {
+    useEffect(() => {
+        Aos.init({duration: 1500});
+ }, []);
     return (
-        <div className='main-techh'>
+        <div className='main-techh' data-aos='fade-up'>
         <div className='center'>
         <div className='center__left'>
         <Description description = 'We use only proven and reliable technologies to ensure your app will perform seamlessly' />

@@ -312,6 +312,7 @@
     margin-top: 2.5rem;
     width: 100%;
     border-bottom: 1px solid #a2a2a2;
+    
   }
 
   &__ques {
@@ -332,8 +333,9 @@
 
     &--plus {
       font-size: 3rem;
-      transition: transform 2s;
-      animation-delay: 3s;
+      transition: all 1s;
+    
+
     }
 
     &--ans {
@@ -342,7 +344,8 @@
       font-size: 1.5rem;
       font-weight: 450;
       color: black;
-      transform: translateY(30%);
+      
+      
     }
   }
 }
@@ -350,11 +353,11 @@
 /////////////////////////
 //////////QUERIES
 .waves{ 
-  margin-top: -10rem;
+  margin-top: 1rem;
 }
 
 .queries {
-  margin-top: -.5rem;
+  margin-top: -11rem;
   background-color: #17217b;
   // clip-path: polygon(
   //   0% 15%,

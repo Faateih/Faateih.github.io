@@ -1,5 +1,8 @@
 import React from 'react';
 import Center from './Center';
+import {useEffect} from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 // import Cards from './Cards';
 // import Description from './Description';
 // import Technology from './Technology';
@@ -12,9 +15,12 @@ import Center from './Center';
 
 
 function Services() {
+    useEffect(() => {
+        Aos.init({duration: 1500});
+ }, []);
     return (
-         <div className='main'>
-            <Center  />
+         <div className='main' data-aos='fade-up'>
+            <Center />
             </div>
     )
 }

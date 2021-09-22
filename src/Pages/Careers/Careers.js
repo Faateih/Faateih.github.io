@@ -1,12 +1,18 @@
 import React from 'react';
 import {HiPlus} from 'react-icons/hi';
 import {BiUser} from 'react-icons/bi';
+import { useEffect } from 'react';
 import {useState} from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function Careers(props) {
     const [isUpload, setIsUpload] = useState("");
+    useEffect(() => {
+           Aos.init({duration: 1500});
+    }, []);
     return (
-        <form className='careers' id='aboutussectionfour'>
+        <form className='careers' id='aboutussectionfour' data-aos='fade-up'>
             <div className='careers__tag'>Welcome to Careers</div>
             <div className='middle'> 
                 <div className='middle__left'>

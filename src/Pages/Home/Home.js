@@ -7,6 +7,8 @@ import CaseOnMain from "../../components/caseonmain";
 import { useState } from "react";
 import { useEffect } from "react";
 import Footer from "../../components/footer";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 import Partner from "../Parnter/Partner";
 import Queries from "../Queries/Queries";
@@ -17,6 +19,9 @@ import mobil from "../../assets/phone.svg";
 import fb from "../../assets/frazbhai.jpg";
 import { FiSend } from "react-icons/fi";
 const Home = () => {
+  useEffect(() => {
+    Aos.init({duration: 1200});
+}, []);
   const [header, setHeader] = useState("transparent");
   const [border, setBorder] = useState("border");
 
@@ -64,7 +69,9 @@ const Home = () => {
   return (
     <div>
       <Header style={{ backgroundColor: header, borderBottom: border }} />
+      <div data-aos="fade-down">
       <Background />
+      </div>
       <Table />
       <CaseOnMain />
       <Cases />
