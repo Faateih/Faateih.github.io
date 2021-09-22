@@ -16,7 +16,7 @@ function Questions() {
         <div className='questions'>
             <h1 className='questions__qhead-primary'>See Frequently Asked Questions</h1>
             <h2 className='questions__qhead-secondary'>We advise, answer questions, find solutions and create dedicated web applications. If you need more information, please call us!</h2>
-            <div className='questions__border-down'></div>
+            {/* <div className='questions__border-down'></div> */}
             <div className='questions__ques'  onClick={()=> {
                     setAnsOpen(!ansOpen);
                 }}>
@@ -115,11 +115,11 @@ function Questions() {
                 {ansOpen8===true &&<span className='questions__ques--plus'><VscClose/></span> }
                 </div>
             </div> 
-            <div className='questions__border-down'></div>
+            {/* <div className='questions__border-down'></div> */}
             {ansOpen8===true &&
             <>
             <div className='questions__ques--ans'>We advise, answer questions, find solutions and create</div>
-            <div className='questions__border-down'></div>
+            {/* <div className='questions__border-down'></div> */}
             </>
             }
         </div>

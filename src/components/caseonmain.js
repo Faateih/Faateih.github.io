@@ -9,13 +9,13 @@ const CaseOnMain = () => {
   const [header, setHeader] = useState("header");
 
   const listenScrollEvent = (event) => {
-    if (window.scrollY > 2000 && window.scrollY < 2500) {
+    if (window.scrollY > 1850 && window.scrollY < 2350) {
       return setHeader("#007cba");
     }
-    if (window.scrollY > 2500 && window.scrollY < 3000) {
+    if (window.scrollY > 2350 && window.scrollY < 2850) {
       return setHeader("#414756");
     }
-    if (window.scrollY > 3000 && window.scrollY < 3500) {
+    if (window.scrollY > 2850 && window.scrollY < 3100) {
       return setHeader("green");
     }
   };

@@ -23,30 +23,30 @@ const Home = () => {
   const listenScrollEvent = (event) => {
     if (window.scrollY < 599) {
       setHeader("rgba(9, 13, 48, 0)");
-      setBorder("none");
+      setBorder("none");  
       return;
     }
-    if (window.scrollY > 600 && window.scrollY < 2000) {
+    if (window.scrollY > 600 && window.scrollY < 1850) {
       setHeader("white");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 2000 && window.scrollY < 2500) {
+    if (window.scrollY > 1850 && window.scrollY < 2350) {
       setHeader("#007cba");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 2500 && window.scrollY < 3000) {
+    if (window.scrollY > 2350 && window.scrollY < 2850) {
       setHeader("#414756");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 2500 && window.scrollY < 3200) {
+    if (window.scrollY > 2850 && window.scrollY < 3100) {
       setHeader("green");
       setBorder("none");
       return;
     }
-    if (window.scrollY > 3200) {
+    if (window.scrollY > 3400) {
       setHeader("rgba(255, 255, 255, 0.9)");
       setBorder("0.1rem solid #dcdcdc");
       return;

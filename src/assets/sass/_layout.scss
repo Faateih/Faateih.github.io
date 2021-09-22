@@ -332,6 +332,8 @@
 
     &--plus {
       font-size: 3rem;
+      transition: transform 2s;
+      animation-delay: 3s;
     }
 
     &--ans {
@@ -340,29 +342,34 @@
       font-size: 1.5rem;
       font-weight: 450;
       color: black;
+      transform: translateY(30%);
     }
   }
 }
 
 /////////////////////////
 //////////QUERIES
+.waves{ 
+  margin-top: -10rem;
+}
 
 .queries {
+  margin-top: -.5rem;
   background-color: #17217b;
-  clip-path: polygon(
-    0% 15%,
-    0 5%,
-    33% 2%,
-    68% 9%,
-    100% 0,
-    100% 15%,
-    100% 85%,
-    100% 100%,
-    85% 100%,
-    15% 100%,
-    0 100%,
-    0% 85%
-  );
+  // clip-path: polygon(
+  //   0% 15%,
+  //   0 5%,
+  //   33% 2%,
+  //   68% 9%,
+  //   100% 0,
+  //   100% 15%,
+  //   100% 85%,
+  //   100% 100%,
+  //   85% 100%,
+  //   15% 100%,
+  //   0 100%,
+  //   0% 85%
+  // );
 
   &__query {
     display: flex;
