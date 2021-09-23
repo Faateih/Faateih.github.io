@@ -68,8 +68,10 @@
       align-items: center;
       &-text {
         margin-top: 4rem;
-        font-size: 3rem;
-        font-weight: 900;
+        font-size: 6rem;
+        font-weight: 800;
+        color: #17217b;
+        font-family: var(--font-fam);
       }
       &-logo {
         width: 3rem;
@@ -116,10 +118,12 @@
       }
       &-two {
         margin-top: 4rem;
+        margin-bottom: 12rem;
         &-icon {
           font-size: 5rem;
           font-weight: lighter;
           color: black;
+          animation: MoveUpDown 1s linear infinite;
           transition: all 0.2s;
           &:hover {
             transform: translateY(-0.2rem);
@@ -169,5 +173,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
   }
 }
