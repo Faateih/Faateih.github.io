@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 
 const CaseOnMain = (props) => {
+  
   // const [header, setHeader] = useState("header");
   // const myRef = useRef(null);
   // const myRef1 = useRef(null);

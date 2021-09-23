@@ -2,10 +2,16 @@ import React from "react";
 import Medical from "../assets/images/medical.png";
 import { FaStar } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from 'react';
 
 const BlogsCard = (props) => {
+  useEffect(() => {
+    Aos.init({duration: 1500});
+}, []);
   return (
-    <div className="blogscard" id={props.id}>
+    <div className="blogscard" id={props.id} data-aos='fade-up'>
       <div className="blogscard__image">
         <img src={Medical} alt="cardpic" className="blogscard__image--img" />
       </div>

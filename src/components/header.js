@@ -4,6 +4,7 @@ import HeaderText from "./headertext";
 import HeaderPopup from "./header-popup";
 import companyLogo from "../assets/CBsollogo.png";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import { findAllByTestId } from "@testing-library/dom";
 import { HashLink as Link } from "react-router-hash-link";
@@ -140,9 +141,9 @@ const Header = (props) => {
             <HeaderPopup popupname="blog" />
           </div>
         )}
-        <Link className="header__button" to='#contactus'>
+        <NavLink className="header__button" to='contactus'>
           <HeaderButton />
-        </Link>
+          </NavLink>
       </div>
     </div>
   );

@@ -1,10 +1,16 @@
 import React from "react";
 
 import Tech from "../assets/images/tech.webp";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from 'react';
 
 const SingleTech = (props) => {
+  useEffect(() => {
+    Aos.init({duration: 2000});
+}, []);
   return (
-    <div className="singletech" id={props.id}>
+    <div className="singletech" id={props.id} data-aos='fade-left'>
       <div className="singletech__left">
         <img src={Tech} alt="technology" className="singletech__left--image" />
       </div>

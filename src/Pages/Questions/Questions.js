@@ -17,7 +17,8 @@ function Questions() {
     const[ansOpen7, setAnsOpen7] = useState(false);
     const[ansOpen8, setAnsOpen8] = useState(false);
     const rotateStyle={
-        transform:'rotate(-45deg)'
+        transform:'rotate(-45deg)',
+        transition: 'all .5s',
     }
     return (
         <div className='questions' data-aos='fade-up'>

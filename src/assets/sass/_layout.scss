@@ -564,7 +564,16 @@
 }
 ////////////////////////
 //////CAREERS_MIDDLE
-
+.merging {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  // margin-left: -46rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  // margin-top: -8.3rem;
+  color: white;
+}
 .middle {
   display: flex;
   margin-left: 4rem;
@@ -592,6 +601,7 @@
   }
 
   &__field {
+    position: relative;
     width: 70%;
     height: 2rem;
     font-size: 1.5rem;
@@ -857,5 +867,176 @@
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 3rem;
+  }
+}
+
+/////////////////////// 
+//////CONTACT
+.contact {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+  &__middle {
+    border-radius: 10px;
+    display: flex;
+    height: 52rem;
+    margin-top: 15rem;
+    width: 70%;
+    // border: 1px solid grey;
+    background-color: white;
+    box-shadow: -1px 2px 19px 16px rgba(0,0,0,0.75);
+
+  }
+
+  &__heading {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  &__left {
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #17217b;
+  }
+
+  &__left-container {
+    margin: 3rem 3rem;
+    font-size: 2.5rem;
+    color: #fefefe;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  &__locspan {
+    margin-left: 2.5rem;
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  &__mail {
+    margin-left: 2.5rem;
+  }
+
+  &__call {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  &__num {
+    margin-left: 2.5rem;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+  }
+
+  &__fb {
+    font-size: 3rem;
+    transition: all .3s;
+
+    &:hover {
+      transform: translateY(-.5rem);
+      cursor: pointer;
+    }
+  }
+
+  /////////////////// 
+  ///////RIGHT
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    color: #17217b;
+  }
+
+  &__right-head {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: var(--font-fam);
+    margin-bottom: 3rem;
+  }
+
+  &__right-put {
+    padding: 0 1.5rem;
+    border: none;
+    height: 5rem;
+    width: 70%;
+    margin-left: 2.5rem;
+    margin-bottom: 3rem;
+    background-color: #f1eeee;
+    font-size: 1.5rem;
+
+    &::placeholder {
+      font-size: 1.5rem;
+      color: black;
+
+    }
+
+    &:focus {
+      outline: none;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__right-message {
+    background-color: #f1eeee;
+    padding: 1rem 1.5rem;
+    border: none;
+    height: 10rem;
+    width: 70%;
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
+    resize: none;
+
+    &::placeholder {
+      font-size: 1.5rem;
+      font-family: sans-serif;
+      color: black;
+
+    }
+
+    &:focus {
+      outline: none;
+      font-size: 1.5rem;
+    }
+  }
+  &__button {
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5rem;
+    height: 4rem;
+    width: 12rem;
+    border-radius: 15px;
+    border: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #17217b;
+    border: 1px solid #17217b;
+
+    &:hover {
+      color: white;
+      background-color: #17217b;
+      cursor: pointer;
+      transition: all .9s .1s;
+    }
   }
 }

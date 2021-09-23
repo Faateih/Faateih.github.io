@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Contact from "./Pages/Contact/Contact";
 
 // firebase
 import db from "./firebase";
@@ -46,6 +47,9 @@ function App() {
             </Route>
             <Route exact path="/services1">
               <Services1 />
+            </Route>
+            <Route exact path="/contactus">
+              <Contact />
             </Route>
           </Switch>
         </div>

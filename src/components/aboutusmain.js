@@ -6,8 +6,14 @@ import { useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import { AiOutlineUp } from "react-icons/ai";
 import Person from "./person";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from 'react';
 
 const AboutUsMain = () => {
+  useEffect(() => {
+    Aos.init({duration: 2000});
+}, []);
   const [isShow, setIsShow] = useState(false);
   return (
     <div className="aboutus">

@@ -1,9 +1,14 @@
 import React from "react";
 import BlogsCard from "./blogscard";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from 'react';
 const BlogsMain = () => {
+  useEffect(() => {
+    Aos.init({duration: 1500});
+}, []);
   return (
-    <div className="blogsmain">
+    <div className="blogsmain" data-aos='fade-up'>
       <div className="blogsmain__section-one">
         <h1 className="blogsmain__section-one-text">
           Check Out the Latest Articles

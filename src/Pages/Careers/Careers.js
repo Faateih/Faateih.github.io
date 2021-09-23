@@ -18,7 +18,10 @@ function Careers(props) {
                 <div className='middle__left'>
                 <input type='text' placeholder='Your Name' className='middle__field'/>
                 <input type='email' placeholder='example@gmail.com' className='middle__field'/>
-                 <input type='text' placeholder='+92xxx-xxxxxxx' className='middle__field'/>
+                <div className='middle__field'>
+                <span> +92-
+                 <input type='text' placeholder='XXX-XXXXXXX' className='middle__field' maxLength={10} /> </span> 
+                 </div>
                  <div className='middle__field'>
                      <div className='middle__field--select'>
                          <select className='middle__field--selec'>
