@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { findAllByTestId } from "@testing-library/dom";
 import { HashLink as Link } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
   const [isOpen1, setIsOpen1] = useState(false);
@@ -17,11 +18,12 @@ const Header = (props) => {
   return (
     <div style={{ position: "fixed", zIndex: 2000, width: "100%" }}>
       <div className="header" style={props.style}>
-        <div className="header__logo">
+        <NavLink to={"/"} className="header__logo">
           <img src={companyLogo} alt="Blogo" className="header__logo--image" />
-        </div>
+        </NavLink>
         <div className="header__menu">
-          <HeaderText styleee={props.styleee1}
+          <HeaderText
+            styleee={props.styleee1}
             to={`/aboutus`}
             text="About Us"
             onMouseEnter={() => {
@@ -36,7 +38,7 @@ const Header = (props) => {
           />
 
           <HeaderText
-          styleee={props.styleee2}
+            styleee={props.styleee2}
             to={`/services1`}
             text="Services"
             onMouseEnter={() => {
@@ -51,7 +53,7 @@ const Header = (props) => {
           />
 
           <HeaderText
-          styleee={props.styleee3}
+            styleee={props.styleee3}
             to={`/technologies`}
             text="Technology"
             onMouseEnter={() => {
@@ -65,7 +67,8 @@ const Header = (props) => {
             }}
           />
           <HeaderText text="Cases" to={`/newpage`} styleee={props.styleee4} />
-          <HeaderText styleee={props.styleee5}
+          <HeaderText
+            styleee={props.styleee5}
             to={`/blogs`}
             text="Blog"
             onMouseEnter={() => {
@@ -140,7 +143,7 @@ const Header = (props) => {
             <HeaderPopup popupname="blog" />
           </div>
         )}
-        <Link className="header__button" to='#contactus'>
+        <Link className="header__button" to="#contactus">
           <HeaderButton />
         </Link>
       </div>

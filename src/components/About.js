@@ -18,7 +18,7 @@ function About() {
       <div className="aboutus__sectionthree" id="aboutsectionthree" data-aos='fade-up'>
         <div className="aboutus__sectionthree--partone">
           <div className="aboutus__sectionthree--partone-text">
-            Meet the team
+            Meet The Team
           </div>
         </div>
         <div className="aboutus__sectionthree--parttwo">
