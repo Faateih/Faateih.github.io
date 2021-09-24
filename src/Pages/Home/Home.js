@@ -103,7 +103,7 @@ const Home = () => {
         iconmail={<FiSend />}
         queryhead="Have a project in mind? Need help with an ongoing one?"
         querysub="We'll be happy to talk!"
-        button="Send Message"
+        button="Send&nbsp;"
         mailpic={mail}
         mailname="Umair Ali"
         maildetail="Cheif Executive Officer, CbSol"

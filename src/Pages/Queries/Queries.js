@@ -42,6 +42,7 @@ function Queries(props) {
           ></input>
           <button className="mail__button">
             {props.button}
+            <span className='mail__txt'>Message</span>
             <span className="card__arrow"> &rarr;</span>
           </button>
         </div>
