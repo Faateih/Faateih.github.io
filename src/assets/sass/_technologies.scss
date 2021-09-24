@@ -28,12 +28,16 @@
     justify-content: center;
     align-items: center;
     margin-left: 5rem;
+    @media (max-width: 800px) {
+      width: 0%;
+      margin-left: 0rem;
+    }
     &--image {
       max-width: 90%;
       max-height: 60rem;
       transition: all 0.5s;
-      box-shadow: 49px 46px 15px -5px rgba(0,0,0,0.67);
-      transition: all .3s;
+      box-shadow: 49px 46px 15px -5px rgba(0, 0, 0, 0.67);
+      transition: all 0.3s;
 
       &:hover {
         transform: translateY(-1rem);
@@ -45,6 +49,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 800px) {
+      width: 100%;
+      align-items: flex-start;
+    }
 
     &--inner {
       width: 100%;
@@ -57,6 +65,9 @@
         color: #17217b;
         margin-bottom: 3rem;
         font-family: "Playfair Design", serif;
+        @media (max-width: 500px) {
+          font-size: 2rem;
+        }
       }
       &-text {
         font-size: 2rem;
@@ -68,5 +79,8 @@
         }
       }
     }
+  }
+  @media (max-width: 800px) {
+    margin-bottom: 4rem;
   }
 }
