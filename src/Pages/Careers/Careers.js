@@ -57,7 +57,7 @@ function Careers(props) {
 
     return (
         <form className='careers' id='aboutussectionfour' data-aos='fade-up'>
-            <div className='careers__tag'>Welcome to Careers</div>
+            <div className='careers__tag'>Join Our Team</div>
             <div className='middle'> 
                 <div className='middle__left'>
                 <input type='text' placeholder='Your Name' className='middle__field'/>
@@ -89,13 +89,25 @@ function Careers(props) {
                 <div className='middle__vac'> JOIN OUR TEAM </div>
                     <div className='middle__data'>
                         <div className='middle__icons'><BiUser/></div>
-                        <div className='middle__vacancy'>Web Development</div>
+                        <div className='middle__vacancy'>Software Engineer</div>
                         <div className='middle__line'></div>
-                        <div className='middle__opens'>2 Years of Experience</div>
+                        <div className='middle__opens'>Fresh Graduate</div>
                     </div>
                     <div className='middle__data'>
                         <div className='middle__icons'><BiUser/></div>
-                        <div className='middle__vacancy'>Web Development</div>
+                        <div className='middle__vacancy'>Business Developer</div>
+                        <div className='middle__line'></div>
+                        <div className='middle__opens'>Fresh Graduates</div>
+                    </div>
+                    <div className='middle__data'>
+                        <div className='middle__icons'><BiUser/></div>
+                        <div className='middle__vacancy'>QA internee</div>
+                        <div className='middle__line'></div>
+                        <div className='middle__opens'>Fresh Graduates</div>
+                    </div>
+                    <div className='middle__data'>
+                        <div className='middle__icons'><BiUser/></div>
+                        <div className='middle__vacancy'>HR Manager</div>
                         <div className='middle__line'></div>
                         <div className='middle__opens'>Fresh Graduates</div>
                     </div>

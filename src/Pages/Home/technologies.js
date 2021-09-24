@@ -11,7 +11,7 @@ const Technologies = () => {
       <Mid
         heading="Technologies we are working on"
         text="We cover web app creation from the ground up for companies in any field
-        and any size, offering both design and development services" page = 'Technologies'
+        and any size, offering both design and development services" page = '&nbsp;Technologies'
       />
 
       <TechnologiesMain text="Technologies We Are Working On" />

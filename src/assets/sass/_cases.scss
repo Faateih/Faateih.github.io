@@ -148,3 +148,47 @@
     color: white;
   }
 }
+
+@media(max-width: 1000px) {
+  .cases__heading {
+    font-size: 4rem;
+  }
+}
+
+@media(max-width:900px){
+  .cases__heading {
+    font-size: 3.5rem;
+  }
+}
+
+@media(max-width:800px){
+  .cases__heading {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width:650px){
+  .cases__heading {
+    margin: auto;
+    font-size: 2.5rem;
+  }
+}
+
+@media(max-width:400px){
+  .cases__heading {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+  .cases__description {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .cases__button {
+    width: 20rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
