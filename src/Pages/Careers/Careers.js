@@ -8,7 +8,27 @@ import "aos/dist/aos.css";
 import Select from "react-select";
 
 function Careers(props) {
+    const [inputValue, setInputValue] = useState("");
+  
+    const handleInput = (e) => {
+      const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+      setInputValue(formattedPhoneNumber);
+    };
+  function formatPhoneNumber(value) {
+    if (!value) return value;
+    const phoneNumber = value.replace(/[^\d]/g, "");
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 10) {
+      return `${phoneNumber.slice(0, 5)} ${phoneNumber.slice(5)}`;
+    }
+    return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(
+      3,
+      10
+    )} ${phoneNumber.slice(10, 10)}`;
+  }
     const [isUpload, setIsUpload] = useState("");
+    
     useEffect(() => {
            Aos.init({duration: 1500});
     }, []);
@@ -64,7 +84,7 @@ function Careers(props) {
                 <input type='email' placeholder='example@gmail.com' className='middle__field'/>
                 <div className='middle__field'>
                 <span> +92-
-                 <input type='text' placeholder='XXX-XXXXXXX' className='middle__field' maxLength={10} /> </span> 
+                 <input type='text' placeholder='XXX-XXXXXXX' onChange={(e) => handleInput(e)} value={inputValue} className='middle__field'  /> </span> 
                  </div>
                  <div className='middle__field'>
                      <div className='middle__field--select'>
