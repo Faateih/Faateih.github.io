@@ -1,22 +1,19 @@
 import React from "react";
 import FarazBhai from "../assets/frazbhai.jpg";
 
-const Person = () => {
+const Person = (props) => {
   return (
-    <a
-      href="www.linkedin.com"
-      className="aboutus__sectionthree--parttwo-three-p1"
-    >
+    <a href={props.href} className="aboutus__sectionthree--parttwo-three-p1">
       <img
-        src={FarazBhai}
+        src={props.src}
         alt="hr"
         className="aboutus__sectionthree--parttwo-three-p1-image"
       />
       <div className="aboutus__sectionthree--parttwo-three-p1-text">
-        hello world
+        {props.name}
       </div>
       <div className="aboutus__sectionthree--parttwo-three-p1-text-2">
-        hello world
+        {props.designation}
       </div>
     </a>
   );
