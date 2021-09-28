@@ -2,16 +2,31 @@ import React from "react";
 import Medical from "../assets/images/medical.png";
 import { FaStar } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import {useEffect} from 'react';
+import Aos from "aos";
+import "aos/dist/aos.css";
+import db from "../../src/firebase.config";
+
+import { useState, useEffect } from "react";
 
 const BlogsCard = (props) => {
+  const [blogs, setBlogs] = useState([]);
+  const fetchBlogs = async () => {
+    const response = db.collection("blogs");
+    const data = await response.get();
+    data.docs.forEach((item) => {
+      setBlogs([...blogs, item.data()]);
+    });
+  };
   useEffect(() => {
-    Aos.init({duration: 1500});
-}, []);
+    Aos.init({ duration: 1500 });
+  });
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+  console.log(blogs);
+
   return (
-    <div className="blogscard" id={props.id} data-aos='fade-up'>
+    <div className="blogscard" id={props.id} data-aos="fade-up">
       <div className="blogscard__image">
         <img src={Medical} alt="cardpic" className="blogscard__image--img" />
       </div>

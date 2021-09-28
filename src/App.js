@@ -13,7 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Contact from "./Pages/Contact/Contact";
 
 // firebase
-import db from "./firebase";
+
 
 // Files
 import Home from "./Pages/Home/Home";
