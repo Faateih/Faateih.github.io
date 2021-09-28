@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/header";
 import Background from "../../components/background";
-import Table from "../../components/table";
 import Cases from "../../components/cases";
 import CaseOnMain from "../../components/caseonmain";
 import { useState } from "react";
@@ -52,20 +51,20 @@ const Home = () => {
       setText('black');
     }
     if (window.scrollY > offsetTop && window.scrollY < offsetTop1) {
-       setHeader("blue");
-       setBg('blue');
+       setHeader("#55117f");
+       setBg('#55117f');
        setText('white');
        return;
     }
     if (window.scrollY > offsetTop1 && window.scrollY < offsetTop2) {
-       setHeader("brown");
-      setBg('brown');
+       setHeader("#d4b20d");
+      setBg('#d4b20d');
       setText('white');
        return;
     }
     if (window.scrollY > offsetTop2 && window.scrollY < offsetTop4) {
-       setHeader("green");
-      setBg('green');
+       setHeader("#078723");
+      setBg('#078723');
       setText('white');
        return;
     }
@@ -87,7 +86,7 @@ const Home = () => {
       <Header style={{ backgroundColor: header }} styleee1={{color: text}} styleee2={{color: text}} styleee3={{color: text}} styleee4={{color: text}} styleee5={{color: text}}/>
       <Background />
       </div>
-      <Table ref={newRef}/>
+      <Headd />
       <CaseOnMain
         ref1={myRef}
         ref2={myRef1}
@@ -96,7 +95,6 @@ const Home = () => {
       />
       <Cases ref={lastRef} />
 
-      <Headd />
       <Partner />
       <Questions />
       <Queries

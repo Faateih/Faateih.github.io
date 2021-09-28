@@ -76,6 +76,7 @@ function Careers(props) {
   ];
 
     return (
+      <>
         <form className='careers' id='aboutussectionfour' data-aos='fade-up'>
             <div className='careers__tag'>Join Our Team</div>
             <div className='middle'> 
@@ -140,7 +141,25 @@ function Careers(props) {
                 </div>
                 </div>
             </form>
-
+            {/* <div className='response'>
+              <div className='response__card'>
+                <div className='response__icon'><BiUser/></div>
+                <div className='response__descrip'>Software Engineer</div>
+                <div className='response__exp'>2 Years</div>
+              </div>
+              <div className='response__card'>
+                <div className='response__icon'><BiUser/></div>
+                <div className='response__descrip'>Software Engineer</div>
+                <div className='response__exp'>2 Years</div>
+              </div>
+              <div className='response__card'>
+                <div className='response__icon'><BiUser/></div>
+                <div className='response__descrip'>Software Engineer</div>
+                <div className='response__exp'>2 Years</div>
+              </div>
+            </div> */}
+            
+</>
     )}
 
     export default Careers;

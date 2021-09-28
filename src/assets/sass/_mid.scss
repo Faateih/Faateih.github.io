@@ -1,37 +1,59 @@
 .mid {
   display: flex;
   flex-direction: column;
-  padding: 10rem 5rem;
   width: 100%;
   margin-top: 10rem;
-  background-image: url("../images/blue.jpg");
+
+  &__techno {
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    margin-top: -8rem;
+  }
 
   &__one {
-    margin-top: -7rem;
+    position: absolute;
+    padding-top: -7rem;
     &--text {
       color: white;
       font-size: 1.4rem;
       font-weight: 900;
       text-transform: uppercase;
       &-span {
-        color: #b3b3b3;
+        color: white;
       }
     }
   }
   &__two {
-    margin-top: 10rem;
+    position: absolute;
+    margin-top: 5rem;
     color: white;
     font-size: 5.6rem;
     font-family: "Playfair Display", serif;
     margin-bottom: 2rem;
   }
   &__three {
-    font-size: 2.4rem;
+    position: absolute;
+    margin-top: 18rem;
+    font-size: 2rem;
     color: white;
     font-weight: 500;
-    width: 46vw;
-    @media (max-width: 800px) {
-      width: 90vw;
-    }
+}
+}
+@media (max-width: 468px) {
+  .mid__techno {
+    height: 40rem;
+  }
+  .mid__one--text {
+    font-size: 1.5rem;
+  }
+  .mid__two {
+    margin-left: 1.5rem;
+    font-size: 4rem;
+  }
+  .mid__three {
+    margin-left: .5rem;
+    font-size: 1rem;
+    margin-top: 12rem;
   }
 }

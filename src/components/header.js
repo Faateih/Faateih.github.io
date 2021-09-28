@@ -6,6 +6,11 @@ import companyLogo from "../assets/CBsollogo.png";
 import { useState,useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import {GiHamburgerMenu} from 'react-icons/gi';
+import { HashLink as Link } from "react-router-hash-link";
+import {FiFacebook} from 'react-icons/fi';
+import {AiOutlineInstagram} from 'react-icons/ai';
+import {AiOutlineLinkedin} from 'react-icons/ai';
+
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -24,13 +29,19 @@ const Header = (props) => {
       {open === true && <div className='navbr' data-aos='fade-right'>
       <div className='navbr__color'>
           <ul className='navbr__ul'>
-            <li className='navbr__link'>About Us</li>
-            <li className='navbr__link'>Services</li>
-            <li className='navbr__link'>Technology</li>
+            <Link to='aboutus' className='navbr__link'>About Us</Link>
+            <Link to='services1' className='navbr__link'>Services</Link>
+            <Link to='technologies' className='navbr__link'>Technology</Link>
             <li className='navbr__link'>Cases</li>
             <li className='navbr__link'>Blog</li>
           </ul>
-          </div>  
+          <div className='navbr__button'> Contact Us </div>
+          <div className='navbr__socials'>
+              <FiFacebook className="navbr__social" />
+              <AiOutlineInstagram className="navbr__social" />
+              <AiOutlineLinkedin className= "navbr__social" />
+              </div>
+          </div>
         </div> }
       <div className='header__ham' onClick={()=> {
         setOpen(!open);

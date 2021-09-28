@@ -185,3 +185,24 @@
     transform: translateY(-1rem);
   }
 }
+
+@media(max-width: 468px) {
+  .aboutus__sectionthree--parttwo-two-icon {
+    font-size: 2.5rem;
+  }
+  .aboutus__sectionthree--partone-text {
+    margin-top: 5rem;
+    font-size: 3rem;
+  }
+  .aboutus__sectionthree--parttwo-one-p1-image {
+    width: 8rem;
+    height: 8rem;
+  }
+  .aboutus__sectionthree--parttwo-three {
+    margin-top: -10rem;
+  }
+  .aboutus__sectionthree--parttwo-three-p1-image {
+    width: 8rem;
+    height: 8rem;
+  }
+}
