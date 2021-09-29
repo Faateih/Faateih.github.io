@@ -1,0 +1,51 @@
+.product {
+    margin-top: 10rem;
+    padding: 0 3rem;
+}
+.productcase {
+    display: flex;
+    flex-direction: column;
+    
+    &__head {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+
+    &__name {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+
+    &__detailup {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__descshort {
+    font-size: 3rem;
+    }
+
+    &__imagepro {
+
+    }
+
+    &__detailbelow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__imagebelow {
+
+    }
+
+    &__desclong {
+        font-size: 3rem;
+    }
+}

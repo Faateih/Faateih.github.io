@@ -50,7 +50,7 @@ function Contact() {
     <div style={{ display: "flex", flexDirection: "column" }}>
       <Header />
       <div className="contact">
-        <div className="contact__middle" data-aos="fade-up">
+        <div className="contact__middle" data-aos="fade-right">
           <div className="contact__left">
             <div className="contact__left-container">
               <div className="contact__heading">Contact Us</div>
@@ -64,7 +64,7 @@ function Contact() {
               </div>
               <div className="contact__call">
                 <BiPhoneCall />{" "}
-                <span className="contact__num">+92-XXX-XXXXXX</span>
+                <span className="contact__num">+92-090-078601</span>
               </div>
               <div className="contact__social">
                 <div className="contact__fb">

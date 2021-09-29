@@ -22,7 +22,7 @@ import AboutUs from "./Pages/Home/aboutus";
 import Blogs from "./Pages/Home/blogs";
 import Technologies from "./Pages/Home/technologies";
 import Services1 from "./Pages/Home/services1";
-
+import Products from '../src/Pages/Home/Products.js'
 function App() {
   return (
     <Router>
@@ -50,6 +50,9 @@ function App() {
             </Route>
             <Route exact path="/contactus">
               <Contact />
+            </Route>
+            <Route exact path="/product">
+              <Products />
             </Route>
           </Switch>
         </div>

@@ -43,10 +43,11 @@ const Home = () => {
     console.log(offsetTop);
     console.log(offsetTop1);
     console.log(offsetTop2);
-    if (window.scrollY < offsetTop3 ){
+    if (window.scrollY < offsetTop ){
       setHeader('transparent');
+      setText('black');
     }
-    if(window.scrollY > offsetTop3 && window.scrollY < offsetTop) {
+    if(window.scrollY > offsetTop && window.scrollY < offsetTop1) {
       setHeader('rgba(255,255,255,0.9)');
       setText('black');
     }
@@ -95,7 +96,6 @@ const Home = () => {
       />
       <Cases ref={lastRef} />
 
-      <Partner />
       <Questions />
       <Queries
         iconmail={<FiSend />}

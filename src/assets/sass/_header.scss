@@ -436,6 +436,9 @@
 }
 
 @media (max-width: 500px) {
+  .background {
+    margin-bottom: -13rem;
+  }
   .header__logo--image {
     position: absolute;
     left: 52.5%;

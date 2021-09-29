@@ -10,14 +10,17 @@ const Footer = () => {
       </div>
     
       <div className="footer1__main">
-        <div className="footer1__main--one">
-          <FooterContent name="footerone" />
-        </div>
         <div className="footer1__main--two">
           <FooterContent name="footertwo" />
         </div>
         <div className="footer1__main--three">
-          <FooterContent name="footertwo" />
+          <FooterContent name="footerfour" />
+        </div>
+        <div className="footer1__main--five">
+          <FooterContent name="footerfive" />
+        </div>
+        <div className="footer1__main--one">
+          <FooterContent name="footerone" />
         </div>
         <div className="footer1__main--four">
           <FooterContent name="footerthree" />

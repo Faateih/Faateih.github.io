@@ -10,7 +10,7 @@ const SingleTech = (props) => {
     Aos.init({duration: 2000});
 }, []);
   return (
-    <div className="singletech" id={props.id} data-aos='fade-left'>
+    <div className="singletech" id={props.id} data-aos='fade-up'>
       <div className="singletech__left">
         <img src={Tech} alt="technology" className="singletech__left--image" />
       </div>

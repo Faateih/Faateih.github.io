@@ -82,7 +82,7 @@ function Queries(props) {
               className="mail__email"
               onChange={handleChange3}
             ></input>
-            <button className="mail__button" onClick={handleSubmit}>
+            <button className="mail__button" type='submit' onClick={handleSubmit}>
               {props.button}
               <span className="card__arrow"> &rarr;</span>
             </button>

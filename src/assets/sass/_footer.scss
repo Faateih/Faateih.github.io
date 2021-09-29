@@ -17,6 +17,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-top: -2.5rem;
     &--one {
     }
     &--two {
@@ -54,6 +55,7 @@
       color: black;
     }
     &--content {
+      margin-bottom: 3.5rem;
       &-text {
         color: gray;
         font-size: 1.2rem;
@@ -61,6 +63,9 @@
         margin-top: 1rem;
         position: relative;
         width: fit-content;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
         cursor: pointer;
         &::after {
           content: "";
@@ -87,10 +92,15 @@
       color: black;
     }
     &--content {
+
       &-text {
+        position: absolute;
         color: gray;
-        margin-top: 1rem;
-        font-size: 1.2rem;
+        margin-top: 5rem;
+        font-size: 1.3rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
         font-weight: 700;
       }
       &-social {
@@ -166,6 +176,9 @@
   }
   .footercontent {
     margin-bottom: 6rem;
+  }
+  .footercontent__three--content-text {
+    margin-top: 9rem;
   }
   .footercontent__three--heading {
     margin-top: -3rem;
