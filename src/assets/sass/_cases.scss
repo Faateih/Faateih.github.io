@@ -64,7 +64,6 @@
 
     &--logo {
       display: flex;
-      align-items: center;
       margin-top: 1rem;
 
       &-logo {
@@ -216,5 +215,6 @@
     width: 20rem;
     height: 4rem;
     font-size: 1.5rem;
+    margin-bottom: 5rem;
   }
 }

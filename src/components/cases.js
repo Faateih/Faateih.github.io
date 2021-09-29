@@ -18,7 +18,7 @@ const Cases = React.forwardRef((props,ref) => {
         Discover more projects developed by our software development company
       </div>
 
-      <NavLink to="/newpage" className="cases__button">
+      <NavLink to="/product" className="cases__button">
         View More Cases
       </NavLink>
     </div>

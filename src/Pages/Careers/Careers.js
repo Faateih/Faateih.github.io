@@ -1,6 +1,6 @@
 import React from "react";
 import { HiPlus } from "react-icons/hi";
-import { BiUser } from "react-icons/bi";
+import { IoIosDesktop } from "react-icons/io";
 import { useEffect } from "react";
 import { useState } from "react";
 import Aos from "aos";
@@ -101,12 +101,12 @@ function Careers(props) {
     const phoneNumberLength = phoneNumber.length;
     if (phoneNumberLength < 4) return phoneNumber;
     if (phoneNumberLength < 10) {
-      return `${phoneNumber.slice(0, 5)} ${phoneNumber.slice(5)}`;
+      return `${phoneNumber.slice(0, 5)}${phoneNumber.slice(5)}`;
     }
     return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(
       3,
       10
-    )} ${phoneNumber.slice(10, 10)}`;
+    )}${phoneNumber.slice(10, 10)}`;
   }
 
   useEffect(() => {
@@ -238,44 +238,51 @@ function Careers(props) {
         <div className="middle__right">
           <div className="middle__vac"> JOIN OUR TEAM </div>
           <div className="middle__data">
-            <div className="middle__icons">
-              <BiUser />
+            <div className="response">
+              <div className="response__card">
+                <div className="response__icon">
+                  <IoIosDesktop />
+                </div>
+                <div className="response__descrip">
+                  Software Quality Assurance
+                </div>
+                <div className="response__exp">
+                  We need a software with 2 years of experience and have good
+                  knowledge of html,css and javascript
+                </div>
+              </div>
+              <div className="response__card">
+                <div className="response__icon">
+                  <IoIosDesktop />
+                </div>
+                <div className="response__descrip">Software Engineer</div>
+                <div className="response__exp">
+                  We need a software with 2 years of experience and have good
+                  knowledge of html,css and javascript
+                </div>
+              </div>
+
+              <div className="response__card">
+                <div className="response__icon">
+                  <IoIosDesktop />
+                </div>
+                <div className="response__descrip">Software Engineer</div>
+                <div className="response__exp">
+                  We need a software with 2 years of experience and have good
+                  knowledge of html,css and javascript
+                </div>
+              </div>
+              <div className="response__card">
+                <div className="response__icon">
+                  <IoIosDesktop />
+                </div>
+                <div className="response__descrip">Software Engineer</div>
+                <div className="response__exp">
+                  We need a software with 2 years of experience and have good
+                  knowledge of html,css and javascript
+                </div>
+              </div>
             </div>
-            <div className="middle__vacancy">Software Engineer</div>
-            <div className="middle__line"></div>
-            <div className="middle__opens">Fresh Graduate</div>
-          </div>
-          <div className="middle__data">
-            <div className="middle__icons">
-              <BiUser />
-            </div>
-            <div className="middle__vacancy">Business Developer</div>
-            <div className="middle__line"></div>
-            <div className="middle__opens">Fresh Graduates</div>
-          </div>
-          <div className="middle__data">
-            <div className="middle__icons">
-              <BiUser />
-            </div>
-            <div className="middle__vacancy">QA internee</div>
-            <div className="middle__line"></div>
-            <div className="middle__opens">Fresh Graduates</div>
-          </div>
-          <div className="middle__data">
-            <div className="middle__icons">
-              <BiUser />
-            </div>
-            <div className="middle__vacancy">HR Manager</div>
-            <div className="middle__line"></div>
-            <div className="middle__opens">Fresh Graduates</div>
-          </div>
-          <div className="middle__data">
-            <div className="middle__icons">
-              <BiUser />
-            </div>
-            <div className="middle__vacancy">Web Development</div>
-            <div className="middle__line"></div>
-            <div className="middle__opens"> 1 years of Experience</div>
           </div>
         </div>
       </div>
@@ -284,3 +291,23 @@ function Careers(props) {
 }
 
 export default Careers;
+
+{
+  /* <div className='response'>
+              <div className='response__card'>
+                <div className='response__icon'><BiUser/></div>
+                <div className='response__descrip'>Software Engineer</div>
+                <div className='response__exp'>2 Years</div>
+              </div>
+              <div className='response__card'>
+                <div className='response__icon'><BiUser/></div>
+                <div className='response__descrip'>Software Engineer</div>
+                <div className='response__exp'>2 Years</div>
+              </div>
+              <div className='response__card'>
+                <div className='response__icon'><BiUser/></div>
+                <div className='response__descrip'>Software Engineer</div>
+                <div className='response__exp'>2 Years</div>
+              </div>
+            </div> */
+}

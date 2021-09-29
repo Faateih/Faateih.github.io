@@ -16,7 +16,7 @@ const AboutUsMain = () => {
 }, []);
   const [isShow, setIsShow] = useState(false);
   return (
-    <div className="aboutus">
+    <div className="aboutus" id='aboutus'>
       <div className="aboutus__sectionone" id="aboutsectionone">
         <img
           src={Picture}

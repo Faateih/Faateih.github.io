@@ -1,10 +1,12 @@
 import React from "react";
+import Techno from '../../src/assets/images/techno.jpg';
 
 const Mid = (props) => {
   return (
     <div className="mid">
+    <img src={props.techno} alt='Technology' className='mid__techno' />
       <div className="mid__one">
-        <div className="mid__one--text">
+              <div className="mid__one--text">
           HOMEPAGE /&nbsp;
           <span className="mid__one--text-span">{props.page}</span>
         </div>
