@@ -4,12 +4,16 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useState } from "react";
 import db from "../../firebase.config";
+import { doc, setDoc } from "firebase/firestore";
+import Loader from "react-loader-spinner";
 
 function Queries(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (event) => {
     setName(event.target.value);
   };
@@ -23,18 +27,36 @@ function Queries(props) {
     setMessage(event.target.value);
   };
   const handleSubmit = (event) => {
+    setIsLoading(true);
     event.preventDefault();
     addItem({ name, email, phone, message });
   };
-  const addItem = ({ name, email, phone, message }) => {
-    // db.collection("queries").doc(phone);
-    // db.collection("queries").add({ name, email, phone, message });
+  const addItem = async ({ name, email, phone, message }) => {
+    let arr = [];
+    try {
+      const response = db.collection("queries").doc(phone);
+      const data = await response.get();
+      console.log(data.data().message);
+      arr = data.data()?.message || [];
+    } catch (err) {
+      console.log(err);
+    }
+    // data.data().forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    // console.log(arr);
     db.collection("queries").doc(phone).set({
       name: name,
       email: email,
       phone: phone,
-      message: message,
     });
+    db.collection("queries")
+      .doc(phone)
+      .update({ message: [...arr, message] });
+    setIsLoading(false);
+
+    // Atomically remove a region from the "regions" array field.
   };
   useEffect(() => {
     Aos.init({ duration: 1300 });
@@ -82,10 +104,21 @@ function Queries(props) {
               className="mail__email"
               onChange={handleChange3}
             ></input>
-            <button className="mail__button" onClick={handleSubmit}>
-              {props.button}
-              <span className="card__arrow"> &rarr;</span>
-            </button>
+            {isLoading === false && (
+              <button className="mail__button" onClick={handleSubmit}>
+                {props.button}
+                <span className="card__arrow"> &rarr;</span>
+              </button>
+            )}
+            {isLoading === true && (
+              <Loader
+                type="BallTriangle"
+                color="#00BFFF"
+                height={50}
+                width={50}
+                timeout={1000000} //3 secs
+              />
+            )}
           </div>
           <div className="mail__center"></div>
           <div className="mail__right" data-aos="fade-down">

@@ -30,7 +30,6 @@ function About() {
   useEffect(() => {
     fetchUsers();
   }, []);
-  console.log(users);
 
   return (
     <div
@@ -104,7 +103,7 @@ function About() {
               users.map((user) => {
                 return (
                   <Person
-                    src="https://www.gs://cbsolsite.appspot.com/frazbhai.jpg"
+                    src={user.image}
                     name={user.name}
                     designation={user.designation}
                   />

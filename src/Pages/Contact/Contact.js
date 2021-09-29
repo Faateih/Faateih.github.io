@@ -11,12 +11,15 @@ import { useEffect } from "react";
 import Header from "../../components/header";
 import { useState } from "react";
 import db from "../../firebase.config";
+import Loader from "react-loader-spinner";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (event) => {
     setName(event.target.value);
   };
@@ -30,18 +33,52 @@ function Contact() {
     setMessage(event.target.value);
   };
   const handleSubmit = (event) => {
+    setIsLoading(true);
     event.preventDefault();
     addItem({ name, email, phone, message });
   };
-  const addItem = ({ name, email, phone, message }) => {
-    // db.collection("queries").doc(phone);
-    // db.collection("queries").add({ name, email, phone, message });
+  // const addItem = async ({ name, email, phone, message }) => {
+  //   const response = db.collection("queries").doc(phone);
+  //   const data = await response.get();
+
+  //   const arr = data.data().message;
+
+  //   db.collection("queries").doc(phone).set({
+  //     name: name,
+  //     email: email,
+  //     phone: phone,
+  //   });
+  //   db.collection("queries")
+  //     .doc(phone)
+  //     .update({ message: [...arr, message] });
+  //   setIsLoading(false);
+  // };
+  const addItem = async ({ name, email, phone, message }) => {
+    let arr = [];
+    try {
+      const response = db.collection("queries").doc(phone);
+      const data = await response.get();
+      console.log(data.data().message);
+      arr = data.data()?.message || [];
+    } catch (err) {
+      console.log(err);
+    }
+    // data.data().forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    // console.log(arr);
     db.collection("queries").doc(phone).set({
       name: name,
       email: email,
       phone: phone,
-      message: message,
     });
+    db.collection("queries")
+      .doc(phone)
+      .update({ message: [...arr, message] });
+    setIsLoading(false);
+
+    // Atomically remove a region from the "regions" array field.
   };
   useEffect(() => {
     Aos.init({ duration: 1500 });
@@ -105,9 +142,22 @@ function Contact() {
               className="contact__right-message"
               onChange={handleChange3}
             />
-            <button className="contact__button" onClick={handleSubmit}>
-              Send
-            </button>
+            {isLoading === false && (
+              <button className="contact__button" onClick={handleSubmit}>
+                Send
+              </button>
+            )}
+            {isLoading === true && (
+              <div style={{ marginLeft: "20px" }}>
+                <Loader
+                  type="BallTriangle"
+                  color="#00BFFF"
+                  height={50}
+                  width={50}
+                  timeout={1000000} //3 secs
+                />
+              </div>
+            )}
           </form>
         </div>
       </div>
