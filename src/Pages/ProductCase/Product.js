@@ -1,8 +1,14 @@
 import React from 'react';
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Product(props) {
+    useEffect(() => {
+        Aos.init({ duration: 1300 });
+      }, []);
     return (
-        <div className='productcase'>
+        <div className='productcase' data-aos='fade-up'>        
             <div className='productcase__head'>
                 <img src = {props.logos} className='productcase__logo' alt='product'/>
                 <div className='productcase__name'>{props.proname}</div>

@@ -24,18 +24,18 @@ const Header = (props) => {
     Aos.init({duration: 500});
 }, []);
   return (
-    <div style={{ position: "fixed", zIndex: 2000, width: "100vw" }}>
+    <div style={{ position: "fixed", zIndex: 2000, width: "100vw"}}>
       <div className="header" style={props.style}>
-      {open === true && <div className='navbr' data-aos='fade-right'>
+      {open === true && <div className='navbr' data-aos='fade-right' data-aos-duration="400">
       <div className='navbr__color'>
           <ul className='navbr__ul'>
-            <Link to='aboutus' className='navbr__link'>About Us</Link>
-            <Link to='services1' className='navbr__link'>Services</Link>
-            <Link to='technologies' className='navbr__link'>Technology</Link>
-            <li className='navbr__link'>Cases</li>
-            <li className='navbr__link'>Blog</li>
+            <Link to='aboutus' target='_top' className='navbr__link'>About Us</Link>
+            <Link to='services1' target='_top' className='navbr__link'>Services</Link>
+            <Link to='technologies' target='_top' className='navbr__link'>Technology</Link>
+            <Link to='product' target='_top' className='navbr__link'>Product</Link>
+            {/* <li className='navbr__link'>Blog</li> */}
           </ul>
-          <div className='navbr__button'> Contact Us </div>
+          <Link to='contactus' className='navbr__button'> Contact Us </Link>
           <div className='navbr__socials'>
               <FiFacebook className="navbr__social" />
               <AiOutlineInstagram className="navbr__social" />
@@ -46,14 +46,14 @@ const Header = (props) => {
       <div className='header__ham' onClick={()=> {
         setOpen(!open);
       }}><GiHamburgerMenu/></div>
-        <NavLink to={"/"} className="header__logo">
+        <NavLink to={"/"} className="header__logo" target='_top'>
           <img src={companyLogo} alt="Blogo" className="header__logo--image" />
         </NavLink>
         
         <div className="header__menu">
           <HeaderText
             styleee={props.styleee1}
-            to={`/aboutus`}
+            to={`/aboutus`} 
             text="About Us"
             onMouseEnter={() => {
               setIsOpen1(false);
@@ -96,7 +96,7 @@ const Header = (props) => {
             }}
           />
           <HeaderText text="Product" to={`/product`} styleee={props.styleee4} />
-          <HeaderText
+          {/* <HeaderText
             styleee={props.styleee5}
             to={`/blogs`}
             text="Blog"
@@ -109,7 +109,7 @@ const Header = (props) => {
             onMouseLeave={() => {
               setIsOpen3(false);
             }}
-          />
+          /> */}
         </div>
           
         {isOpen1 === true && (
@@ -158,7 +158,7 @@ const Header = (props) => {
             <HeaderPopup popupname="aboutus" />
           </div>
         )}
-        {isOpen3 === true && (
+        {/* {isOpen3 === true && (
           <div
             className="header__pop"
             onMouseEnter={() => {
@@ -172,7 +172,7 @@ const Header = (props) => {
           >
             <HeaderPopup popupname="blog" />
           </div>
-        )}
+        )} */}
         <NavLink className="header__button" to='contactus'>
           <HeaderButton />
           </NavLink>

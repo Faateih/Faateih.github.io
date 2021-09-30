@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import Select from "react-select";
 
 function Careers(props) {
+  const [name, setName] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -15,24 +16,23 @@ function Careers(props) {
   // It may not be 100% perfect but can catch most email pattern errors and assures that the form is mostly right
   const emailRegex = /\S+@\S+\.\S+/;
 
+  const ValidateName = (event) => {
+    const val = event.target.value.replace(/[0-9]/g, '');
+    setName(val);
+  }
   const validateEmail = (event) => {
-    console.log('I am here');
     const email = event.target.value;
     if (emailRegex.test(email)) {
       setIsValid(true);
-      setMessage('Your email looks good!');
-      
+      setMessage('');
+      // setTimeout(()=>{setMessage('')},4500)
     } else {
       setIsValid(false);
       setMessage('Please enter a valid email!');
+      setTimeout(()=>{setMessage('')}, 3000)
     }
   };
-  useEffect(() => {
-    // when the component is mounted, the alert is displayed for 3 seconds
-    setTimeout(() => {
-      setIsValid(true);
-    }, 3000);
-  }, []);  
+    //PHONE VALIDATION
     const [inputValue, setInputValue] = useState("");
   
     const handleInput = (e) => {
@@ -56,6 +56,7 @@ function Careers(props) {
     
     useEffect(() => {
            Aos.init({duration: 1500});
+           
     }, []);
   const customStyles = {
     control: (base, state) => ({
@@ -99,15 +100,14 @@ function Careers(props) {
     { value: "faateih", label: "Saaqb" },
     { value: "usman", label: "someone" },
   ];
-
     return (
       <>
         <form className='careers' id='aboutussectionfour' data-aos='fade-up'>
             <div className='careers__tag'>Join Our Team</div>
             <div className='middle'> 
                 <div className='middle__left'>
-                <input type='text' placeholder='Your Name' className='middle__field'/>
-                <input type='email' placeholder='example@gmail.com' onBlur={validateEmail} className='middle__field'/>
+                <input type='text' placeholder='Your Name' onChange={ValidateName} className='middle__field' value = {name}/>
+                <input type='email' placeholder='example@gmail.com' onChange={validateEmail} className='middle__field'/>
                 
                 <div className='middle__field'>
                 <span> +92-

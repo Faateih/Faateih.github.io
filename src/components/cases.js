@@ -14,9 +14,6 @@ const Cases = React.forwardRef((props,ref) => {
       <div className="cases__heading">
         Haven't found the case in your business sector?
       </div>
-      <div className="cases__description">
-        Discover more projects developed by our software development company
-      </div>
 
       <NavLink to="/contactus" className="cases__button">
         Contact Us

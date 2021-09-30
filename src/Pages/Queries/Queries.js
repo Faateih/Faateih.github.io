@@ -6,18 +6,62 @@ import { useState } from "react";
 import db from "../../firebase.config";
 
 function Queries(props) {
+    //PHONE VALIDATION 
+    const [inputValue, setInputValue] = useState("");
+  
+    const handleInput = (e) => {
+      const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+      setInputValue(formattedPhoneNumber);
+    };
+  function formatPhoneNumber(value) {
+    if (!value) return value;
+    const phoneNumber = value.replace(/[^\d]/g, "");
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 11) {
+      return `${phoneNumber.slice(0, 5)}${phoneNumber.slice(5)}`;
+    }
+    return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(
+      4,
+      10
+    )}${phoneNumber.slice(10, 11)}`;
+  }
+  //EMAIL VALIDATION
+  const [isValid, setIsValid] = useState(false);
+  const [isMessage, setIsMessage] = useState('');
+
+  // The regular exprssion to validate the email pattern
+  // It may not be 100% perfect but can catch most email pattern errors and assures that the form is mostly right
+  const emailRegex = /\S+@\S+\.\S+/;
+
+  const validateEmail = (event) => {
+    const email = event.target.value;
+    if (emailRegex.test(email)) {
+      setIsValid(true);
+      setIsMessage('');
+      // setTimeout(()=>{setIsMessage('')},4500)
+    } else {
+      setIsValid(false);
+      setIsMessage('Please enter a valid email!');
+      setTimeout(()=>{setIsMessage('')}, 3000)
+    }
+  };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const handleChange = (event) => {
-    setName(event.target.value);
+    const val = event.target.value.replace(/[0-9]/g, '');
+    setName(val);
   };
   const handleChange1 = (event) => {
     setEmail(event.target.value);
+    validateEmail(event);
+
   };
   const handleChange2 = (event) => {
     setPhone(event.target.value);
+    handleInput(event); 
   };
   const handleChange3 = (event) => {
     setMessage(event.target.value);
@@ -44,7 +88,7 @@ function Queries(props) {
       <div className="waves">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
           <path
-            fill="#ffff"
+            fill="black"
             fill-opacity="1"
             d="M0,288L60,288C120,288,240,288,360,277.3C480,267,600,245,720,234.7C840,224,960,224,1080,234.7C1200,245,1320,267,1380,277.3L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
           ></path>
@@ -62,19 +106,23 @@ function Queries(props) {
               type="text"
               placeholder="Your name"
               className="mail__email"
+              value={name}
               onChange={handleChange}
-            ></input>
+            required />
             <input
               type="email"
               placeholder="E-mail address"
               className="mail__email"
               onChange={handleChange1}
             ></input>
+            <div className={`messagequery ${isValid ? 'success' : 'error'}`}> {isMessage} </div>
             <input
               type="text"
               placeholder="Phone number"
               className="mail__email"
               onChange={handleChange2}
+              value={inputValue}
+
             ></input>
             <input
               type="text"
@@ -82,7 +130,7 @@ function Queries(props) {
               className="mail__email"
               onChange={handleChange3}
             ></input>
-            <button className="mail__button" type='submit' onClick={handleSubmit}>
+            <button className="mail__button" onClick={handleSubmit}>
               {props.button}
               <span className="card__arrow"> &rarr;</span>
             </button>

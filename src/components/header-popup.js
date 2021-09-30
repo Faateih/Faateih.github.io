@@ -11,7 +11,7 @@ const HeaderPopup = (props) => {
       <div className="header-popup-services">
         <div className="header-popup-services__section-one"></div>
         <div className="header-popup-services__section-two">
-          <Link
+          <Link 
             to="services1#webdesignanddevelopment"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
@@ -104,10 +104,11 @@ const HeaderPopup = (props) => {
             Our Team
           </Link>
 
-          <div className="header-popup-services__section-two--text">
+          <Link to='aboutus#aboutussectionfour'
+          className="header-popup-services__section-two--text">
             {" "}
             Careers
-          </div>
+          </Link>
         </div>
       </div>
     );

@@ -9,6 +9,7 @@ const HeaderText = (props) => {
     <NavLink
       
       to={`${props.to}`}
+      target='_top'
       className="header-text"
       onMouseEnter={props.onMouseEnter}
       onMouseLeave={props.onMouseLeave}

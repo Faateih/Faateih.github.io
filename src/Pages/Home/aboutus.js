@@ -7,7 +7,7 @@ import Mid from "../../components/mid";
 import Abut from '../../assets/images/opactech.jpg';
 const AboutUs = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div style={{ display: "flex", flexDirection: "column"}}>
       <Header />
       <Mid
         techno = {Abut}
