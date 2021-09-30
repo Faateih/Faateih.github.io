@@ -49,7 +49,7 @@ function Contact() {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <Header />
-      <div className="contact">
+      <form className="contact">
         <div className="contact__middle" data-aos="fade-right">
           <div className="contact__left">
             <div className="contact__left-container">
@@ -79,7 +79,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          <form className="contact__right">
+          <div className="contact__right">
             <div className="contact__right-head">Send Us A Message</div>
             <input
               type="text"
@@ -108,9 +108,9 @@ function Contact() {
             <button className="contact__button" onClick={handleSubmit}>
               Send
             </button>
-          </form>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

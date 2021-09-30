@@ -8,6 +8,31 @@ import "aos/dist/aos.css";
 import Select from "react-select";
 
 function Careers(props) {
+  const [isValid, setIsValid] = useState(false);
+  const [message, setMessage] = useState('');
+
+  // The regular exprssion to validate the email pattern
+  // It may not be 100% perfect but can catch most email pattern errors and assures that the form is mostly right
+  const emailRegex = /\S+@\S+\.\S+/;
+
+  const validateEmail = (event) => {
+    console.log('I am here');
+    const email = event.target.value;
+    if (emailRegex.test(email)) {
+      setIsValid(true);
+      setMessage('Your email looks good!');
+      
+    } else {
+      setIsValid(false);
+      setMessage('Please enter a valid email!');
+    }
+  };
+  useEffect(() => {
+    // when the component is mounted, the alert is displayed for 3 seconds
+    setTimeout(() => {
+      setIsValid(true);
+    }, 3000);
+  }, []);  
     const [inputValue, setInputValue] = useState("");
   
     const handleInput = (e) => {
@@ -82,10 +107,12 @@ function Careers(props) {
             <div className='middle'> 
                 <div className='middle__left'>
                 <input type='text' placeholder='Your Name' className='middle__field'/>
-                <input type='email' placeholder='example@gmail.com' className='middle__field'/>
+                <input type='email' placeholder='example@gmail.com' onBlur={validateEmail} className='middle__field'/>
+                
                 <div className='middle__field'>
                 <span> +92-
-                 <input type='text' placeholder='XXX-XXXXXXX' onChange={(e) => handleInput(e)} value={inputValue} className='middle__field'  /> </span> 
+                 <input type='text' placeholder='XXX-XXXXXXX' onChange={(e) => handleInput(e)} value={inputValue} className='middle__field'  /></span> 
+                 <div className={`message ${isValid ? 'success' : 'error'}`}> {message} </div> 
                  </div>
                  <div className='middle__field'>
                      <div className='middle__field--select'>
@@ -136,23 +163,7 @@ function Careers(props) {
               </div>
                 </div>
             </form>
-            {/* <div className='response'>
-              <div className='response__card'>
-                <div className='response__icon'><BiUser/></div>
-                <div className='response__descrip'>Software Engineer</div>
-                <div className='response__exp'>2 Years</div>
-              </div>
-              <div className='response__card'>
-                <div className='response__icon'><BiUser/></div>
-                <div className='response__descrip'>Software Engineer</div>
-                <div className='response__exp'>2 Years</div>
-              </div>
-              <div className='response__card'>
-                <div className='response__icon'><BiUser/></div>
-                <div className='response__descrip'>Software Engineer</div>
-                <div className='response__exp'>2 Years</div>
-              </div>
-            </div> */}
+            
             
 </>
     )}

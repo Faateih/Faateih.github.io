@@ -95,7 +95,7 @@ const Header = (props) => {
               setIsOpen2(false);
             }}
           />
-          <HeaderText text="Cases" to={`/product`} styleee={props.styleee4} />
+          <HeaderText text="Product" to={`/product`} styleee={props.styleee4} />
           <HeaderText
             styleee={props.styleee5}
             to={`/blogs`}

@@ -1,3 +1,4 @@
+
 .header1 {
   display: flex;
   justify-content: center;
@@ -652,6 +653,20 @@
 
   }
 }
+.contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill:hover,
+.contact__right-put:-webkit-autofill:focus
+.contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill:hover
+.contact__right-put:-webkit-autofill:focus,
+.contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill:hover,
+.contact__right-put:-webkit-autofill:focus {
+-webkit-text-fill-color:black;
+-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+transition: background-color 5000s ease-in-out 0s;
+}
 ////////////////////////
 //////CAREERS_MIDDLE
 .merging {
@@ -701,6 +716,7 @@
     border: none;
     background-color: transparent;
     color: #fefefe;
+
 
     &:not(:nth-child(4)) {
       border-bottom: 2px solid #fefefe;
@@ -966,6 +982,20 @@
 }
 ///////////////////////
 //////CONTACT
+.contact__right--put:-webkit-autofill,
+.contact__right--put:-webkit-autofill:hover,
+.contact__right--put:-webkit-autofill:focus
+.contact__right--put:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-text-fill-color:white;
+-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+transition: background-color 5000s ease-in-out 0s;
+}
 .contact {
   display: flex;
   justify-content: center;
@@ -1241,4 +1271,21 @@
   align-items: center;
   justify-content: center;
   margin-top: 10rem;
+}
+
+
+//////////////// 
+///MESSAGE
+.message {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-left: 4rem;
+  margin-top: -8.5rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: red;
+  width: 35rem;
+  border-radius: 10px;
+
 }
