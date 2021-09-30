@@ -5,62 +5,50 @@ import image from "../assets/images/img-2.png";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import db from "../../src/firebase.config";
 
 const CaseOnMain = (props) => {
-  
-  // const [header, setHeader] = useState("header");
-  // const myRef = useRef(null);
-  // const myRef1 = useRef(null);
-  // const myRef2 = useRef(null);
+  const [mainCases, setMainCases] = useState([]);
+  const [isLoading, setIsLoading] = useState("true");
+  const fetchMainCases = async () => {
+    const response = db.collection("maincases");
+    const data = await response.get();
+    const arr = [];
+    data.forEach((item) => {
+      // setServices((ser) => [...ser, item.data()]);
+      arr.push(item.data());
+    });
+    setMainCases([...arr]);
+    setIsLoading(false);
+  };
 
-  // // let offsetTop = myRef?.current?.node?.getBoundingClientRect();
-
-  // const listenScrollEvent = (event) => {
-  //   let offsetTop = myRef?.current?.offsetTop;
-  //   let offsetTop1 = myRef1?.current?.offsetTop;
-  //   let offsetTop2 = myRef2?.current?.offsetTop;
-  //   console.log(offsetTop);
-  //   console.log(offsetTop1);
-  //   console.log(offsetTop2);
-  //   if (window.scrollY > offsetTop && window.scrollY < offsetTop1) {
-  //     return setHeader("blue");
-  //   }
-  //   if (window.scrollY > offsetTop1 && window.scrollY < offsetTop2) {
-  //     return setHeader("brown");
-  //   }
-  //   if (window.scrollY > offsetTop2) {
-  //     return setHeader("green");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", listenScrollEvent);
-
-  //   return () => window.removeEventListener("scroll", listenScrollEvent);
-  // }, []);
+  useEffect(() => {
+    fetchMainCases();
+  }, [mainCases]);
+  console.log(mainCases);
 
   return (
     <div className="caseonmain" style={props.stylee}>
       <Individualcase
         ref={props.ref1}
-        src={companyLogo}
-        image={image}
-        heading="Ruggengraat"
-        text="Ruggengraat is an online fitness platform. We integrated features, that allow the trainer to create meal and workout plans, send them to the client's phone, and track the progress via text and graphs."
+        src={mainCases[1]?.url}
+        image={mainCases[1]?.image}
+        heading={mainCases[1]?.name}
+        text={mainCases[1]?.description}
       />
       <Individualcase
         ref={props.ref2}
-        src={companyLogo}
-        image={image}
-        heading="Ruggengraat"
-        text="Ruggengraat is an online fitness platform. We integrated features, that allow the trainer to create meal and workout plans, send them to the client's phone, and track the progress via text and graphs."
+        src={mainCases[0]?.url}
+        image={mainCases[0]?.image}
+        heading={mainCases[0]?.name}
+        text={mainCases[0]?.description}
       />
       <Individualcase
         ref={props.ref3}
-        src={companyLogo}
-        image={image}
-        heading="Ruggengraat"
-        text="Ruggengraat is an online fitness platform. We integrated features, that allow the trainer to create meal and workout plans, send them to the client's phone, and track the progress via text and graphs."
+        src={mainCases[2]?.url}
+        image={mainCases[2]?.image}
+        heading={mainCases[2]?.name}
+        text={mainCases[2]?.description}
       />
     </div>
   );
