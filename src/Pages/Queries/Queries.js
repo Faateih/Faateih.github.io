@@ -13,6 +13,21 @@ function Queries(props) {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [senior, setSenior] = useState([]);
+  const fetchBlogs = async () => {
+    const response = db.collection("companyheads");
+    const data = await response.get();
+    const arr = [];
+    data.forEach((item) => {
+      // setServices((ser) => [...ser, item.data()]);
+      arr.push(item.data());
+    });
+    setSenior([...arr]);
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
   const handleChange = (event) => {
     setName(event.target.value);
@@ -123,35 +138,35 @@ function Queries(props) {
           <div className="mail__center"></div>
           <div className="mail__right" data-aos="fade-down">
             <div className="mail__flex">
-              <img src={props.mailpic} alt="Pic" className="mail__picture" />
+              <img src={senior[0]?.image} alt="Pic" className="mail__picture" />
               <div className="mail__data">
-                <div className="mail__heading">{props.mailname}</div>
-                <div className="mail__details">{props.maildetail}</div>
+                <div className="mail__heading">{senior[0]?.name}</div>
+                <div className="mail__details">{senior[0]?.designation}</div>
                 <div className="mail__phone">
                   <img
                     src={props.mobile}
                     alt="mobile"
                     className="mail__mobile"
                   />{" "}
-                  <span className="mail__num">887-999-777-666</span>
+                  <span className="mail__num">{senior[0]?.contact}</span>
                 </div>
-                <div className="mail__emaile">umairali123@gmail.com</div>
+                <div className="mail__emaile">{senior[0]?.email}</div>
               </div>
             </div>
             <div className="mail__flex">
-              <img src={props.mailpicf} alt="Pic" className="mail__picture" />
+              <img src={senior[1]?.image} alt="Pic" className="mail__picture" />
               <div className="mail__data">
-                <div className="mail__heading">{props.mailnamef}</div>
-                <div className="mail__details">{props.maildetailf}</div>
+                <div className="mail__heading">{senior[1]?.name}</div>
+                <div className="mail__details">{senior[1]?.designation}</div>
                 <div className="mail__phone">
                   <img
                     src={props.mobile}
                     alt="mobile"
                     className="mail__mobile"
                   />{" "}
-                  <span className="mail__num">887-999-777-666</span>
+                  <span className="mail__num">{senior[1]?.contact}</span>
                 </div>
-                <div className="mail__emaile">frazkhan123@gmail.com</div>
+                <div className="mail__emaile">{senior[0]?.email}</div>
               </div>
             </div>
           </div>

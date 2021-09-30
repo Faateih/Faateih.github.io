@@ -15,6 +15,7 @@ function About() {
     Aos.init({ duration: 1500 });
   }, []);
   const [users, setUsers] = useState([]);
+  const [senior, setSenior] = useState([]);
 
   const fetchUsers = async () => {
     const response = db.collection("users");
@@ -26,8 +27,19 @@ function About() {
     });
     setUsers([...arr]);
   };
+  const fetchSeniors = async () => {
+    const response = db.collection("companyheads");
+    const data = await response.get();
+    const arrr = [];
+    data.forEach((item) => {
+      // setServices((ser) => [...ser, item.data()]);
+      arrr.push(item.data());
+    });
+    setSenior([...arrr]);
+  };
 
   useEffect(() => {
+    fetchSeniors();
     fetchUsers();
   }, []);
 
@@ -47,15 +59,15 @@ function About() {
             href="www.facebook.com"
           >
             <img
-              src={FarazBhai}
+              src={senior[0]?.image}
               alt="hr"
               className="aboutus__sectionthree--parttwo-one-p1-image"
             />
             <div className="aboutus__sectionthree--parttwo-one-p1-text">
-              hello world
+              {senior[0]?.name}
             </div>
             <div className="aboutus__sectionthree--parttwo-three-p1-text-2">
-              hello world
+              {senior[0]?.designation}
             </div>
           </a>
           <a
@@ -63,15 +75,15 @@ function About() {
             className="aboutus__sectionthree--parttwo-one-p1"
           >
             <img
-              src={FarazBhai}
+              src={senior[1]?.image}
               alt="hr"
               className="aboutus__sectionthree--parttwo-one-p1-image"
             />
             <div className="aboutus__sectionthree--parttwo-one-p1-text">
-              hello world
+              {senior[1]?.name}
             </div>
             <div className="aboutus__sectionthree--parttwo-three-p1-text-2">
-              hello world
+              {senior[1]?.designation}
             </div>
           </a>
         </div>
