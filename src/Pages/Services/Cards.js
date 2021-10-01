@@ -2,7 +2,7 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
 function Cards(props) {
-  console.log(props.icon);
+  // console.log(props.icon);
   return (
     <div className="card">
       <div className="card__head">

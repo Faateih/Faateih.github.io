@@ -1,135 +1,140 @@
 .product {
-    margin-top: 10rem;
-    padding: 0 3rem;
+  margin-top: 10rem;
+  padding: 0 6rem;
 }
 .productcase {
+  display: flex;
+  flex-direction: column;
+
+  &__head {
     display: flex;
-    flex-direction: column;
-    
-    &__head {
-        display: flex;
-        align-items: center;
-    }
+    align-items: center;
+  }
 
-    &__background {
-        width: 100%;
-        height: 50rem;
-        object-fit: cover;
-        margin-bottom: 4rem;
-    }
+  &__background {
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+    margin-bottom: 4rem;
+  }
 
-    &__logo {
-        width: 5rem;
-        height: 5rem;
-        margin-right: 2rem;
-    }
+  &__logo {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+  }
 
-    &__name {
-        font-size: 3.5rem;
-        font-weight: 700;
-    }
+  &__name {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
 
-    &__detailup {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+  &__detailup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    &__descshort {
+  &__descshort {
     font-size: 3rem;
-    }
+  }
 
-    &__imagepro {
+  &__imagepro {
+    width: 30vw;
+    height: 30vh;
+    border-radius: 8px;
+  }
 
-    }
+  &__detailbelow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  &__imagebelow {
+    width: 30vw;
+    height: 30vh;
+    border-radius: 8px;
+    margin-right: 2rem;
+  }
 
-    &__detailbelow {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__imagebelow {
-
-    }
-
-    &__desclong {
-        font-size: 3rem;
-    }
+  &__desclong {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 468px) {
-    .productcase {
-
-        &__background {
-            display: none;
-            visibility: hidden;
-        }
-        &__head {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        &__logo {
-            width: 3rem;
-            height: 3rem;
-        }
-
-        &__name {
-            font-size: 2.5rem;
-        }
-
-        &__detailup {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-        }
-
-        &__descshort {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        &__imagepro {
-            display: none;
-            visibility: hidden;
-        }
-
-        &__detailbelow {
-            display: none;
-            visibility: hidden;
-        }
+  .productcase {
+    &__background {
+      display: none;
+      visibility: hidden;
     }
-    .footer1__main--one {
-        display: none;
-        visibility: hidden;
-      }
-      .footer1__main--two {
-        display: none;
-        visibility: hidden;
-      }
-      .footer1__main--three {
-        display: none;
-        visibility: hidden;
-      }
-      .footercontent {
-        margin-bottom: 6rem;
-        &__three {
-            margin-top: 3rem;
-        }
-      }
-      .footercontent__three--content-text {
-        margin-top: 9rem;
-      }
-      .footercontent__three--heading {
-        margin-top: -3rem;
-      }
-      .footercontent__three--content-social {
-        display: flex;
-        justify-content: space-around;
-      }
-      .footers {
-        margin-top: 1.5rem;
-      }
+    &__head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    &__logo {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &__name {
+      font-size: 2.5rem;
+    }
+
+    &__detailup {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__descshort {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    &__imagepro {
+      display: none;
+      visibility: hidden;
+    }
+
+    &__detailbelow {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .footer1__main--one {
+    display: none;
+    visibility: hidden;
+  }
+  .footer1__main--two {
+    display: none;
+    visibility: hidden;
+  }
+  .footer1__main--three {
+    display: none;
+    visibility: hidden;
+  }
+  .footercontent {
+    margin-bottom: 6rem;
+    &__three {
+      margin-top: 3rem;
+    }
+  }
+  .footercontent__three--content-text {
+    margin-top: 9rem;
+  }
+  .footercontent__three--heading {
+    margin-top: -3rem;
+  }
+  .footercontent__three--content-social {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footers {
+    margin-top: 1.5rem;
+  }
 }

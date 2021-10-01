@@ -112,6 +112,9 @@
       margin-top: 3rem;
     }
     &--button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-decoration: none;
       width: 25rem;
       height: 6rem;

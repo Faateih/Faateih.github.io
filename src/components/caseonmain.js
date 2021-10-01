@@ -35,6 +35,7 @@ const CaseOnMain = (props) => {
         image={mainCases[1]?.image}
         heading={mainCases[1]?.name}
         text={mainCases[1]?.description}
+        to={mainCases[1]?.to}
       />
       <Individualcase
         ref={props.ref2}
@@ -42,6 +43,7 @@ const CaseOnMain = (props) => {
         image={mainCases[0]?.image}
         heading={mainCases[0]?.name}
         text={mainCases[0]?.description}
+        to={mainCases[0]?.to}
       />
       <Individualcase
         ref={props.ref3}
@@ -49,6 +51,7 @@ const CaseOnMain = (props) => {
         image={mainCases[2]?.image}
         heading={mainCases[2]?.name}
         text={mainCases[2]?.description}
+        to={mainCases[2]?.to}
       />
     </div>
   );

@@ -6,78 +6,47 @@ import mail from "../assets/umairbhai.jpg";
 import mobil from "../assets/phone.svg";
 import fb from "../assets/frazbhai.jpg";
 import { FiSend } from "react-icons/fi";
-
+import db from "../firebase.config";
+import { useState } from "react";
+import { useEffect } from "react";
 const TechnologiesMain = (props) => {
+  const [technologies, setTechnologies] = useState([]);
+
+  const fetchBlogs = async () => {
+    // console.log("im here");
+    const response = db.collection("technologies");
+    const data = await response.get();
+    const arr = [];
+    data.forEach((item) => {
+      // setServices((ser) => [...ser, item.data()]);
+      arr.push(item.data());
+    });
+    setTechnologies([...arr]);
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+    console.log(technologies);
+  }, []);
+
   return (
     <div className="technologiesmain">
       {/* <div className="technologiesmain__one">
         <h1 className="technologiesmain__one--text">{props.text}</h1>
       </div> */}
       <div className="technologiesmain__two">
-        <SingleTech
-          id="react"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="React"
-        />
-        <SingleTech
-          id="reactnative"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="React Native"
-        />
-       
-        
-        <SingleTech
-          id="nodejs"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="Node Js"
-        />
-        <SingleTech
-          id="typescript"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="TypeScript"
-        />
-        <SingleTech
-          id="aws"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="AWS"
-        />
-       <SingleTech
-          id="graphql"
-          description="GraphQL is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="Graph QL"
-        />
-       
-        
+        {technologies.length > 0 &&
+          technologies.map((technology) => {
+            return (
+              <SingleTech
+                id={technology.name}
+                description={technology.description}
+                heading={technology.name}
+                src={technology.image}
+              />
+            );
+          })}
+
         {/* <Queries
           iconmail={<FiSend />}
           queryhead="Have a project in mind? Need help with an ongoing one?"

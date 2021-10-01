@@ -22,23 +22,24 @@ function Careers(props) {
   const [selectt, setSelectt] = useState("");
   const emailRegex = /\S+@\S+\.\S+/;
 
-const validateEmail = (event) => {
-  const email = event.target.value;
-  if (emailRegex.test(email)) {
-    setIsValid(true);
-    setMessage('');
-    // setTimeout(()=>{setMessage('')},4500)
-  } else {
-    setIsValid(false);
-    setMessage('Please enter a valid email!');
-    setTimeout(()=>{setMessage('')}, 3000)
-  }
-}
+  const validateEmail = (event) => {
+    const email = event.target.value;
+    if (emailRegex.test(email)) {
+      setIsValid(true);
+      setMessage("");
+      // setTimeout(()=>{setMessage('')},4500)
+    } else {
+      setIsValid(false);
+      setMessage("Please enter a valid email!");
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
+    }
+  };
 
   const handleChange = (event) => {
-    const val = event.target.value.replace(/[0-9]/g, '');
+    const val = event.target.value.replace(/[0-9]/g, "");
     setName(val);
-
   };
   const handleChange1 = (event) => {
     setEmail(event.target.value);
@@ -181,7 +182,7 @@ const validateEmail = (event) => {
       <div className="careers__tag">Join Our Team</div>
       <div className="middle">
         <div className="middle__left">
-        {isLoading === true && (
+          {isLoading === true && (
             <Loader
               type="BallTriangle"
               color="#00BFFF"
@@ -192,68 +193,71 @@ const validateEmail = (event) => {
           )}
           {isLoading === false && (
             <>
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={name}
-            className="middle__field"
-            onChange={handleChange}
-          />
-          <div className='middle__field'>
-          <input
-            type="email"
-            placeholder="example@gmail.com"
-            className="middle__field"
-            onChange={handleChange1}
-          /> 
-          <div className={`message ${isValid ? 'success' : 'error'}`}> {message} </div>
-          </div>
-          <div className="middle__field">
-            <span>
-              {" "}
-              +92-
               <input
                 type="text"
-                placeholder="300-0000000"
-                onChange={(e) => handleInput(e)}
-                value={inputValue}
+                placeholder="Your Name"
+                value={name}
                 className="middle__field"
-              />{" "}
-            </span>
-          </div>
-          <div className="middle__field">
-            <div className="middle__field--select">
-              <Select
-                // defaultValue={[colourOptions[2], colourOptions[3]]}
-                name="colors"
-                options={options}
-                className="basic-multi-select middle__field--selec"
-                classNamePrefix="select"
-                styles={customStyles}
-                onChange={(e) => {
-                  setSelectt(e.value);
-                }}
+                onChange={handleChange}
               />
-            </div>
-          </div>
-          <div className="middle__field--1">
-            <div className="middle__field--2">
-              {" "}
-              {image === null ? "Upload Your CV Here" : `${image}`}{" "}
-              <span className="middle__span">
-                <HiPlus />
-              </span>{" "}
-            </div>
-          </div>
-          <input
-            type="file"
-            onChange={(event) => {
-              // setIsUpload(e.target.files[0]);
-              setImage(event.target.files[0]);
-              console.log(event.target.files[0]);
-            }}
-            className="middle__inpfile"
-          />
+              <div className="middle__field">
+                <input
+                  type="email"
+                  placeholder="example@gmail.com"
+                  className="middle__field"
+                  onChange={handleChange1}
+                />
+                <div className={`message ${isValid ? "success" : "error"}`}>
+                  {" "}
+                  {message}{" "}
+                </div>
+              </div>
+              <div className="middle__field">
+                <span>
+                  {" "}
+                  +92-
+                  <input
+                    type="text"
+                    placeholder="300-0000000"
+                    onChange={(e) => handleInput(e)}
+                    value={inputValue}
+                    className="middle__field"
+                  />{" "}
+                </span>
+              </div>
+              <div className="middle__field">
+                <div className="middle__field--select">
+                  <Select
+                    // defaultValue={[colourOptions[2], colourOptions[3]]}
+                    name="colors"
+                    options={options}
+                    className="basic-multi-select middle__field--selec"
+                    classNamePrefix="select"
+                    styles={customStyles}
+                    onChange={(e) => {
+                      setSelectt(e.value);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="middle__field--1">
+                <div className="middle__field--2">
+                  {" "}
+                  {image === null ? "Upload Your CV Here" : `${image}`}{" "}
+                  <span className="middle__span">
+                    <HiPlus />
+                  </span>{" "}
+                </div>
+              </div>
+              <input
+                type="file"
+                onChange={(event) => {
+                  // setIsUpload(e.target.files[0]);
+                  setImage(event.target.files[0]);
+                  console.log(event.target.files[0]);
+                }}
+                className="middle__inpfile"
+              />
               <button className="middle__btn " onClick={upload}>
                 Submit Here
               </button>

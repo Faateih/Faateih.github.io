@@ -28,7 +28,7 @@ const ServicesMain = (props) => {
   useEffect(() => {
     fetchBlogs();
   }, []);
-  console.log(services);
+  // console.log(services);
 
   return (
     <div className="technologiesmain">

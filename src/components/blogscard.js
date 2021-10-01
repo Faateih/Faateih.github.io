@@ -20,10 +20,10 @@ const BlogsCard = (props) => {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   });
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
-  console.log(blogs);
+  // useEffect(() => {
+  //   fetchBlogs();
+  // }, []);
+  // console.log(blogs);
 
   return (
     <div className="blogscard" id={props.id} data-aos="fade-up">

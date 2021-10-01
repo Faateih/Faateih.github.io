@@ -2,17 +2,17 @@ import React from "react";
 import companyLogo from "../assets/images/kg.svg";
 import image from "../assets/images/img-2.png";
 import { AiFillPropertySafety } from "react-icons/ai";
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import {useEffect} from 'react';
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Individualcase = React.forwardRef((props, ref) => {
   useEffect(() => {
-    Aos.init({duration: 1500});
-}, []);
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
-    <div className="individualcase" ref={ref} data-aos='fade-up'>
+    <div className="individualcase" ref={ref} data-aos="fade-up">
       <div className="individualcase__left">
         <div className="individualcase__left--logo">
           <div className="individualcase__left--logo-logo">
@@ -32,9 +32,13 @@ const Individualcase = React.forwardRef((props, ref) => {
           <div className="individualcase__left--technologies-item">Web</div>
         </div>
         <div className="individualcase__left--description">{props.text}</div>
-        <button className="individualcase__left--button" style={props.styless}>
+        <Link
+          to={props.to}
+          className="individualcase__left--button"
+          style={props.styless}
+        >
           View Case
-        </button>
+        </Link>
       </div>
       <div className="individualcase__right">
         <img
