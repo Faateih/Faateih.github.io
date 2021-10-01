@@ -169,6 +169,9 @@
 }
 
 @media (max-width: 1160px) {
+  .card:nth-child(6) {
+    margin-top: 2rem;
+  }
   .card__button {
     font-size: 1.5rem;
     height: 3rem;
@@ -176,16 +179,19 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1010px) {
   .card__button {
     width: 90%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 468px) {
   .card {
     width: 100%;
     margin-right: 1.5rem;
 
+  }
+  .card__button {
+    height: 4.5rem;
   }
   .card__head {
     display: flex;
@@ -1096,7 +1102,7 @@ transition: background-color 5000s ease-in-out 0s;
 .contact__right-put:-webkit-autofill,
 .contact__right-put:-webkit-autofill:hover,
 .contact__right-put:-webkit-autofill:focus {
--webkit-text-fill-color:white;
+-webkit-text-fill-color:black;
 -webkit-box-shadow: 0 0 0px 1000px transparent inset;
 transition: background-color 5000s ease-in-out 0s;
 }
@@ -1267,8 +1273,21 @@ transition: background-color 5000s ease-in-out 0s;
   }
 }
 
-@media (max-width:400px) {
-  
+@media (max-width:468px) {
+  .contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill:hover,
+.contact__right-put:-webkit-autofill:focus
+.contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill:hover
+.contact__right-put:-webkit-autofill:focus,
+.contact__right-put:-webkit-autofill,
+.contact__right-put:-webkit-autofill:hover,
+.contact__right-put:-webkit-autofill:focus {
+-webkit-text-fill-color:white;
+-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+transition: background-color 5000s ease-in-out 0s;
+}
   .contact__middle{
     display: flex;
     flex-direction: column;
