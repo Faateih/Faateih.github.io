@@ -123,9 +123,9 @@ function Queries(props) {
   return (
     <>
       <div className="waves">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 1440 300">
           <path
-            fill="black"
+            fill="white"
             fill-opacity="1"
             d="M0,288L60,288C120,288,240,288,360,277.3C480,267,600,245,720,234.7C840,224,960,224,1080,234.7C1200,245,1320,267,1380,277.3L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
           ></path>
@@ -155,18 +155,18 @@ function Queries(props) {
             <div className={`messagequery ${isValid ? 'success' : 'error'}`}> {isMessage} </div>
             <input
               type="text"
-              placeholder="Phone number"
+              placeholder="Enter Number (e.g, 0300-0000000)"
               className="mail__email"
               onChange={handleChange2}
               value={inputValue}
 
             ></input>
-            <input
+            <textarea
               type="text"
               placeholder="Your message or query"
-              className="mail__email"
+              className="mail__email-message"
               onChange={handleChange3}
-            ></input>
+            ></textarea>
             {isLoading === false && (
               <button className="mail__button" onClick={handleSubmit}>
                 {props.button}

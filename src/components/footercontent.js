@@ -59,14 +59,13 @@ const FooterContent = (props) => {
         <div className="footercontent__three">
           <div className="footercontent__three--heading">Contact Us</div>
           <div className='footers'>
-            <div className='footers__location'><FiMapPin/><span className='footers__locspan'> DHA Rahbar</span></div>
-                        <div className='footers__email'><AiOutlineMail/><span className='footers__mail'>cbsolpro@gmail.com</span></div>
-                        <div className='footers__call'><BiPhoneCall/> <span className='footers__num'>+92-XXX-XXXXXX</span></div>
+            <div className='footers__location'><FiMapPin/><span className='footers__locspan'> DHA Rahbar, Lahore</span></div>
+                        <div className='footers__email'><AiOutlineMail/><span className='footers__mail'>careers@cbsolpro.com</span></div>
+                        <div className='footers__call'><BiPhoneCall/> <span className='footers__num'>+92-303-9093600</span></div>
                         </div>
           <div className="footercontent__three--content">
             <div className="footercontent__three--content-social">
               <FiFacebook className="footercontent__three--content-social-facebook" />
-              <RiTwitterLine className="footercontent__three--content-social-twitter" />
               <AiOutlineInstagram className="footercontent__three--content-social-instagram" />
               <AiOutlineLinkedin className="footercontent__three--content-social-linkedin" />
             </div>        

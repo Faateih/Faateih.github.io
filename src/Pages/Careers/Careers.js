@@ -22,10 +22,6 @@ function Careers(props) {
   const [selectt, setSelectt] = useState("");
   const emailRegex = /\S+@\S+\.\S+/;
 
-const ValidateName = (event) => {
-  const val = event.target.value.replace(/[0-9]/g, '');
-  setName(val);
-}
 const validateEmail = (event) => {
   const email = event.target.value;
   if (emailRegex.test(email)) {
@@ -41,8 +37,9 @@ const validateEmail = (event) => {
 
 
   const handleChange = (event) => {
-    setName(event.target.value);
-    ValidateName(event);
+    const val = event.target.value.replace(/[0-9]/g, '');
+    setName(val);
+
   };
   const handleChange1 = (event) => {
     setEmail(event.target.value);
@@ -186,23 +183,26 @@ const validateEmail = (event) => {
           <input
             type="text"
             placeholder="Your Name"
+            value={name}
             className="middle__field"
             onChange={handleChange}
           />
-          <span>
+          <div className='middle__field'>
           <input
             type="email"
             placeholder="example@gmail.com"
             className="middle__field"
             onChange={handleChange1}
-          /> <div className={`message ${isValid ? 'success' : 'error'}`}> {message} </div> </span>
+          /> 
+          <div className={`message ${isValid ? 'success' : 'error'}`}> {message} </div>
+          </div>
           <div className="middle__field">
             <span>
               {" "}
               +92-
               <input
                 type="text"
-                placeholder="XXX-XXXXXXX"
+                placeholder="300-0000000"
                 onChange={(e) => handleInput(e)}
                 value={inputValue}
                 className="middle__field"
@@ -227,7 +227,7 @@ const validateEmail = (event) => {
           <div className="middle__field--1">
             <div className="middle__field--2">
               {" "}
-              {image === null ? "Upload Your CV Here" : "hello"}{" "}
+              {image === null ? "Upload Your CV Here" : `${image}`}{" "}
               <span className="middle__span">
                 <HiPlus />
               </span>{" "}

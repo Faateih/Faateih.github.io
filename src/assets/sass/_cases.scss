@@ -67,10 +67,12 @@
     &--logo {
       display: flex;
       margin-top: 1rem;
+      align-items: center;
 
       &-logo {
         &-img {
           width: 6rem;
+          margin-right: 1.5rem;
         }
       }
       &-description {
@@ -201,9 +203,9 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 468px) {
   .cases__heading {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
   }
@@ -214,6 +216,7 @@
     margin-bottom: 2rem;
   }
   .cases__button {
+    margin-top: 1.5rem;
     width: 20rem;
     height: 4rem;
     font-size: 1.5rem;

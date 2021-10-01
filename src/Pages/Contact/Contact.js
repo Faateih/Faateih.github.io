@@ -180,7 +180,7 @@ function formatPhoneNumber(value) {
 
             <input
               type="text"
-              placeholder="Enter Your Phone number"
+              placeholder="Enter Number (e.g, 0300-0000000)"
               className="contact__right-put"
               onChange={handleChange2}
               value={inputValue}

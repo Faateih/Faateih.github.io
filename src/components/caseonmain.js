@@ -24,7 +24,7 @@ const CaseOnMain = (props) => {
 
   useEffect(() => {
     fetchMainCases();
-  }, [mainCases]);
+  }, []);
   console.log(mainCases);
 
   return (

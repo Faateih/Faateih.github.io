@@ -40,9 +40,9 @@ const Home = () => {
     let offsetTop2 = myRef2?.current?.offsetTop;
     let offsetTop3 = newRef?.current?.offsetTop;
     let offsetTop4 = lastRef?.current?.offsetTop;
-    console.log(offsetTop);
-    console.log(offsetTop1);
-    console.log(offsetTop2);
+    // console.log(offsetTop);
+    // console.log(offsetTop1);
+    // console.log(offsetTop2);
     if (window.scrollY < offsetTop ){
       setHeader('transparent');
       setText('black');

@@ -31,6 +31,7 @@
     font-size: 5.6rem;
     font-family: "Playfair Display", serif;
     margin-bottom: 2rem;
+    margin-left: 4rem;
   }
   &__three {
     position: absolute;
@@ -38,6 +39,8 @@
     font-size: 2rem;
     color: white;
     font-weight: 500;
+    margin-left: 4rem;
+    width: 95% !important;
 }
 }
 @media (max-width: 468px) {

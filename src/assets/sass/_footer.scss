@@ -161,7 +161,7 @@
   }
 }
 
-@media(max-width:400px) {
+@media(max-width:468px) {
   .footer1__main--one {
     display: none;
     visibility: hidden;
@@ -183,9 +183,19 @@
   .footercontent__three--heading {
     margin-top: -3rem;
   }
-  .footercontent__three--content-social {
+  // .footercontent__three--content {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+  .footercontent__three--content-social-facebook {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  }
+  .footercontent__three--content-social-instagram {
+    margin-left: 2rem;
+  }
+  .footercontent__three--content-social-linkedin {
+    margin-left: 4rem;
   }
   .footers {
     margin-top: 1.5rem;
