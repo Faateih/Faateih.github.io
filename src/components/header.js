@@ -30,7 +30,7 @@ const Header = (props) => {
       <div className='navbr__color'>
           <ul className='navbr__ul'>
             <Link to='aboutus' target='_top' className='navbr__link'>About Us</Link>
-            <Link to='services1' target='_top' className='navbr__link'>Services</Link>
+            <Link to='services' target='_top' className='navbr__link'>Services</Link>
             <Link to='technologies' target='_top' className='navbr__link'>Technology</Link>
             <Link to='product' target='_top' className='navbr__link'>Product</Link>
             {/* <li className='navbr__link'>Blog</li> */}
@@ -68,7 +68,7 @@ const Header = (props) => {
 
           <HeaderText
             styleee={props.styleee2}
-            to={`/services1`}
+            to={`/services`}
             text="Services"
             onMouseEnter={() => {
               setIsOpen1(true);

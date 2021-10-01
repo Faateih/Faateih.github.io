@@ -46,12 +46,12 @@ const FooterContent = (props) => {
         <div className="footercontent__two">
           <div className="footercontent__two--heading">Services</div>
           <div className="footercontent__two--content">
-            <Link to='services1#webdesignanddevelopment' className="footercontent__two--content-text">Web Application</Link>
-            <Link to='services1#mobiledevelopment' className="footercontent__two--content-text">Mobile Application</Link>
-            <Link to='services1#softwaretesting' className="footercontent__two--content-text">Software Testing</Link>
-            <Link to='services1#uxuidesign' className="footercontent__two--content-text">UI/UX Design</Link>
-            <Link to='services1' className="footercontent__two--content-text">Data Security</Link>
-            <Link to='services1' className="footercontent__two--content-text">Project Management</Link>
+            <Link to='services#webdesignanddevelopment' className="footercontent__two--content-text">Web Application</Link>
+            <Link to='services#mobiledevelopment' className="footercontent__two--content-text">Mobile Application</Link>
+            <Link to='services#softwaretesting' className="footercontent__two--content-text">Software Testing</Link>
+            <Link to='services#uxuidesign' className="footercontent__two--content-text">UI/UX Design</Link>
+            <Link to='services' className="footercontent__two--content-text">Data Security</Link>
+            <Link to='services' className="footercontent__two--content-text">Project Management</Link>
           </div>
         </div>
       )}
