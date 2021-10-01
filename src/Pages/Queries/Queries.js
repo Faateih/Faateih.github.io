@@ -8,13 +8,13 @@ import { doc, setDoc } from "firebase/firestore";
 import Loader from "react-loader-spinner";
 
 function Queries(props) {
-    //PHONE VALIDATION 
-    const [inputValue, setInputValue] = useState("");
-  
-    const handleInput = (e) => {
-      const formattedPhoneNumber = formatPhoneNumber(e.target.value);
-      setInputValue(formattedPhoneNumber);
-    };
+  //PHONE VALIDATION
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInput = (e) => {
+    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+    setInputValue(formattedPhoneNumber);
+  };
   function formatPhoneNumber(value) {
     if (!value) return value;
     const phoneNumber = value.replace(/[^\d]/g, "");
@@ -30,7 +30,7 @@ function Queries(props) {
   }
   //EMAIL VALIDATION
   const [isValid, setIsValid] = useState(false);
-  const [isMessage, setIsMessage] = useState('');
+  const [isMessage, setIsMessage] = useState("");
 
   // The regular exprssion to validate the email pattern
   // It may not be 100% perfect but can catch most email pattern errors and assures that the form is mostly right
@@ -40,12 +40,14 @@ function Queries(props) {
     const email = event.target.value;
     if (emailRegex.test(email)) {
       setIsValid(true);
-      setIsMessage('');
+      setIsMessage("");
       // setTimeout(()=>{setIsMessage('')},4500)
     } else {
       setIsValid(false);
-      setIsMessage('Please enter a valid email!');
-      setTimeout(()=>{setIsMessage('')}, 3000)
+      setIsMessage("Please enter a valid email!");
+      setTimeout(() => {
+        setIsMessage("");
+      }, 3000);
     }
   };
   const [name, setName] = useState("");
@@ -70,17 +72,16 @@ function Queries(props) {
   }, []);
 
   const handleChange = (event) => {
-    const val = event.target.value.replace(/[0-9]/g, '');
+    const val = event.target.value.replace(/[0-9]/g, "");
     setName(val);
   };
   const handleChange1 = (event) => {
     setEmail(event.target.value);
     validateEmail(event);
-
   };
   const handleChange2 = (event) => {
     setPhone(event.target.value);
-    handleInput(event); 
+    handleInput(event);
   };
   const handleChange3 = (event) => {
     setMessage(event.target.value);
@@ -139,6 +140,25 @@ function Queries(props) {
         </div>
         <div className="mail">
           <div className="mail__left" data-aos="fade-up">
+          {isLoading === true && (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <Loader
+                  type="BallTriangle"
+                  color="#00BFFF"
+                  height={50}
+                  width={50}
+                  timeout={1000000} //3 secs
+                />
+              </div>
+            )}
+          {isLoading === false && (
+            <>
             <input
               type="text"
               placeholder="Your name"
@@ -167,21 +187,13 @@ function Queries(props) {
               className="mail__email-message"
               onChange={handleChange3}
             ></textarea>
-            {isLoading === false && (
               <button className="mail__button" onClick={handleSubmit}>
                 {props.button}
                 <span className="card__arrow"> &rarr;</span>
               </button>
+              </>
             )}
-            {isLoading === true && (
-              <Loader
-                type="BallTriangle"
-                color="#00BFFF"
-                height={50}
-                width={50}
-                timeout={1000000} //3 secs
-              />
-            )}
+           
           </div>
           <div className="mail__center"></div>
           <div className="mail__right" data-aos="fade-down">

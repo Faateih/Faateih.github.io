@@ -34,26 +34,8 @@ const TechnologiesMain = (props) => {
             Flutter app development services for you."
           heading="React Native"
         />
-        <SingleTech
-          id="flutter"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="Flutter"
-        />
-        <SingleTech
-          id="python"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="Python"
-        />
+       
+        
         <SingleTech
           id="nodejs"
           description="Flutter is Google’s framework to streamline multi-platform
@@ -84,46 +66,18 @@ const TechnologiesMain = (props) => {
             Flutter app development services for you."
           heading="AWS"
         />
-        <SingleTech
-          id="saas"
-          description="Flutter is Google’s framework to streamline multi-platform
+       <SingleTech
+          id="graphql"
+          description="GraphQL is Google’s framework to streamline multi-platform
             development. Being backed and actively maintained by the tech giant,
             it is the only framework with mobile SDK, that doesn’t require
             Javascript bridge for reactive styles. This leads to less time to
             get the working app and returns on capital. Our company is offering
             Flutter app development services for you."
-          heading="SAAS"
+          heading="Graph QL"
         />
-        <SingleTech
-          id="hewlet"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="HEWLET"
-        />
-        <SingleTech
-          id="kotlin"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="KOTLIN"
-        />
-        <SingleTech
-          id="java"
-          description="Flutter is Google’s framework to streamline multi-platform
-            development. Being backed and actively maintained by the tech giant,
-            it is the only framework with mobile SDK, that doesn’t require
-            Javascript bridge for reactive styles. This leads to less time to
-            get the working app and returns on capital. Our company is offering
-            Flutter app development services for you."
-          heading="JAVA"
-        />
+       
+        
         {/* <Queries
           iconmail={<FiSend />}
           queryhead="Have a project in mind? Need help with an ongoing one?"

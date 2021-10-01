@@ -11,14 +11,14 @@ import db from "../../firebase.config";
 import Loader from "react-loader-spinner";
 
 function Careers(props) {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [downloadurl, setDownLoadurl] = useState("");
   const [image, setImage] = useState();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isValid, setIsValid] = useState('');
+  const [isValid, setIsValid] = useState("");
   const [selectt, setSelectt] = useState("");
   const emailRegex = /\S+@\S+\.\S+/;
 
@@ -34,7 +34,6 @@ const validateEmail = (event) => {
     setTimeout(()=>{setMessage('')}, 3000)
   }
 }
-
 
   const handleChange = (event) => {
     const val = event.target.value.replace(/[0-9]/g, '');
@@ -54,7 +53,7 @@ const validateEmail = (event) => {
       arr = data.data()?.url || [];
       // console.log(data.data().url);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
     // data.data().forEach((item) => {
     //   // setServices((ser) => [...ser, item.data()]);
@@ -89,22 +88,25 @@ const validateEmail = (event) => {
 
   // console.log(image);
   const upload = async (e) => {
+    console.log("hello");
     setIsLoading(true);
     e.preventDefault();
-    console.log("I am call here");
-    console.log(image);
+    // console.log("I am call here");
+    // console.log(image);
     let strData;
     try {
       strData = await storage.ref(`${image.name}`).put(image);
+      const url = await strData.ref.getDownloadURL();
+      console.log(url);
       await addItem({
         name,
         email,
         inputValue,
         selectt,
-        downloadurl: strData.downloadURL,
+        downloadurl: url,
       });
     } catch (error) {
-      console.log("hello");
+      console.log("error file");
     }
     setIsLoading(false);
   };
@@ -126,12 +128,11 @@ const validateEmail = (event) => {
       10
     )}${phoneNumber.slice(10, 10)}`;
   }
-    const [isUpload, setIsUpload] = useState("");
-    
-    useEffect(() => {
-           Aos.init({duration: 1500});
-           
-    }, []);
+  const [isUpload, setIsUpload] = useState("");
+
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   const customStyles = {
     control: (base, state) => ({
       ...base,
@@ -180,6 +181,17 @@ const validateEmail = (event) => {
       <div className="careers__tag">Join Our Team</div>
       <div className="middle">
         <div className="middle__left">
+        {isLoading === true && (
+            <Loader
+              type="BallTriangle"
+              color="#00BFFF"
+              height={50}
+              width={50}
+              timeout={1000000} //3 secs
+            />
+          )}
+          {isLoading === false && (
+            <>
           <input
             type="text"
             placeholder="Your Name"
@@ -242,19 +254,10 @@ const validateEmail = (event) => {
             }}
             className="middle__inpfile"
           />
-          {isLoading === true && (
-            <Loader
-              type="BallTriangle"
-              color="#00BFFF"
-              height={50}
-              width={50}
-              timeout={1000000} //3 secs
-            />
-          )}
-          {isLoading === false && (
-            <button className="middle__btn " onClick={upload}>
-              Submit Here
-            </button>
+              <button className="middle__btn " onClick={upload}>
+                Submit Here
+              </button>
+            </>
           )}
         </div>
 

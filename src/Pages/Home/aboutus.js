@@ -23,7 +23,7 @@ const AboutUs = () => {
   };
   useEffect(() => {
     fetchdata();
-  }, [setData1]);
+  }, []);
   console.log(data1);
 
   return (

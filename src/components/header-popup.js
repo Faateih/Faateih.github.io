@@ -11,7 +11,7 @@ const HeaderPopup = (props) => {
       <div className="header-popup-services">
         <div className="header-popup-services__section-one"></div>
         <div className="header-popup-services__section-two">
-          <Link 
+          <Link
             to="services1#webdesignanddevelopment"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
@@ -134,22 +134,7 @@ const HeaderPopup = (props) => {
               React Native
             </Link>
           </div>
-          <div className="extra">
-            <Link
-              to="Technologies#flutter"
-              className="header-popup-technologies-two__text"
-            >
-              Flutter
-            </Link>
-          </div>
-          <div className="extra">
-            <Link
-              to="Technologies#python"
-              className="header-popup-technologies-two__text"
-            >
-              Python
-            </Link>
-          </div>
+          
           <div className="extra">
             <Link
               to="Technologies#nodejs"
@@ -176,36 +161,13 @@ const HeaderPopup = (props) => {
           </div>
           <div className="extra">
             <Link
-              to="Technologies#sass"
+              to="Technologies#graphql"
               className="header-popup-technologies-two__text"
             >
-              SASS
+              Graph QL
             </Link>
           </div>
-          <div className="extra">
-            <Link
-              to="Technologies#hewlet"
-              className="header-popup-technologies-two__text"
-            >
-              Hewlet
-            </Link>
-          </div>
-          <div className="extra">
-            <Link
-              to="Technologies#kotlin"
-              className="header-popup-technologies-two__text"
-            >
-              Kotlin
-            </Link>
-          </div>
-          <div className="extra">
-            <Link
-              to="Technologies#java"
-              className="header-popup-technologies-two__text"
-            >
-              Java
-            </Link>
-          </div>
+          
         </div>
       </div>
     );

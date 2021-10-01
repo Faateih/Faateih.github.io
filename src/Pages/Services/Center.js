@@ -7,15 +7,16 @@ import { MdColorLens } from "react-icons/md";
 import { RiSettings4Line } from "react-icons/ri";
 import { BsShieldLock } from "react-icons/bs";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import db from '../../firebase.config';
+import db from "../../firebase.config";
 
-import Loader from 'react-loader-spinner';
+import Loader from "react-loader-spinner";
 import { useState, useEffect } from "react";
 
 const Center = () => {
   const [services, setServices] = useState([]);
   const [isLoading, setIsLoading] = useState("true");
   const fetchBlogs = async () => {
+    // console.log("im here");
     const response = db.collection("services");
     const data = await response.get();
     const arr = [];
@@ -30,7 +31,7 @@ const Center = () => {
   useEffect(() => {
     fetchBlogs();
   }, []);
-  console.log(services);
+  // console.log(services);
   if (isLoading === false) {
     return (
       <div className="center">
@@ -40,7 +41,7 @@ const Center = () => {
         <div className="center__right">
           {services.length > 0 &&
             services.map((service) => {
-              console.log("i am here.");
+              // console.log("i am here.");
               let Icon;
               if (service.icon === "RiSettings4Line") {
                 Icon = <RiSettings4Line />;
