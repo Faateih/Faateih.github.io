@@ -130,9 +130,7 @@
       &:not(:last-child) {
         margin-bottom: 1rem;
       }
-      &:hover {
-        color: blue;
-      }
+      
     }
     &--text::after {
       content: "";
