@@ -24,8 +24,8 @@ const CaseOnMain = (props) => {
 
   useEffect(() => {
     fetchMainCases();
-  }, [mainCases]);
-  console.log(mainCases);
+  }, []);
+  // console.log(mainCases);
 
   return (
     <div className="caseonmain" style={props.stylee}>

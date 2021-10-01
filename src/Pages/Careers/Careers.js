@@ -11,34 +11,35 @@ import db from "../../firebase.config";
 import Loader from "react-loader-spinner";
 
 function Careers(props) {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [downloadurl, setDownLoadurl] = useState("");
   const [image, setImage] = useState();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isValid, setIsValid] = useState('');
+  const [isValid, setIsValid] = useState("");
   const [selectt, setSelectt] = useState("");
   const emailRegex = /\S+@\S+\.\S+/;
 
-const ValidateName = (event) => {
-  const val = event.target.value.replace(/[0-9]/g, '');
-  setName(val);
-}
-const validateEmail = (event) => {
-  const email = event.target.value;
-  if (emailRegex.test(email)) {
-    setIsValid(true);
-    setMessage('');
-    // setTimeout(()=>{setMessage('')},4500)
-  } else {
-    setIsValid(false);
-    setMessage('Please enter a valid email!');
-    setTimeout(()=>{setMessage('')}, 3000)
-  }
-}
-
+  const ValidateName = (event) => {
+    const val = event.target.value.replace(/[0-9]/g, "");
+    setName(val);
+  };
+  const validateEmail = (event) => {
+    const email = event.target.value;
+    if (emailRegex.test(email)) {
+      setIsValid(true);
+      setMessage("");
+      // setTimeout(()=>{setMessage('')},4500)
+    } else {
+      setIsValid(false);
+      setMessage("Please enter a valid email!");
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
+    }
+  };
 
   const handleChange = (event) => {
     setName(event.target.value);
@@ -57,7 +58,7 @@ const validateEmail = (event) => {
       arr = data.data()?.url || [];
       // console.log(data.data().url);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
     // data.data().forEach((item) => {
     //   // setServices((ser) => [...ser, item.data()]);
@@ -92,22 +93,25 @@ const validateEmail = (event) => {
 
   // console.log(image);
   const upload = async (e) => {
+    console.log("hello");
     setIsLoading(true);
     e.preventDefault();
-    console.log("I am call here");
-    console.log(image);
+    // console.log("I am call here");
+    // console.log(image);
     let strData;
     try {
       strData = await storage.ref(`${image.name}`).put(image);
+      const url = await strData.ref.getDownloadURL();
+      console.log(url);
       await addItem({
         name,
         email,
         inputValue,
         selectt,
-        downloadurl: strData.downloadURL,
+        downloadurl: url,
       });
     } catch (error) {
-      console.log("hello");
+      console.log("error file");
     }
     setIsLoading(false);
   };
@@ -129,12 +133,11 @@ const validateEmail = (event) => {
       10
     )}${phoneNumber.slice(10, 10)}`;
   }
-    const [isUpload, setIsUpload] = useState("");
-    
-    useEffect(() => {
-           Aos.init({duration: 1500});
-           
-    }, []);
+  const [isUpload, setIsUpload] = useState("");
+
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   const customStyles = {
     control: (base, state) => ({
       ...base,
@@ -183,65 +186,6 @@ const validateEmail = (event) => {
       <div className="careers__tag">Join Our Team</div>
       <div className="middle">
         <div className="middle__left">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="middle__field"
-            onChange={handleChange}
-          />
-          <span>
-          <input
-            type="email"
-            placeholder="example@gmail.com"
-            className="middle__field"
-            onChange={handleChange1}
-          /> <div className={`message ${isValid ? 'success' : 'error'}`}> {message} </div> </span>
-          <div className="middle__field">
-            <span>
-              {" "}
-              +92-
-              <input
-                type="text"
-                placeholder="XXX-XXXXXXX"
-                onChange={(e) => handleInput(e)}
-                value={inputValue}
-                className="middle__field"
-              />{" "}
-            </span>
-          </div>
-          <div className="middle__field">
-            <div className="middle__field--select">
-              <Select
-                // defaultValue={[colourOptions[2], colourOptions[3]]}
-                name="colors"
-                options={options}
-                className="basic-multi-select middle__field--selec"
-                classNamePrefix="select"
-                styles={customStyles}
-                onChange={(e) => {
-                  setSelectt(e.value);
-                }}
-              />
-            </div>
-          </div>
-          <div className="middle__field--1">
-            <div className="middle__field--2">
-              {" "}
-              {image === null ? "Upload Your CV Here" : "hello"}{" "}
-              <span className="middle__span">
-                <HiPlus />
-              </span>{" "}
-            </div>
-          </div>
-          <input
-            type="file"
-            onChange={(event) => {
-              // setIsUpload(e.target.files[0]);
-              setImage(event.target.files[0]);
-              console.log(event.target.files[0]);
-            }}
-            className="middle__inpfile"
-          />
           {isLoading === true && (
             <Loader
               type="BallTriangle"
@@ -252,9 +196,86 @@ const validateEmail = (event) => {
             />
           )}
           {isLoading === false && (
-            <button className="middle__btn " onClick={upload}>
-              Submit Here
-            </button>
+            <>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="middle__field"
+                onChange={handleChange}
+              />
+              <span>
+                <input
+                  type="email"
+                  placeholder="example@gmail.com"
+                  className="middle__field"
+                  onChange={handleChange1}
+                />{" "}
+                <div className={`message ${isValid ? "success" : "error"}`}>
+                  {" "}
+                  {message}{" "}
+                </div>{" "}
+              </span>
+              <div className="middle__field">
+                <span>
+                  {" "}
+                  +92-
+                  <input
+                    type="text"
+                    placeholder="XXX-XXXXXXX"
+                    onChange={(e) => handleInput(e)}
+                    value={inputValue}
+                    className="middle__field"
+                  />{" "}
+                </span>
+              </div>
+
+              <div className="middle__field">
+                <div className="middle__field--select">
+                  <Select
+                    // defaultValue={[colourOptions[2], colourOptions[3]]}
+                    name="colors"
+                    options={options}
+                    className="basic-multi-select middle__field--selec"
+                    classNamePrefix="select"
+                    styles={customStyles}
+                    onChange={(e) => {
+                      setSelectt(e.value);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="middle__field--1">
+                <div className="middle__field--2">
+                  {" "}
+                  {image === null ? "Upload Your CV Here" : "hello"}{" "}
+                  <span className="middle__span">
+                    <HiPlus />
+                  </span>{" "}
+                </div>
+              </div>
+              <input
+                type="file"
+                onChange={(event) => {
+                  // setIsUpload(e.target.files[0]);
+                  setImage(event.target.files[0]);
+                  // console.log(event.target.files[0]);
+                }}
+                className="middle__inpfile"
+              />
+              {isLoading === true && (
+                <Loader
+                  type="BallTriangle"
+                  color="#00BFFF"
+                  height={50}
+                  width={50}
+                  timeout={1000000} //3 secs
+                />
+              )}
+
+              <button className="middle__btn " onClick={upload}>
+                Submit Here
+              </button>
+            </>
           )}
         </div>
 

@@ -12,31 +12,31 @@ import Header from "../../components/header";
 import { useState } from "react";
 import db from "../../firebase.config";
 import Loader from "react-loader-spinner";
+import Center from "../Services/Center";
 
 function Contact() {
-
-  //PHONE VALIDATION 
+  //PHONE VALIDATION
   const [inputValue, setInputValue] = useState("");
-  
+
   const handleInput = (e) => {
     const formattedPhoneNumber = formatPhoneNumber(e.target.value);
     setInputValue(formattedPhoneNumber);
   };
-function formatPhoneNumber(value) {
-  if (!value) return value;
-  const phoneNumber = value.replace(/[^\d]/g, "");
-  const phoneNumberLength = phoneNumber.length;
-  if (phoneNumberLength < 4) return phoneNumber;
-  if (phoneNumberLength < 11) {
-    return `${phoneNumber.slice(0, 5)}${phoneNumber.slice(5)}`;
+  function formatPhoneNumber(value) {
+    if (!value) return value;
+    const phoneNumber = value.replace(/[^\d]/g, "");
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 11) {
+      return `${phoneNumber.slice(0, 5)}${phoneNumber.slice(5)}`;
+    }
+    return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(
+      4,
+      10
+    )}${phoneNumber.slice(10, 11)}`;
   }
-  return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(
-    4,
-    10
-  )}${phoneNumber.slice(10, 11)}`;
-}
   const [isValid, setIsValid] = useState(false);
-  const [isMessage, setIsMessage] = useState('');
+  const [isMessage, setIsMessage] = useState("");
 
   // The regular exprssion to validate the email pattern
   // It may not be 100% perfect but can catch most email pattern errors and assures that the form is mostly right
@@ -46,12 +46,16 @@ function formatPhoneNumber(value) {
     const email = event.target.value;
     if (emailRegex.test(email)) {
       setIsValid(true);
-      setIsMessage('Your email looks good!');
-      setTimeout(()=>{setIsMessage('')},4500)
+      setIsMessage("Your email looks good!");
+      setTimeout(() => {
+        setIsMessage("");
+      }, 4500);
     } else {
       setIsValid(false);
-      setIsMessage('Please enter a valid email!');
-      setTimeout(()=>{setIsMessage('')}, 2000)
+      setIsMessage("Please enter a valid email!");
+      setTimeout(() => {
+        setIsMessage("");
+      }, 2000);
     }
   };
   const [name, setName] = useState("");
@@ -62,7 +66,7 @@ function formatPhoneNumber(value) {
 
   const handleChange = (event) => {
     setName(event.target.value);
-    const val = event.target.value.replace(/[0-9]/g, '');
+    const val = event.target.value.replace(/[0-9]/g, "");
     setName(val);
   };
   const handleChange1 = (event) => {
@@ -71,8 +75,7 @@ function formatPhoneNumber(value) {
   };
   const handleChange2 = (event) => {
     setPhone(event.target.value);
-        handleInput(event); 
-
+    handleInput(event);
   };
   const handleChange3 = (event) => {
     setMessage(event.target.value);
@@ -162,44 +165,15 @@ function formatPhoneNumber(value) {
             </div>
           </div>
           <div className="contact__right">
-            <div className="contact__right-head">Send Us A Message</div>
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              value={name}
-              className="contact__right-put"
-              onChange={handleChange}
-            />
-            <input
-              type="email"
-              placeholder="Enter Your Email"
-              className="contact__right-put"
-              onChange={handleChange1}
-            />
-             <div className={`messagecontact ${isValid ? 'success' : 'error'}`}> {isMessage} </div> 
-
-            <input
-              type="text"
-              placeholder="Enter Your Phone number"
-              className="contact__right-put"
-              onChange={handleChange2}
-              value={inputValue}
-
-            />
-            <textarea
-              type="text"
-              placeholder="Enter Your Message"
-              className="contact__right-message"
-              onChange={handleChange3}
-            />
-            {isLoading === false && (
-              <button className="contact__button" onClick={handleSubmit}>
-                Send
-              </button>
-            )}
-            </div>
             {isLoading === true && (
-              <div style={{ marginLeft: "20px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "100%",
+                }}
+              >
                 <Loader
                   type="BallTriangle"
                   color="#00BFFF"
@@ -209,6 +183,49 @@ function formatPhoneNumber(value) {
                 />
               </div>
             )}
+            {isLoading === false && (
+              <>
+                <div className="contact__right-head">Send Us A Message</div>
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  value={name}
+                  className="contact__right-put"
+                  onChange={handleChange}
+                />
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  className="contact__right-put"
+                  onChange={handleChange1}
+                />
+                <div
+                  className={`messagecontact ${isValid ? "success" : "error"}`}
+                >
+                  {" "}
+                  {isMessage}{" "}
+                </div>
+
+                <input
+                  type="text"
+                  placeholder="Enter Your Phone number"
+                  className="contact__right-put"
+                  onChange={handleChange2}
+                  value={inputValue}
+                />
+                <textarea
+                  type="text"
+                  placeholder="Enter Your Message"
+                  className="contact__right-message"
+                  onChange={handleChange3}
+                />
+
+                <button className="contact__button" onClick={handleSubmit}>
+                  Send
+                </button>
+              </>
+            )}
+          </div>
         </div>
       </form>
     </div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import { AiOutlineUp } from "react-icons/ai";
 import { useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import db from "../firebase.config";
@@ -41,6 +42,7 @@ function About() {
   useEffect(() => {
     fetchSeniors();
     fetchUsers();
+    console.log("i am error in about js");
   }, []);
 
   return (
@@ -89,15 +91,18 @@ function About() {
         </div>
         <div className="aboutus__sectionthree--parttwo-two">
           {isShow === false && (
-            <AiOutlineDown
-              onClick={() => {
-                setIsShow(!isShow);
-              }}
-              className="aboutus__sectionthree--parttwo-two-icon"
-            />
+            <Link to="#person">
+              <AiOutlineDown
+                onClick={() => {
+                  setIsShow(!isShow);
+                }}
+                className="aboutus__sectionthree--parttwo-two-icon"
+              />
+            </Link>
           )}
           {isShow === true && (
             <AiOutlineUp
+              id="person"
               onClick={() => {
                 setIsShow(!isShow);
               }}
@@ -115,6 +120,7 @@ function About() {
               users.map((user) => {
                 return (
                   <Person
+                    id="person"
                     src={user.image}
                     name={user.name}
                     designation={user.designation}
