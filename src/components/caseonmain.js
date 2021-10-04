@@ -20,12 +20,12 @@ const CaseOnMain = (props) => {
     });
     setMainCases([...arr]);
     setIsLoading(false);
+    console.log("i am called from main cases");
   };
 
   useEffect(() => {
     fetchMainCases();
   }, []);
-  console.log(mainCases);
 
   return (
     <div className="caseonmain" style={props.stylee}>

@@ -22,11 +22,11 @@ const TechnologiesMain = (props) => {
       arr.push(item.data());
     });
     setTechnologies([...arr]);
+    console.log("i am from tech");
   };
 
   useEffect(() => {
     fetchBlogs();
-    console.log(technologies);
   }, []);
 
   return (

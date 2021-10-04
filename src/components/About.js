@@ -27,6 +27,7 @@ function About() {
       arr.push(item.data());
     });
     setUsers([...arr]);
+    console.log("I am called from about us");
   };
   const fetchSeniors = async () => {
     const response = db.collection("companyheads");
@@ -37,6 +38,7 @@ function About() {
       arrr.push(item.data());
     });
     setSenior([...arrr]);
+    console.log("I am called from about us");
   };
 
   useEffect(() => {

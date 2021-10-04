@@ -19,15 +19,15 @@ const AboutUs = () => {
       setData1(arr);
     });
     setData1(arr);
-    console.log(data1);
+    console.log("i am called from aboutus in mid");
   };
   useEffect(() => {
     fetchdata();
   }, []);
-  console.log(data1);
+  // console.log(data1);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column"}}>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <Header />
       <Mid
         techno={Abut}
