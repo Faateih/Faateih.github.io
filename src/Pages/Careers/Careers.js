@@ -171,11 +171,10 @@ function Careers(props) {
   };
 
   const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "something", label: "something" },
-    { value: "saaqib", label: "Saaqb" },
-    { value: "usman", label: "usman" },
+    { value: "Software Quality Assurance", label: "Software Quality Assurance" },
+    { value: "Web Developer", label: "Web Developer" },
+    { value: "Mobile Developer", label: "Mobile Developer" },
+    { value: "HR Internee", label: "HR Internee" },
   ];
 
   return (
