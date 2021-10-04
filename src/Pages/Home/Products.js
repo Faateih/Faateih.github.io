@@ -25,6 +25,7 @@ function Products() {
       arr.push(item.data());
     });
     setServices([...arr]);
+    console.log("i am from products");
   };
 
   useEffect(() => {

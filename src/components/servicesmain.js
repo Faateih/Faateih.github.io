@@ -23,6 +23,7 @@ const ServicesMain = (props) => {
     });
     setServices([...arr]);
     setIsLoading(false);
+    console.log("i am called from services");
   };
 
   useEffect(() => {

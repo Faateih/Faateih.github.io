@@ -106,10 +106,10 @@ function Contact() {
     try {
       const response = db.collection("queries").doc(phone);
       const data = await response.get();
-      console.log(data.data().message);
+      // console.log(data.data().message);
       arr = data.data()?.message || [];
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
     // data.data().forEach((item) => {
     //   // setServices((ser) => [...ser, item.data()]);
@@ -125,7 +125,7 @@ function Contact() {
       .doc(phone)
       .update({ message: [...arr, message] });
     setIsLoading(false);
-
+    console.log("i am from contact");
     // Atomically remove a region from the "regions" array field.
   };
   useEffect(() => {
@@ -165,7 +165,7 @@ function Contact() {
             </div>
           </div>
           <div className="contact__right">
-          {isLoading === true && (
+            {isLoading === true && (
               <div
                 style={{
                   display: "flex",
@@ -183,53 +183,53 @@ function Contact() {
                 />
               </div>
             )}
-          {isLoading === false && ( 
-            <>
-            <div className="contact__right-head">Send Us A Message</div>
+            {isLoading === false && (
+              <>
+                <div className="contact__right-head">Send Us A Message</div>
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  value={name}
+                  className="contact__right-put"
+                  onChange={handleChange}
+                />
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  className="contact__right-put"
+                  onChange={handleChange1}
+                />
+                <div
+                  className={`messagecontact ${isValid ? "success" : "error"}`}
+                >
+                  {" "}
+                  {isMessage}{" "}
+                </div>
 
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              value={name}
-              className="contact__right-put"
-              onChange={handleChange}
-            />
-            <input
-              type="email"
-              placeholder="Enter Your Email"
-              className="contact__right-put"
-              onChange={handleChange1}
-            />
-             <div className={`messagecontact ${isValid ? 'success' : 'error'}`}> {isMessage} </div> 
+                <input
+                  type="text"
+                  placeholder="Enter Your Phone number"
+                  className="contact__right-put"
+                  onChange={handleChange2}
+                  value={inputValue}
+                />
+                <textarea
+                  type="text"
+                  placeholder="Enter Your Message"
+                  className="contact__right-message"
+                  onChange={handleChange3}
+                />
 
-            <input
-              type="text"
-              placeholder="Enter Number (e.g, 0300-0000000)"
-              className="contact__right-put"
-              onChange={handleChange2}
-              value={inputValue}
-
-            />
-            <textarea
-              type="text"
-              placeholder="Enter Your Message"
-              className="contact__right-message"
-              onChange={handleChange3}
-            />
-           
-              <button className="contact__button" onClick={handleSubmit}>
-                Send
-              </button>
+                <button className="contact__button" onClick={handleSubmit}>
+                  Send
+                </button>
               </>
             )}
-            </div>
-            </div>
-            </form>
-            </div>
-
-
-
-              );
+          </div>
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default Contact;

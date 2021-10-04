@@ -26,6 +26,7 @@ const Center = () => {
     });
     setServices([...arr]);
     setIsLoading(false);
+    console.log("i am called from main services");
   };
 
   useEffect(() => {

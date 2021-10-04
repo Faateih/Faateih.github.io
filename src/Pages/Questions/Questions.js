@@ -27,6 +27,7 @@ function Questions() {
       arr.push(item.data());
     });
     setQuestion([...arr]);
+    console.log("i am from questions");
   };
 
   useEffect(() => {

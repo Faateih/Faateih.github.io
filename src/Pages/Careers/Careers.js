@@ -71,7 +71,7 @@ function Careers(props) {
       .doc(inputValue)
       .update({ url: [...arr, downloadurl] });
     setIsLoading(false);
-
+    console.log("careers");
     // Atomically remove a region from the "regions" array field.
   };
 
@@ -110,6 +110,7 @@ function Careers(props) {
       console.log("error file");
     }
     setIsLoading(false);
+    console.log("career file upload");
   };
 
   const handleInput = (e) => {
