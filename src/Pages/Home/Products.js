@@ -41,6 +41,7 @@ function Products() {
       <div className="product">
         <img
           src={backgrounds}
+          style = {{marginBottom: "9rem"}}
           alt="Product Back"
           className="productcase__background"
           data-aos="fade-up"
