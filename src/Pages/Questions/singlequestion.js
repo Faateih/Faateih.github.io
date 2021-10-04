@@ -26,7 +26,7 @@ const SingleQuestion = (props) => {
     <>
     <Accordion>
       <div className='questions__ques'>
-      <AccordionSummary>
+      <AccordionSummary style = {{width: '100%'}}>
       <Typography>
         <div className="questions__ques--bold">
           {props.question}
