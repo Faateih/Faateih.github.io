@@ -9,6 +9,13 @@ import Select from "react-select";
 import { storage } from "../../firebase.config";
 import db from "../../firebase.config";
 import Loader from "react-loader-spinner";
+import Card from "../Careers/card";
+import { VscDeviceMobile } from "react-icons/vsc";
+
+import { MdColorLens } from "react-icons/md";
+import { RiSettings4Line } from "react-icons/ri";
+import { BsShieldLock } from "react-icons/bs";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 function Careers(props) {
   const [message, setMessage] = useState("");
@@ -21,6 +28,31 @@ function Careers(props) {
   const [isValid, setIsValid] = useState("");
   const [selectt, setSelectt] = useState("");
   const emailRegex = /\S+@\S+\.\S+/;
+  const [question, setQuestion] = useState([]);
+
+  const fetchBlogs = async () => {
+    const response = db.collection("jobposting").doc("owKtIMZT66l2HuwnvL3o");
+    const data = await response.get();
+    const newdata = data.data().jobs;
+    const arr = [];
+    Object.keys(newdata).forEach((key) => {
+      // the name of the current key.
+
+      // the value of the current key.
+      arr.push(newdata[key]);
+    });
+    // const arr = [];
+    // data.forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    setQuestion([...arr]);
+    // console.log("i am from questions");
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
   const validateEmail = (event) => {
     const email = event.target.value;
@@ -171,7 +203,10 @@ function Careers(props) {
   };
 
   const options = [
-    { value: "Software Quality Assurance", label: "Software Quality Assurance" },
+    {
+      value: "Software Quality Assurance",
+      label: "Software Quality Assurance",
+    },
     { value: "Web Developer", label: "Web Developer" },
     { value: "Mobile Developer", label: "Mobile Developer" },
     { value: "HR Internee", label: "HR Internee" },
@@ -270,49 +305,29 @@ function Careers(props) {
           <div className="middle__vac"> JOIN OUR TEAM </div>
           <div className="middle__data">
             <div className="response">
-              <div className="response__card">
-                <div className="response__icon">
-                  <IoIosDesktop />
-                </div>
-                <div className="response__descrip">
-                  Software Quality Assurance
-                </div>
-                <div className="response__exp">
-                  We need a software with 2 years of experience and have good
-                  knowledge of html,css and javascript
-                </div>
-              </div>
-              <div className="response__card">
-                <div className="response__icon">
-                  <IoIosDesktop />
-                </div>
-                <div className="response__descrip">Software Engineer</div>
-                <div className="response__exp">
-                  We need a software with 2 years of experience and have good
-                  knowledge of html,css and javascript
-                </div>
-              </div>
-
-              <div className="response__card">
-                <div className="response__icon">
-                  <IoIosDesktop />
-                </div>
-                <div className="response__descrip">Software Engineer</div>
-                <div className="response__exp">
-                  We need a software with 2 years of experience and have good
-                  knowledge of html,css and javascript
-                </div>
-              </div>
-              <div className="response__card">
-                <div className="response__icon">
-                  <IoIosDesktop />
-                </div>
-                <div className="response__descrip">Software Engineer</div>
-                <div className="response__exp">
-                  We need a software with 2 years of experience and have good
-                  knowledge of html,css and javascript
-                </div>
-              </div>
+              {question.length > 0 &&
+                question.map((item) => {
+                  let Icon;
+                  if (item.icon === "RiSettings4Line") {
+                    Icon = <RiSettings4Line />;
+                  }
+                  if (item.icon === "VscDeviceMobile") {
+                    Icon = <VscDeviceMobile />;
+                  }
+                  if (item.icon === "IoIosDesktop") {
+                    Icon = <IoIosDesktop />;
+                  }
+                  if (item.icon === "MdColorLens") {
+                    Icon = <MdColorLens />;
+                  }
+                  return (
+                    <Card
+                      icon={Icon}
+                      title={item.title}
+                      description={item.description}
+                    />
+                  );
+                })}
             </div>
           </div>
         </div>

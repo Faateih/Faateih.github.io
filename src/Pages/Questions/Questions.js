@@ -19,15 +19,25 @@ function Questions() {
   };
 
   const fetchBlogs = async () => {
-    const response = db.collection("qna");
+    const response = db
+      .collection("questionanswers")
+      .doc("bygIc09pstibe86gIm9U");
     const data = await response.get();
+    const newdata = data.data().questions;
     const arr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arr.push(item.data());
+    Object.keys(newdata).forEach((key) => {
+      // the name of the current key.
+
+      // the value of the current key.
+      arr.push(newdata[key]);
     });
+    // const arr = [];
+    // data.forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
     setQuestion([...arr]);
-    console.log("i am from questions");
+    // console.log("i am from questions");
   };
 
   useEffect(() => {

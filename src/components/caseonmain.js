@@ -11,16 +11,25 @@ const CaseOnMain = (props) => {
   const [mainCases, setMainCases] = useState([]);
   const [isLoading, setIsLoading] = useState("true");
   const fetchMainCases = async () => {
-    const response = db.collection("maincases");
+    const response = db.collection("products").doc("OwubAju7dmeGeXCk5QAF");
     const data = await response.get();
+    const maindata = data.data().products;
+    console.log(maindata);
     const arr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arr.push(item.data());
+    Object.keys(maindata).forEach((key) => {
+      // the name of the current key.
+      // the value of the current key.
+      arr.push(maindata[key]);
     });
     setMainCases([...arr]);
+    console.log(mainCases);
+    // const arr = [];
+    // data.forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    // setMainCases([...arr]);
     setIsLoading(false);
-    console.log("i am called from main cases");
   };
 
   useEffect(() => {
