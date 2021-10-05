@@ -3,7 +3,7 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import ServicesMain from "../../components/servicesmain";
 import Mid from "../../components/mid";
-import Service from '../../assets/images/opacserv.jpg';
+import Service from '../../assets/images/Services-CbSol.jpg';
 const Services1 = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>

@@ -11,7 +11,6 @@ import {
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Contact from "./Pages/Contact/Contact";
-
 // firebase
 
 
@@ -23,8 +22,27 @@ import Blogs from "./Pages/Home/blogs";
 import Technologies from "./Pages/Home/technologies";
 import Services1 from "./Pages/Home/services1";
 import Products from '../src/Pages/Home/Products.js'
+import FrontLoader from "./Pages/FrontLoader/FrontLoader";
+import {useState, useEffect} from 'react';
 function App() {
+  const [load,setLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoad(false);
+    }, 2700);
+    return () => clearTimeout(timer);
+  }, []);
+  if(load === true ) {
+    return(
+      <div>
+      <FrontLoader />
+      </div>
+    )
+       }
   return (
+    <>
+    <div>
     <Router>
       <div>
         <ToastContainer />
@@ -58,6 +76,8 @@ function App() {
         </div>
       </div>
     </Router>
+    </div>
+    </>
   );
 }
 

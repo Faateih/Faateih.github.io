@@ -145,7 +145,7 @@ function Contact() {
               </div>
               <div className="contact__email">
                 <AiOutlineMail />
-                <span className="contact__mail">cbsolpro@gmail.com</span>
+                <span className="contact__mail">careers@cbsolpro.com</span>
               </div>
               <div className="contact__call">
                 <BiPhoneCall />{" "}

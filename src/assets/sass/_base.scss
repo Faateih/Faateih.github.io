@@ -28,5 +28,12 @@ body {
    html {
     overflow-x : hidden !important;
   }
+  .MuiAccordion-root.Mui-expanded:before {
+    opacity: 1 !important;
+  }
   
+}
+
+.MuiAccordion-root.Mui-expanded:before {
+  opacity: 1 !important;
 }

@@ -4,7 +4,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import About from "../../components/About";
 import Mid from "../../components/mid";
-import Abut from "../../assets/images/opactech.jpg";
+import Abut from "../../assets/images/AboutUs-CbSol.jpg";
 import db from "../../firebase.config";
 
 const AboutUs = () => {

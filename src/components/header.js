@@ -32,7 +32,7 @@ const Header = (props) => {
             <Link to='aboutus' target='_top' className='navbr__link'>About Us</Link>
             <Link to='services' target='_top' className='navbr__link'>Services</Link>
             <Link to='technologies' target='_top' className='navbr__link'>Technology</Link>
-            <Link to='product' target='_top' className='navbr__link'>Product</Link>
+            <Link to='product' target='_top' className='navbr__link'>Products</Link>
             {/* <li className='navbr__link'>Blog</li> */}
           </ul>
           <Link to='contactus' className='navbr__button'> Contact Us </Link>
@@ -95,7 +95,7 @@ const Header = (props) => {
               setIsOpen2(false);
             }}
           />
-          <HeaderText text="Product" to={`/product`} styleee={props.styleee4} />
+          <HeaderText text="Products" to={`/product`} styleee={props.styleee4} />
           {/* <HeaderText
             styleee={props.styleee5}
             to={`/blogs`}
