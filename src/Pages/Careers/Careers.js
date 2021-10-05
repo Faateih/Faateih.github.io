@@ -128,7 +128,8 @@ function Careers(props) {
     // console.log(image);
     let strData;
     try {
-      strData = await storage.ref(`${image.name}`).put(image);
+      const imagename = `${image.name}`;
+      strData = await storage.ref(`CVs/${imagename}`).put(image);
       const url = await strData.ref.getDownloadURL();
       console.log(url);
       await addItem({
@@ -210,6 +211,8 @@ function Careers(props) {
     { value: "Web Developer", label: "Web Developer" },
     { value: "Mobile Developer", label: "Mobile Developer" },
     { value: "HR Internee", label: "HR Internee" },
+    { value: "Business Developer", label: "Business Developer" },
+    { value: "UI/UX Designer", label: "UI/UX Designer" },
   ];
 
   return (
@@ -278,7 +281,9 @@ function Careers(props) {
               <div className="middle__field--1">
                 <div className="middle__field--2">
                   {" "}
-                  {image === null ? "Upload Your CV Here" : `${image}`}{" "}
+                  {`${image?.name}` === null
+                    ? "Upload Your CV Here"
+                    : `${image?.name}`}{" "}
                   <span className="middle__span">
                     <HiPlus />
                   </span>{" "}

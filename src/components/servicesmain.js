@@ -9,10 +9,11 @@ import { FiSend } from "react-icons/fi";
 import { useEffect } from "react";
 import db from "../firebase.config";
 import { useState } from "react";
+import Loader from "react-loader-spinner";
 
 const ServicesMain = (props) => {
   const [services, setServices] = useState([]);
-  const [isLoading, setIsLoading] = useState("true");
+  const [isLoading, setIsLoading] = useState(true);
   const fetchBlogs = async () => {
     // console.log("im here");
     const response = db.collection("service").doc("LC3OM19HPFHeOJvzQCW7");
@@ -39,40 +40,52 @@ const ServicesMain = (props) => {
   useEffect(() => {
     fetchBlogs();
   }, []);
-  // console.log(services);
-
+  console.log(isLoading);
   return (
     <div className="technologiesmain">
       {/* <div className="technologiesmain__one">
         <h1 className="technologiesmain__one--text">{props.text}</h1>
       </div> */}
-      <div className="technologiesmain__two">
-        {services.length > 0 &&
-          services.map((service) => {
-            return (
-              <SingleTech
-                id={service.name}
-                description={service.description}
-                heading={service.name}
-                src={service.image}
-              />
-            );
-          })}
+      {isLoading === false && (
+        <div className="technologiesmain__two">
+          {services.length > 0 &&
+            services.map((service) => {
+              return (
+                <SingleTech
+                  id={service.name}
+                  description={service.description}
+                  heading={service.name}
+                  src={service.image}
+                />
+              );
+            })}
 
-        <Queries
-          iconmail={<FiSend />}
-          queryhead="Have a project in mind? Need help with an ongoing one?"
-          querysub="We'll be happy to talk!"
-          button="Send Message"
-          mailpic={mail}
-          mailname="Umair Ali"
-          maildetail="Cheif Executive Officer, CbSol"
-          mobile={mobil}
-          mailpicf={fb}
-          mailnamef="Fraz Khan"
-          maildetailf="Project Manager, CbSol"
-        />
-      </div>
+          <Queries
+            iconmail={<FiSend />}
+            queryhead="Have a project in mind? Need help with an ongoing one?"
+            querysub="We'll be happy to talk!"
+            button="Send Message"
+            mailpic={mail}
+            mailname="Umair Ali"
+            maildetail="Cheif Executive Officer, CbSol"
+            mobile={mobil}
+            mailpicf={fb}
+            mailnamef="Fraz Khan"
+            maildetailf="Project Manager, CbSol"
+          />
+        </div>
+      )}
+      {isLoading === true && (
+        <div className="newloader">
+          <Loader
+            type="BallTriangle"
+            color="#00BFFF"
+            height={50}
+            width={50}
+            timeout={1000000} //3 secs
+          />
+        </div>
+      )}
     </div>
   );
 };

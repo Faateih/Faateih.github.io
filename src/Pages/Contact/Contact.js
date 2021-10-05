@@ -13,6 +13,7 @@ import { useState } from "react";
 import db from "../../firebase.config";
 import Loader from "react-loader-spinner";
 import Center from "../Services/Center";
+import { Link } from "react-router-dom";
 
 function Contact() {
   //PHONE VALIDATION
@@ -153,13 +154,37 @@ function Contact() {
               </div>
               <div className="contact__social">
                 <div className="contact__fb">
-                  <FiFacebook />
+                  <Link
+                    className="hello"
+                    to={{
+                      pathname: "https://www.facebook.com/cbsolpro",
+                    }}
+                    target="_blank"
+                  >
+                    <FiFacebook />
+                  </Link>
                 </div>
                 <div className="contact__fb">
-                  <AiOutlineInstagram />
+                  <Link
+                    className="hello"
+                    to={{
+                      pathname: "https://www.instagram.com/cbsolpro/",
+                    }}
+                    target="_blank"
+                  >
+                    <AiOutlineInstagram />
+                  </Link>
                 </div>
                 <div className="contact__fb">
-                  <AiOutlineLinkedin />
+                  <Link
+                    className="hello"
+                    to={{
+                      pathname: "https://www.linkedin.com/company/cbsolpro",
+                    }}
+                    target="_blank"
+                  >
+                    <AiOutlineLinkedin />
+                  </Link>
                 </div>
               </div>
             </div>
