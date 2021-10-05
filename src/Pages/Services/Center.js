@@ -76,7 +76,7 @@ const Center = () => {
                 <Cards
                   icons={Icon}
                   title={service.name}
-                  title2={service.description}
+                  title2={service.description1}
                   to={service.to}
                 />
               );

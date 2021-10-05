@@ -11,10 +11,11 @@
 
 html {
   font-size: 58.5%;
+  font-family: "Questrial", sans-ser;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Questrial", sans-ser;
   line-height: 1.6;
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,9 +25,8 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-@media(max-width: 500px) {
-   html {
-    overflow-x : hidden !important;
+@media (max-width: 500px) {
+  html {
+    overflow-x: hidden !important;
   }
-  
 }
