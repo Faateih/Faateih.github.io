@@ -57,15 +57,21 @@ function Queries(props) {
   const [isLoading, setIsLoading] = useState(false);
   const [senior, setSenior] = useState([]);
   const fetchBlogs = async () => {
-    const response = db.collection("companyheads");
+    const response = db.collection("people").doc("n1IuxcTbWLxmXwwDxsz9");
     const data = await response.get();
+    const newdata = data.data().people.CTO;
+    const newdata1 = data.data().people.PM;
+    console.log(newdata);
     const arr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arr.push(item.data());
-    });
+    arr.push(newdata);
+    arr.push(newdata1);
     setSenior([...arr]);
-    console.log("i am from quiries");
+    // data.forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    // setSenior([...arr]);
+    // console.log("i am from quiries");
   };
 
   useEffect(() => {
@@ -233,7 +239,7 @@ function Queries(props) {
                   />{" "}
                   <span className="mail__num">{senior[1]?.contact}</span>
                 </div>
-                <div className="mail__emaile">{senior[0]?.email}</div>
+                <div className="mail__emaile">{senior[1]?.email}</div>
               </div>
             </div>
           </div>

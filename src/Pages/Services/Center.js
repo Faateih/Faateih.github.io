@@ -17,16 +17,25 @@ const Center = () => {
   const [isLoading, setIsLoading] = useState("true");
   const fetchBlogs = async () => {
     // console.log("im here");
-    const response = db.collection("services");
+    const response = db.collection("service").doc("LC3OM19HPFHeOJvzQCW7");
     const data = await response.get();
+    const newdata = data.data().services;
     const arr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arr.push(item.data());
+    Object.keys(newdata).forEach((key) => {
+      // console.log(key); // the name of the current key.
+      // console.log(newdata[key]); // the value of the current key.
+      arr.push(newdata[key]);
     });
     setServices([...arr]);
     setIsLoading(false);
-    console.log("i am called from main services");
+    // const arr = [];
+    // data.forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    // setServices([...arr]);
+    // setIsLoading(false);
+    // console.log("i am called from main services");
   };
 
   useEffect(() => {

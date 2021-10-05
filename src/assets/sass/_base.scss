@@ -15,9 +15,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-
   line-height: 1.6;
-
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -28,7 +26,9 @@ body {
 }
 @media(max-width: 500px) {
   .body {
-    overflow-x: hidden;
-    height: 60vh;
+    overflow-x: hidden !important;
+    height: 80vh;
+   
   }
+  
 }

@@ -12,14 +12,14 @@ const HeaderPopup = (props) => {
         <div className="header-popup-services__section-one"></div>
         <div className="header-popup-services__section-two">
           <Link
-            to="services1#webdesignanddevelopment"
+            to="services#webdesignanddevelopment"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             Web Application
           </Link>
           <Link
-            to="services1#mobiledevelopment"
+            to="services#mobiledevelopment"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(true)}
           >
@@ -28,7 +28,7 @@ const HeaderPopup = (props) => {
           {isOpen === true && (
             <div className="header-popup-services__section-three">
               <Link
-                to="services1#ios"
+                to="services#ios"
                 className="header-popup-services__section-three--text"
               >
                 iOS
@@ -38,14 +38,14 @@ const HeaderPopup = (props) => {
               </Link>
 
               <Link
-                to="services1#android"
+                to="services#android"
                 className="header-popup-services__section-three--text"
               >
                 Android
               </Link>
 
               <Link
-                to="services1#crossplatform"
+                to="services#crossplatform"
                 className="header-popup-services__section-three--text"
               >
                 Cross-platform
@@ -54,7 +54,7 @@ const HeaderPopup = (props) => {
           )}
 
           <Link
-            to="services1#softwaretesting"
+            to="services#softwaretesting"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
@@ -62,21 +62,21 @@ const HeaderPopup = (props) => {
             Software Testing
           </Link>
           <Link
-            to="services1#uiuxdesign"
+            to="services#uiuxdesign"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             UX/UI Design
           </Link>
           <Link
-            to="services1#uiuxdesign"
+            to="services#uiuxdesign"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             Data Security
           </Link>
           <Link
-            to="services1#uiuxdesign"
+            to="services#uiuxdesign"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >

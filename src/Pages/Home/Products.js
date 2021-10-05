@@ -16,16 +16,25 @@ function Products() {
   const [services, setServices] = useState([]);
 
   const fetchBlogs = async () => {
-    // console.log("im here");
-    const response = db.collection("maincases");
+    const response = db.collection("products").doc("OwubAju7dmeGeXCk5QAF");
     const data = await response.get();
+    const maindata = data.data().products;
+    console.log(maindata);
     const arr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arr.push(item.data());
+    Object.keys(maindata).forEach((key) => {
+      // the name of the current key.
+      // the value of the current key.
+      arr.push(maindata[key]);
     });
     setServices([...arr]);
-    console.log("i am from products");
+    console.log(services);
+    // const arr = [];
+    // data.forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    // setMainCases([...arr]);
+    // setIsLoading(false);
   };
 
   useEffect(() => {
@@ -42,6 +51,7 @@ function Products() {
       <div className="product">
         <img
           src={backgrounds}
+          style={{ marginBottom: "9rem" }}
           alt="Product Back"
           className="productcase__background"
           data-aos="fade-up"

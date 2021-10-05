@@ -1,6 +1,12 @@
 import React from "react";
 import Queries from "../Pages/Queries/Queries";
 import SingleTech from "./singletech";
+import graph from "../assets/images/GraphQL.png";
+import rea from "../assets/images/ReactJs.png";
+import rean from "../assets/images/React_Native.jpg";
+import aws from "../assets/images/AWS.jpg";
+import node from "../assets/images/Node-js.jpg";
+import type from "../assets/images/TypeScript.jpg";
 
 import mail from "../assets/umairbhai.jpg";
 import mobil from "../assets/phone.svg";
@@ -10,56 +16,45 @@ import db from "../firebase.config";
 import { useState } from "react";
 import { useEffect } from "react";
 const TechnologiesMain = (props) => {
-  const [technologies, setTechnologies] = useState([]);
-
-  const fetchBlogs = async () => {
-    // console.log("im here");
-    const response = db.collection("technologies");
-    const data = await response.get();
-    const arr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arr.push(item.data());
-    });
-    setTechnologies([...arr]);
-    console.log("i am from tech");
-  };
-
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
-
   return (
     <div className="technologiesmain">
-      {/* <div className="technologiesmain__one">
-        <h1 className="technologiesmain__one--text">{props.text}</h1>
-      </div> */}
       <div className="technologiesmain__two">
-        {technologies.length > 0 &&
-          technologies.map((technology) => {
-            return (
-              <SingleTech
-                id={technology.name}
-                description={technology.description}
-                heading={technology.name}
-                src={technology.image}
-              />
-            );
-          })}
-
-        {/* <Queries
-          iconmail={<FiSend />}
-          queryhead="Have a project in mind? Need help with an ongoing one?"
-          querysub="We'll be happy to talk!"
-          button="Send Message"
-          mailpic={mail}
-          mailname="Umair Ali"
-          maildetail="Cheif Executive Officer, CbSol"
-          mobile={mobil}
-          mailpicf={fb}
-          mailnamef="Fraz Khan"
-          maildetailf="Project Manager, CbSol"
-        /> */}
+        <SingleTech
+          id="React Js"
+          description="React is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications."
+          heading="React Js"
+          src={rea}
+        />
+        <SingleTech
+          id="Graph QL"
+          description="GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools."
+          heading="Graph QL"
+          src={graph}
+        />
+        <SingleTech
+          id="Node Js"
+          description="As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. Node.js is similar in design to, and influenced by, systems like Ruby's Event Machine and Python's Twisted. Node.js takes the event model a bit further. It presents an event loop as a runtime construct instead of as a library. In other systems, there is always a blocking call to start the event-loop."
+          heading="Node Js"
+          src={node}
+        />
+        <SingleTech
+          id="TypeScript"
+          description="TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript."
+          heading="TypeScript"
+          src={type}
+        />
+        <SingleTech
+          id="React Native"
+          description="React Native is an open-source UI software framework created by Facebook, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use the React framework along with native platform capabilities."
+          heading="React Native"
+          src={rean}
+        />
+        <SingleTech
+          id="AWS"
+          description="Amazon Web Services, Inc. is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis. Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services"
+          heading="AWS"
+          src={aws}
+        />
       </div>
     </div>
   );

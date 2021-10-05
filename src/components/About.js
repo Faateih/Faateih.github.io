@@ -19,24 +19,35 @@ function About() {
   const [senior, setSenior] = useState([]);
 
   const fetchUsers = async () => {
-    const response = db.collection("users");
+    const response = db.collection("people").doc("n1IuxcTbWLxmXwwDxsz9");
     const data = await response.get();
+    const newdata = data.data().people.team;
+    console.log(newdata);
     const arr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arr.push(item.data());
+    Object.keys(newdata).forEach((key) => {
+      console.log(key);
+      arr.push(newdata[key]); // the name of the current key.
+      // the value of the current key.
     });
     setUsers([...arr]);
-    console.log("I am called from about us");
+    // const arr = [];
+    // data.forEach((item) => {
+    //   // setServices((ser) => [...ser, item.data()]);
+    //   arr.push(item.data());
+    // });
+    // setUsers([...arr]);
+    // console.log("I am called from about us");
   };
   const fetchSeniors = async () => {
-    const response = db.collection("companyheads");
+    const response = db.collection("people").doc("n1IuxcTbWLxmXwwDxsz9");
     const data = await response.get();
+    const newdata = data.data().people.CTO;
+    const newdata1 = data.data().people.PM;
+    console.log(newdata);
     const arrr = [];
-    data.forEach((item) => {
-      // setServices((ser) => [...ser, item.data()]);
-      arrr.push(item.data());
-    });
+    arrr.push(newdata);
+    arrr.push(newdata1);
+
     setSenior([...arrr]);
     console.log("I am called from about us");
   };
