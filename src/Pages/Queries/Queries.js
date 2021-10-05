@@ -134,13 +134,13 @@ function Queries(props) {
           ></path>
         </svg>
       </div>
-      <form className="queries" id="contactus">
+      <div className="queries" id="contactus">
         <div className="queries__query">
           <div className="queries__main">{props.queryhead}</div>
           <div className="queries__sub">{props.querysub}</div>
           {/* <div className="queries__icon">{props.iconmail}</div> */}
         </div>
-        <div className="mail">
+        <div className="mail" >
           <div className="mail__left" data-aos="fade-up">
             {isLoading === true && (
               <div
@@ -160,10 +160,10 @@ function Queries(props) {
               </div>
             )}
             {isLoading === false && (
-              <>
+              <form className='mail__form' onSubmit={handleSubmit}>
                 <input
                   type="text"
-                  placeholder="Your name"
+                  placeholder="Enter Your Name"
                   className="mail__email"
                   value={name}
                   onChange={handleChange}
@@ -171,10 +171,10 @@ function Queries(props) {
                 />
                 <input
                   type="email"
-                  placeholder="E-mail address"
+                  placeholder="Enter Your E-mail"
                   className="mail__email"
                   onChange={handleChange1}
-                ></input>
+                />
                 <div
                   className={`messagequery ${isValid ? "success" : "error"}`}
                 >
@@ -183,23 +183,23 @@ function Queries(props) {
                 </div>
                 <input
                   type="text"
-                  placeholder="Phone number"
+                  placeholder="Enter Your Phone number"
                   className="mail__email"
                   onChange={handleChange2}
                   value={inputValue}
-                ></input>
+                />
                 <input
                   type="text"
-                  placeholder="Your message or query"
+                  placeholder="Enter Your Message"
                   className="mail__email"
                   onChange={handleChange3}
-                ></input>
+                />
 
-                <button className="mail__button" onClick={handleSubmit}>
+                <button className="mail__button" type='submit' >
                   {props.button}
                   <span className="card__arrow"> &rarr;</span>
                 </button>
-              </>
+              </form>
             )}
           </div>
           <div className="mail__center"></div>
@@ -238,7 +238,7 @@ function Queries(props) {
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </>
   );
 }

@@ -44,7 +44,7 @@ const Home = () => {
     // console.log(offsetTop1);
     // console.log(offsetTop2);
     if (window.scrollY < offsetTop ){
-      setHeader('transparent');
+      setHeader('rgba(255,255,255,0.9)');
       setText('black');
     }
     if(window.scrollY > offsetTop && window.scrollY < offsetTop1) {

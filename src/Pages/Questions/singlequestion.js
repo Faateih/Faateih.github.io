@@ -18,20 +18,24 @@ const SingleQuestion = (props) => {
     transition: "all .3s",
   };
 
+  const handleOpen = () => {
+    setAnsOpen(!ansOpen);
+  }
 
   // useEffect(() => {
   //   Aos.init({ duration: 50 });
   // }, []);
   return (
     <>
-    <Accordion>
-      <div className='questions__ques'>
+    <Accordion style={{boxShadow: "none",
+    margin: "0 0"}}>
+      <div className='questions__ques' onClick={handleOpen}>
       <AccordionSummary style = {{width: '100%'}}>
       <Typography>
         <div className="questions__ques--bold">
           {props.question}
           <span
-            className="questions__ques--plus" style={{fontSize: '2.5rem'}}>
+            className="questions__ques--plus" style={ansOpen? rotateStyle:{transition: "all .3s"}}>
             <BiPlus />
           </span>
         </div>

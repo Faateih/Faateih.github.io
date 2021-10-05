@@ -195,7 +195,7 @@ function Careers(props) {
             <>
               <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Enter Your Name"
                 value={name}
                 className="middle__field"
                 onChange={handleChange}
@@ -203,7 +203,7 @@ function Careers(props) {
               <div className="middle__field">
                 <input
                   type="email"
-                  placeholder="example@gmail.com"
+                  placeholder="Enter Your Email"
                   className="middle__field"
                   onChange={handleChange1}
                 />
@@ -218,7 +218,7 @@ function Careers(props) {
                   +92-
                   <input
                     type="text"
-                    placeholder="300-0000000"
+                    placeholder="Enter Your Phone number"
                     onChange={(e) => handleInput(e)}
                     value={inputValue}
                     className="middle__field"

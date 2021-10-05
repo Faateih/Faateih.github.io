@@ -101,7 +101,15 @@
           }
         }
       }
-      @media (max-width: 500px) {
+      @media (max-width: 468px) {
+        .individualcase__right {
+          display: none;
+          visibility: hidden;
+        }
+        .individualcase__right--image {
+          display: none;
+          visibility: hidden;
+        }
         // flex-direction: column;
       }
     }

@@ -25,10 +25,8 @@ body {
   box-sizing: border-box;
 }
 @media(max-width: 500px) {
-  .body {
-    overflow-x: hidden !important;
-    height: 80vh;
-   
+   html {
+    overflow-x : hidden !important;
   }
   
 }
