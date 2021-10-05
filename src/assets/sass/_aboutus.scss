@@ -207,7 +207,17 @@
   }
 }
 .hello {
-  background-color: black;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.newloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .hello {
   background-image: linear-gradient(to right bottom, #8b41f2, #3f1180);
