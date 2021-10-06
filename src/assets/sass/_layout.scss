@@ -51,7 +51,7 @@
   &__serv {
     font-size: 3.5rem;
     margin-top: 6rem;
-    font-family: "Playfair Display", serif;
+    font-family: var(--medium-fonts);
     color: #17217b;
   }
 }
@@ -339,7 +339,7 @@
     justify-content: center;
     font-size: 5rem;
     color: #17217b;
-    font-family: "Playfair Display", serif;
+    font-family: var(--medium-fonts);
   }
 
   &__qhead-secondary {
@@ -471,6 +471,7 @@ transition: background-color 5000s ease-in-out 0s;
     font-size: 3.5rem;
     font-weight: 700;
     color: #fefefe;
+    font-family: var(--medium-fonts);
   }
 
   &__icon {
@@ -770,7 +771,7 @@ transition: background-color 5000s ease-in-out 0s;
     font-weight: 800;
     margin-bottom: 4rem;
     color: #17217b;
-    font-family: var(--font-fam);
+    font-family: var(--medium-fonts);
 
   }
 }
@@ -1138,8 +1139,9 @@ transition: background-color 5000s ease-in-out 0s;
   }
 
   &__heading {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 5rem;
+    font-family: var(--medium-fonts);
   }
 
   &__left {
@@ -1217,7 +1219,7 @@ transition: background-color 5000s ease-in-out 0s;
     display: flex;
     justify-content: center;
     font-size: 4rem;
-    font-family: var(--font-fam);
+    font-family: var(--medium-fonts);
     margin-bottom: 3rem;
   }
 
@@ -1230,6 +1232,7 @@ transition: background-color 5000s ease-in-out 0s;
     margin-bottom: 3rem;
     background-color: #f1eeee;
     font-size: 1.5rem;
+    position: relative;
 
     &::placeholder {
       font-size: 1.5rem;
@@ -1250,6 +1253,7 @@ transition: background-color 5000s ease-in-out 0s;
     width: 70%;
     margin-left: 2.5rem;
     margin-bottom: 2rem;
+    font-family: sans-serif;
     resize: none;
 
     &::placeholder {
@@ -1416,22 +1420,26 @@ transition: background-color 5000s ease-in-out 0s;
 .message {
   display: flex;
   position: absolute;
+  width: 32rem;
+  border-radius: 4px;
   margin: auto;
-  margin-top: -2rem;
+   margin-top: -2rem;
   font-size: 1.5rem;
   color: white;
   background-color: rgba(255, 0, 0, 0.863);
-  width: 35rem;
+  padding: 0 3.5rem;
+
 }
 .messagecontact {
   display: flex;
   margin: auto;
-  margin-top: 23rem;
-  margin-left: 4rem;
+  margin-top: 22.5rem;
+  margin-left: 3rem;
   font-size: 1.5rem;
   color: white;
   background-color: rgba(255, 0, 0, 0.863);
-  width: 35rem;
+  width: 32rem;
+  border-radius: 4px;
   position: absolute;
 }
 @media(max-width: 468px) {
@@ -1444,12 +1452,14 @@ transition: background-color 5000s ease-in-out 0s;
   }
 }
 .messagequery {
+  padding: 0 3.5rem;
   display: flex;
   margin: auto;
-  margin-top: 12rem;
+  border-radius: 4px;
+  margin-top: -2rem;
   font-size: 1.5rem;
   color: white;
   background-color: rgba(255, 0, 0, 0.863);
-  width: 35rem;
+  width: 28rem;
   position: absolute;
 }

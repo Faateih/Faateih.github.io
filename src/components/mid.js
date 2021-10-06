@@ -3,7 +3,7 @@ import Techno from '../../src/assets/images/techno.jpg';
 
 const Mid = (props) => {
   return (
-    <div className="mid">
+    <div className="mid" id='aboutussecone'>
     <img src={props.techno} alt='Technology' className='mid__techno' />
       <div className="mid__one">
               {/* <div className="mid__one--text">

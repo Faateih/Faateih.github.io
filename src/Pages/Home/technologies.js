@@ -12,8 +12,8 @@ const Technologies = () => {
       <Mid
         techno = {Techno}
         heading="Technologies"
-        text="We cover web app creation from the ground up for companies in any field
-        and any size, offering both design and development services" page = '&nbsp;Technology'
+        text="We use only proven and reliable technologies to ensure your app will perform seamlessly.
+" page = '&nbsp;Technology'
       />
 
       <TechnologiesMain text="Technologies" />

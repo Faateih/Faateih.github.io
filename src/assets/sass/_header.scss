@@ -307,9 +307,9 @@
 
     &--text {
       color: black;
-      font-size: 7rem;
+      font-size: 6rem;
       font-weight: normal;
-      font-family: "Playfair Display", serif;
+      font-family: var(--medium-fonts);
     }
   }
   &__border {
@@ -329,8 +329,8 @@
   }
   &__button {
     margin-left: 10rem;
-    width: 24rem;
-    height: 6.4rem;
+    width: 22rem;
+    height: 5.4rem;
     margin-top: 3rem;
     border: none;
     color: white;

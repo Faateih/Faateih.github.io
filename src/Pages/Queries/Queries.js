@@ -19,9 +19,9 @@ function Queries(props) {
     if (!value) return value;
     const phoneNumber = value.replace(/[^\d]/g, "");
     const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 5)      { return `${phoneNumber.slice(0, 4)}${phoneNumber.slice(4)}`; }
     if (phoneNumberLength < 11) {
-      return `${phoneNumber.slice(0, 5)}${phoneNumber.slice(5)}`;
+      return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(4)}`;
     }
     return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(
       4,

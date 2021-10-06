@@ -29,7 +29,7 @@ const FooterContent = (props) => {
           <div className="footercontent__two--heading">About Us</div>
           <div className="footercontent__two--content">
             <Link
-              to="aboutus#aboutus"
+              to="aboutus#aboutussecone"
               className="footercontent__two--content-text"
             >
               Our Company
@@ -54,34 +54,40 @@ const FooterContent = (props) => {
           <div className="footercontent__two--heading">Technology</div>
           <div className="footercontent__two--content">
             <Link
-              to="technologies#react"
+              to="technologies#ReactJs"
               className="footercontent__two--content-text"
             >
               React jS
             </Link>
             <Link
-              to="technologies#aws"
+              to="technologies#AWS"
               className="footercontent__two--content-text"
             >
               AWS
             </Link>
             <Link
-              to="technologies#reactnative"
+              to="technologies#ReactNative"
               className="footercontent__two--content-text"
             >
               React Native
             </Link>
             <Link
-              to="technologies#nodejs"
+              to="technologies#NodeJs"
               className="footercontent__two--content-text"
             >
               Node jS
             </Link>
             <Link
-              to="technologies#typescript"
+              to="technologies#TypeScript"
               className="footercontent__two--content-text"
             >
               Type Script
+            </Link>
+            <Link
+              to="technologies#GraphQL"
+              className="footercontent__two--content-text"
+            >
+              Graph QL
             </Link>
           </div>
         </div>
@@ -129,7 +135,7 @@ const FooterContent = (props) => {
           <div className="footers">
             <div className="footers__location">
               <FiMapPin />
-              <span className="footers__locspan"> DHA Rahbar, Lahore</span>
+              <span className="footers__locspan">67-C commercial, DHA Rahber, Lahore</span>
             </div>
             <div className="footers__email">
               <AiOutlineMail />

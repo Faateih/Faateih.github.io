@@ -12,14 +12,14 @@ const HeaderPopup = (props) => {
         <div className="header-popup-services__section-one"></div>
         <div className="header-popup-services__section-two">
           <Link
-            to="services#webdesignanddevelopment"
+            to="services#Web Applications"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             Web Application
           </Link>
           <Link
-            to="services#mobiledevelopment"
+            to="services#Mobile Application"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(true)}
           >
@@ -54,7 +54,7 @@ const HeaderPopup = (props) => {
           )}
 
           <Link
-            to="services#softwaretesting"
+            to="services#Software Testing"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
@@ -62,21 +62,21 @@ const HeaderPopup = (props) => {
             Software Testing
           </Link>
           <Link
-            to="services#uiuxdesign"
+            to="services#UI/UX Design"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             UX/UI Design
           </Link>
           <Link
-            to="services#uiuxdesign"
+            to="services#Data Security"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
             Data Security
           </Link>
           <Link
-            to="services#uiuxdesign"
+            to="services#Project Management"
             className="header-popup-services__section-two--text"
             onMouseEnter={() => setIsOpen(false)}
           >
@@ -120,15 +120,15 @@ const HeaderPopup = (props) => {
         <div className="header-popup-technologies-two">
           <div className="extra">
             <Link
-              to="Technologies#react"
+              to="Technologies#ReactJs"
               className="header-popup-technologies-two__text"
             >
-              React
+              React Js
             </Link>
           </div>
           <div className="extra">
             <Link
-              to="Technologies#reactnative"
+              to="Technologies#ReactNative"
               className="header-popup-technologies-two__text"
             >
               React Native
@@ -137,7 +137,7 @@ const HeaderPopup = (props) => {
           
           <div className="extra">
             <Link
-              to="Technologies#nodejs"
+              to="Technologies#NodeJs"
               className="header-popup-technologies-two__text"
             >
               Node Js
@@ -145,7 +145,7 @@ const HeaderPopup = (props) => {
           </div>
           <div className="extra">
             <Link
-              to="Technologies#typescript"
+              to="Technologies#TypeScript"
               className="header-popup-technologies-two__text"
             >
               Type Script
@@ -153,7 +153,7 @@ const HeaderPopup = (props) => {
           </div>
           <div className="extra">
             <Link
-              to="Technologies#aws"
+              to="Technologies#AWS"
               className="header-popup-technologies-two__text"
             >
               AWS
@@ -161,7 +161,7 @@ const HeaderPopup = (props) => {
           </div>
           <div className="extra">
             <Link
-              to="Technologies#graphql"
+              to="Technologies#GraphQL"
               className="header-popup-technologies-two__text"
             >
               Graph QL

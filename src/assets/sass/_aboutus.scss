@@ -71,7 +71,7 @@
         font-size: 6rem;
         font-weight: 800;
         color: #17217b;
-        font-family: var(--font-fam);
+        font-family: var(--medium-fonts);
       }
       &-logo {
         width: 3rem;
@@ -218,7 +218,4 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-.hello {
-  background-image: linear-gradient(to right bottom, #8b41f2, #3f1180);
 }

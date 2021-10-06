@@ -11,8 +11,7 @@ const Services1 = () => {
       <Mid
         techno = {Service}
         heading="Our Services"
-        text="We cover web app creation from the ground up for companies in any field
-        and any size, offering both design and development services" page = '&nbsp;Services'
+        text="We build successful, long-lasting, profitable products for our clients." page = '&nbsp;Services'
       />
       <ServicesMain text="Services" />
       <Footer />

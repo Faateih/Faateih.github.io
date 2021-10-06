@@ -154,14 +154,14 @@ function Careers(props) {
     if (!value) return value;
     const phoneNumber = value.replace(/[^\d]/g, "");
     const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) return phoneNumber;
-    if (phoneNumberLength < 10) {
-      return `${phoneNumber.slice(0, 5)}${phoneNumber.slice(5)}`;
+    if (phoneNumberLength < 5)      { return `${phoneNumber.slice(0, 4)}${phoneNumber.slice(4)}`; }
+    if (phoneNumberLength < 11) {
+      return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(4)}`;
     }
-    return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(
-      3,
+    return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(
+      4,
       10
-    )}${phoneNumber.slice(10, 10)}`;
+    )}${phoneNumber.slice(10, 11)}`;
   }
   const [isUpload, setIsUpload] = useState("");
 
@@ -251,9 +251,6 @@ function Careers(props) {
                 </div>
               </div>
               <div className="middle__field">
-                <span>
-                  {" "}
-                  +92-
                   <input
                     type="text"
                     placeholder="Enter Your Phone number"
@@ -261,7 +258,6 @@ function Careers(props) {
                     value={inputValue}
                     className="middle__field"
                   />{" "}
-                </span>
               </div>
               <div className="middle__field">
                 <div className="middle__field--select">

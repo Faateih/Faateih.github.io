@@ -27,9 +27,9 @@ function Contact() {
     if (!value) return value;
     const phoneNumber = value.replace(/[^\d]/g, "");
     const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 5)      { return `${phoneNumber.slice(0, 4)}${phoneNumber.slice(4)}`; }
     if (phoneNumberLength < 11) {
-      return `${phoneNumber.slice(0, 5)}${phoneNumber.slice(5)}`;
+      return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(4)}`;
     }
     return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(
       4,
@@ -142,7 +142,7 @@ function Contact() {
               <div className="contact__heading">Contact Us</div>
               <div className="contact__location">
                 <FiMapPin />
-                <span className="contact__locspan"> DHA Rahbar</span>
+                <span className="contact__locspan">67-C commercial, DHA Rahber, Lahore</span>
               </div>
               <div className="contact__email">
                 <AiOutlineMail />
@@ -150,7 +150,7 @@ function Contact() {
               </div>
               <div className="contact__call">
                 <BiPhoneCall />{" "}
-                <span className="contact__num">+92-090-078601</span>
+                <span className="contact__num">+92-303-9093600</span>
               </div>
               <div className="contact__social">
                 <div className="contact__fb">

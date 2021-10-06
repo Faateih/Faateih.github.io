@@ -11,8 +11,8 @@ const Cases = React.forwardRef((props,ref) => {
   return (
     <div className="cases" ref={ref} data-aos='fade-up'>
       <div className="cases__border"></div>
-      <div className="cases__heading">
-        Haven't found the case in your business sector?
+      <div className="cases__heading" style={{fontFamily: 'var(--medium-fonts)'}}>
+        Looking for a software development services?
       </div>
 
       <NavLink to="/contactus" className="cases__button">
